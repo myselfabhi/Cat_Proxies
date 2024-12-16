@@ -1,0 +1,160 @@
+"use client";
+
+import DashboardLayout from "../../layout";
+import { useState } from "react";
+
+const PurchasePlan = () => {
+  const plansData = [
+    {
+      id: "1",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+    {
+      id: "2",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+    {
+      id: "3",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+    {
+      id: "4",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+    {
+      id: "5",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+    {
+      id: "6",
+      title: "30GB Plan",
+      price: "$30",
+      duration: "Per month",
+      description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    },
+  ];
+
+  const [selectedTab, setSelectedTab] = useState("Residential");
+  const [bandwidthPrice, setBandwidthPrice] = useState(19);
+
+  return (
+    <DashboardLayout>
+      <div className="container mx-auto px-4 space-y-8 w-screen">
+        {/* Header Section */}
+        <div className="text-gray-800 text-center md:text-left">
+          <h1 className="text-2xl font-bold">Pricing Plans</h1>
+          <p className="text-sm text-gray-600">
+            Boost security with proxies, shielding your network, filtering
+            traffic, and preserving anonymity online.
+          </p>
+        </div>
+
+        {/* Tabs Section */}
+        <div className="flex justify-between space-x-4 pb-2">
+          {["Residential", "Mobile", "Datacenter", "IPv6", "ISP"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setSelectedTab(tab)}
+              className={`flex-1 text-center px-4 py-2 rounded-lg font-medium ${
+                selectedTab === tab
+                  ? "bg-[#fd980c] text-white"
+                  : "bg-gray-100 text-gray-800"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {/* Main Content Section */}
+        {selectedTab === "Residential" ? (
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Plans */}
+            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {plansData.map((plan) => (
+                <div
+                  key={plan.id}
+                  className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-lg font-bold text-gray-800">
+                      {plan.title}
+                    </h2>
+                    <div className="flex flex-col items-end">
+                      <p className="text-lg font-semibold text-black">
+                        {plan.price}
+                      </p>
+                      <p className="text-sm text-gray-500">/per year</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600">{plan.description}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Section */}
+            <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md flex flex-col items-center space-y-6">
+              <div className="bg-green-500 text-white text-xs font-bold uppercase px-2 py-1 rounded-full">
+                Most Popular
+              </div>
+              <div className="flex items-baseline">
+                <p className="text-4xl font-bold text-orange-500">
+                  ${bandwidthPrice}
+                </p>
+                <p className="text-sm text-gray-600 ml-2">/ per month</p>
+              </div>
+              <input
+                type="range"
+                min="10"
+                max="50"
+                value={bandwidthPrice}
+                onChange={(e) => setBandwidthPrice(parseInt(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mb-4"
+                style={{
+                  background: `linear-gradient(to right, #fd980c ${(bandwidthPrice - 10) * 2}%, #e5e5e5 ${(bandwidthPrice - 10) * 2}%)`,
+                }}
+              />
+              <p className="text-sm font-medium text-gray-700 text-center">
+                Up To 5GB Emails / mo <br /> No daily sending limit
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-gray-600 text-left">
+                <li>✔️ 10M+ Real Residential Peers</li>
+                <li>✔️ IP & User-Pass Authentication</li>
+                <li>✔️ Country, State, City & ISP Targeting</li>
+                <li>✔️ Rotating & Sticky Sessions</li>
+                <li>✔️ Unlimited Concurrent Connections</li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <div className="text-center text-gray-600 text-lg py-20">
+            No plans available for {selectedTab}.
+          </div>
+        )}
+      </div>
+    </DashboardLayout>
+  );
+};
+
+export default PurchasePlan;

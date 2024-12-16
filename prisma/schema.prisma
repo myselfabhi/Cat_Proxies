@@ -1,0 +1,222 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SiteSetting {
+  id        String   @id @default(uuid())
+  Name      String   @unique
+  Value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Blog {
+  id          String    @id
+  slug        String
+  title       String
+  description String?
+  image       String
+  content     String
+  author      String    @default("CatProxies")
+  views       Int?      @default(0)
+  isActive    Boolean   @default(true)
+  categoryId  String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime
+  Category    Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id        String   @id
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Blog      Blog[]
+}
+
+model Coupon {
+  id           String            @id
+  code         String            @unique
+  discount     Float
+  type         CouponTypes
+  proxyType    ProxyTypeCoupons? @default(All)
+  started_at   DateTime
+  ended_at     DateTime
+  allowedUsage Int               @default(0)
+  usage        Int               @default(0)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime
+  ExtendOrder  ExtendOrder[]
+  Order        Order[]
+}
+
+model ExtendOrder {
+  id            String                @id
+  userId        String?
+  orderId       String?
+  couponId      String?
+  type          String?
+  value         String?
+  paymentMethod paymentMethodOptions? @default(Coinbase)
+  payment_id    String?
+  payment_url   String?
+  amount        Float?
+  status        OrderStatusOptions?   @default(CREATED)
+  createdAt     DateTime              @default(now())
+  updatedAt     DateTime
+  Coupon        Coupon?               @relation(fields: [couponId], references: [id])
+  Order         Order?                @relation(fields: [orderId], references: [id])
+  User          User?                 @relation(fields: [userId], references: [id])
+}
+
+model Order {
+  id                  String                @id
+  userId              String?
+  packageId           String?
+  package_title       String?
+  package_description String?
+  package_price       Float?
+  package_bandwidth   Float?
+  package_days        Int?
+  package_ips         Int?
+  package_region      String?
+  package_proxyType   ProxyTypeOptions?
+  package_provider    ProviderOptions?      @default(lightning)
+  couponId            String?
+  paymentMethod       paymentMethodOptions? @default(Coinbase)
+  payment_id          String?
+  payment_url         String?
+  amount              Float?
+  status              OrderStatusOptions    @default(CREATED)
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime
+  package_speed       Int?                  @default(30)
+  ExtendOrder         ExtendOrder[]
+  Coupon              Coupon?               @relation(fields: [couponId], references: [id])
+  Package             Package?              @relation(fields: [packageId], references: [id])
+  User                User?                 @relation(fields: [userId], references: [id])
+  OrderProxy          OrderProxy?
+}
+
+model OrderProxy {
+  id                  String    @id
+  orderId             String    @unique
+  proxy_id            String
+  username            String?
+  password            String?
+  available_bandwidth Float
+  used_bandwidth      Float
+  days                Int
+  whitelist_ip        String[]
+  expired_at          DateTime?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime
+  speed               Int?      @default(30)
+  bandwidth_left      Float     @default(0)
+  Order               Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+model Package {
+  id          String           @id
+  title       String
+  description String
+  price       Float?
+  bandwidth   Float
+  days        Int
+  hidden      Boolean          @default(false)
+  proxyType   ProxyTypeOptions
+  provider    ProviderOptions  @default(lightning)
+  ips         Int?
+  region      String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime
+  speed       Int              @default(30)
+  Order       Order[]
+}
+
+model Referral {
+  id            String   @id
+  code          String   @unique
+  link          String   @unique
+  total_deposit Float?   @default(0.00)
+  visited       Int?     @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+  User          User[]
+}
+
+model User {
+  id                   String        @id
+  email                String        @unique
+  password             String
+  admin                Boolean       @default(false)
+  logged_at            DateTime      @default(now())
+  isActive             Boolean       @default(true)
+  amountSpent          Float         @default(0)
+  twoFactorAuthEnabled Boolean       @default(false)
+  twoFactorAuthOTP     String?
+  resetPasswordToken   String?
+  verified             Boolean       @default(false)
+  verifyToken          String?
+  referralId           String?
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime
+  ExtendOrder          ExtendOrder[]
+  Order                Order[]
+  Referral             Referral?     @relation(fields: [referralId], references: [id])
+}
+
+model CompatibilityChecker {
+  id         String           @id @default(uuid())
+  domain     String
+  userEmail  String?
+  compatible Boolean          @default(false)
+  metaData   Json?
+  createdAt  DateTime         @default(now())
+  proxyType  ProxyTypeOptions
+}
+
+enum CouponTypes {
+  Fixed
+  Percent
+}
+
+enum OrderStatusOptions {
+  CREATED
+  PENDING
+  CONFIRMED
+  EXPIRED
+  CANCELED
+}
+
+enum ProviderOptions {
+  lightning
+  social
+}
+
+enum ProxyTypeCoupons {
+  All
+  Residential
+  Datacenter
+  Ipv6
+  Isp
+  Mobile
+}
+
+enum ProxyTypeOptions {
+  Residential
+  Datacenter
+  Ipv6
+  Isp
+  Mobile
+}
+
+enum paymentMethodOptions {
+  Coinbase
+  Cryptomus
+}
