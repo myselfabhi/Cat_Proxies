@@ -28,7 +28,7 @@ const sidebarItems = [
     sections: [
       {
         name: "Deposit Balance",
-        href: "/deposit",
+        href: "/dashboard/deposit",
         icon: <DollarSign className="w-5 h-5 text-green-500" />,
       },
       {
@@ -37,19 +37,19 @@ const sidebarItems = [
         subItems: [
           {
             name: "Active Plans",
-            href: "./activeplan",
+            href: "/dashboard/activeplan",
             icon: <Package className="w-4 h-4 text-purple-500" />,
           },
           {
             name: "Purchase Plans",
-            href: "/purchaseplan",
+            href: "/dashboard/purchaseplan",
             icon: <Package className="w-4 h-4 text-purple-500" />,
           },
         ],
       },
       {
         name: "Invoices",
-        href: "/invoices",
+        href: "/dashboard/invoices",
         icon: <File className="w-5 h-5 text-green-500" />,
       },
     ],
@@ -62,24 +62,24 @@ const sidebarItems = [
         subItems: [
           {
             name: "Settings",
-            href: "/profile",
+            href: "/dashboard/profile",
             icon: <Settings className="w-4 h-4 text-purple-500" />,
           },
           {
             name: "Get Bonus",
-            href: "/getbonus",
+            href: "/dashboard/getbonus",
             icon: <Gift className="w-4 h-4 text-purple-500" />,
           },
         ],
       },
       {
         name: "Discord Server",
-        href: "/discord",
+        href: "/dashboard/discord",
         icon: <MessageCircle className="w-5 h-5 text-green-500" />,
       },
       {
         name: "Telegram ",
-        href: "/telegram",
+        href: "/dashboard/telegram",
         icon: <Phone className="w-5 h-5 text-green-500" />,
       },
     ],
@@ -92,17 +92,17 @@ const sidebarItems = [
         subItems: [
           {
             name: "Guide",
-            href: "/support/guide",
+            href: "/dashboard/support/guide",
             icon: <File className="w-4 h-4 text-green-500" />,
           },
           {
             name: "Contact Us",
-            href: "/contactus",
+            href: "/dashboard/contactus",
             icon: <MessageCircle className="w-4 h-4 text-pink-500" />,
           },
           {
             name: "Integrations",
-            href: "/support/integrations",
+            href: "/dashboard/support/integrations",
             icon: <Folder className="w-4 h-4 text-purple-500" />,
           },
         ],

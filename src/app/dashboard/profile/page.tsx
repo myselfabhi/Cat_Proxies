@@ -1,12 +1,15 @@
-"use client"; // This enables client-side functionality
-
-import { useState } from "react";
+"use client";
 import General from "@/components/dashboard/accounts/profile/general";
-import Preferences from "@/components/dashboard/accounts/profile/preferences";
-import Verify from "@/components/dashboard/accounts/profile/verify";
 import Offers from "@/components/dashboard/accounts/profile/offers";
+import Preferences from "@/components/dashboard/accounts/profile/preferences";
 import Social from "@/components/dashboard/accounts/profile/social";
-import DashboardLayout from "../../components/layout";
+import Verify from "@/components/dashboard/accounts/profile/verify";
+import DashboardLayout from "@/components/layout";
+import { useState } from "react";
+
+ // This enables client-side functionality
+
+
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState("General");

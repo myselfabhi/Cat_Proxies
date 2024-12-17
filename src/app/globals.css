@@ -207,6 +207,10 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .dark-dashboard{
+    --cream-800: 240 10% 3.9%; 
+  }
 }
 
 @layer base {

@@ -11,7 +11,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-purple-500",
-      link: "/plandetails/1",
+      link: "/dashboard/activeplan/1",
     },
     {
       id: "2",
@@ -21,7 +21,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-orange-500",
-      link: "/plandetails/2",
+      link: "/dashboard/activeplan/2",
     },
     {
       id: "3",
@@ -31,7 +31,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-teal-500",
-      link: "/plandetails/3",
+      link: "/dashboard/activeplan/3",
     },
     {
       id: "4",
@@ -41,7 +41,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-yellow-500",
-      link: "/plandetails/4",
+      link: "/dashboard/activeplan/4",
     },
   ],
   expired: [
@@ -53,7 +53,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-purple-500",
-      link: "/plandetails/5",
+      link: "/dashboard/activeplan/5",
     },
     {
       id: "6",
@@ -63,7 +63,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-orange-500",
-      link: "/plandetails/6",
+      link: "/dashboard/activeplan/6",
     },
     {
       id: "7",
@@ -73,7 +73,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-teal-500",
-      link: "/plandetails/7",
+      link: "/dashboard/activeplan/7",
     },
     {
       id: "8",
@@ -83,7 +83,7 @@ const plansData = {
       price: "$59",
       dueDate: "25/05/2025",
       color: "bg-yellow-500",
-      link: "/plandetails/8",
+      link: "/dashboard/activeplan/8",
     },
   ],
 };
@@ -97,7 +97,7 @@ const ActivePlans = () => {
           <h2 className="text-lg font-semibold text-gray-700">Active Plans</h2>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
             {plansData.active.map((plan) => (
-              <Link href={`/plandetails/${plan.id}`} key={plan.id}>
+              <Link href={`/dashboard/activeplan/${plan.id}`} key={plan.id}>
                 <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
@@ -137,7 +137,7 @@ const ActivePlans = () => {
           <h2 className="text-lg font-semibold text-gray-700">Expired Plans</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
             {plansData.expired.map((plan) => (
-              <Link href={`/plandetails/${plan.id}`} key={plan.id}>
+              <Link href={`/dashboard/activeplan/${plan.id}`} key={plan.id}>
                 <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">

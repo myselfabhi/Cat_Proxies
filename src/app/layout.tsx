@@ -16,22 +16,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const pathname = usePathname() // Get the current route
-
-  // List of routes where the layout should not include Header and Footer
+  const pathname = usePathname()
   const noLayoutRoutes = [
     "/dashboard",
-    "/activeplan",
-    "/purchaseplan",
-    "/getbonus",
-    "/contactus",
-    "/invoices",
-    "/profile",
+    "/dashboard/activeplan",
+    "/dashboard/purchaseplan",
+    "/dashboard/getbonus",
+    "/dashboard/contactus",
+    "/dashboard/invoices",
+    "/dashboard/profile",
   ]
 
-  // Check for dynamic or specific routes like /plandetails/ and its children
   const shouldShowLayout =
-    !noLayoutRoutes.includes(pathname) && !pathname.startsWith("/plandetails/")
+    !noLayoutRoutes.includes(pathname) && !pathname.startsWith("/dashboard/activeplan/")
 
   return (
     <html lang="en">
