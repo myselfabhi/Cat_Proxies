@@ -1,9 +1,10 @@
 "use client";
-import General from "@/components/dashboard/accounts/profile/general";
-import Offers from "@/components/dashboard/accounts/profile/offers";
-import Preferences from "@/components/dashboard/accounts/profile/preferences";
-import Social from "@/components/dashboard/accounts/profile/social";
-import Verify from "@/components/dashboard/accounts/profile/verify";
+
+import General from "@/components/dashboard/accounts/profile/General-form";
+import Offers from "@/components/dashboard/accounts/profile/Offers-form";
+import Preferences from "@/components/dashboard/accounts/profile/Preferences-form";
+import Social from "@/components/dashboard/accounts/profile/Social-form";
+import Verify from "@/components/dashboard/accounts/profile/Verify-form";
 import DashboardLayout from "@/components/layout";
 import { useState } from "react";
 

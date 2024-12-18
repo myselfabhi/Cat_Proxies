@@ -1,6 +1,6 @@
 "use client";
 
-import PlanDetails from "@/components/dashboard/Plans/PlanDetails";
+import PlanDetails from "@/components/dashboard/plans/Plan-Details";
 import { useParams } from "next/navigation";
 
 const PlanDetailPage = () => {

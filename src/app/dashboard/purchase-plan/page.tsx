@@ -1,4 +1,4 @@
-import PurchasePlan from '@/components/dashboard/Plans/PurchasePlan'
+import PurchasePlan from '@/components/dashboard/plans/Purchase-Plan'
 
 export default function Purchase() {
 

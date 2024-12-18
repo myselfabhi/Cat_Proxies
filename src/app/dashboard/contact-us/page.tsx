@@ -1,4 +1,4 @@
-import Contactus_db from "@/components/dashboard/Support/contactus";
+import Contactus_db from "@/components/dashboard/support/Contact-us";
 
 export default function Contact() {
 

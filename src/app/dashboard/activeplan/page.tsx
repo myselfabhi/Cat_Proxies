@@ -1,4 +1,4 @@
-import ActivePlans from "@/components/dashboard/Plans/ActivePlan";
+import ActivePlans from "@/components/dashboard/plans/Active-Plan";
 
 export default function Active() {
 
