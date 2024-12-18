@@ -20,9 +20,9 @@ export default function RootLayout({
   const noLayoutRoutes = [
     "/dashboard",
     "/dashboard/activeplan",
-    "/dashboard/purchaseplan",
-    "/dashboard/getbonus",
-    "/dashboard/contactus",
+    "/dashboard/purchase-plan",
+    "/dashboard/get-bonus",
+    "/dashboard/contact-us",
     "/dashboard/invoices",
     "/dashboard/profile",
   ]

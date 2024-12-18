@@ -42,7 +42,7 @@ const sidebarItems = [
           },
           {
             name: "Purchase Plans",
-            href: "/dashboard/purchaseplan",
+            href: "/dashboard/purchase-plan",
             icon: <Package className="w-4 h-4 text-purple-500" />,
           },
         ],
@@ -67,7 +67,7 @@ const sidebarItems = [
           },
           {
             name: "Get Bonus",
-            href: "/dashboard/getbonus",
+            href: "/dashboard/get-bonus",
             icon: <Gift className="w-4 h-4 text-purple-500" />,
           },
         ],
@@ -97,7 +97,7 @@ const sidebarItems = [
           },
           {
             name: "Contact Us",
-            href: "/dashboard/contactus",
+            href: "/dashboard/contact-us",
             icon: <MessageCircle className="w-4 h-4 text-pink-500" />,
           },
           {
@@ -118,7 +118,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
     <>
       {/* Hamburger Menu for Mobile */}
       <button
-        className="fixed top-32 left-4 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg lg:hidden"
+        className="fixed top-44 left-4 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg lg:hidden"
         onClick={() => setIsOpen(true)}
       >
         <Menu className="w-6 h-6" />

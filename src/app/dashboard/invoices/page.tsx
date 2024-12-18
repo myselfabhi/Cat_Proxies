@@ -1,4 +1,5 @@
-import Invoices from "@/components/dashboard/invoices";
+import Invoices from "@/components/dashboard/Invoices";
+
 
 
 export default function Contact() {
