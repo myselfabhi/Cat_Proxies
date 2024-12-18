@@ -1,6 +1,7 @@
 "use client";
 
 import DashboardLayout from "@/components/layout";
+import { useState } from "react";
 
 interface PlanDetailsProps {
   planId: string;
@@ -24,6 +25,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
   ];
 
   const plan = plansData.find((p) => p.id === planId);
+  const [sessionType, setSessionType] = useState<"rotating" | "sticky">("sticky");
 
   if (!plan) {
     return (
@@ -90,7 +92,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
               <p className="text-sm text-gray-600">
                 Select a precise proxy location or leave it random.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+              <div className="flex flex-col gap-4 mt-4">
                 <select className="p-2 border rounded-md">
                   <option>United States of America</option>
                   <option>United Kingdom</option>
@@ -111,28 +113,49 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
             {/* Session Settings */}
             <div>
-              <h2 className="text-lg font-bold">Session Settings</h2>
-              <p className="text-sm text-gray-600">
-                Keep the same IP address for up to 120 minutes with a sticky
-                session or get a new IP address with each request.
-              </p>
-              <div className="flex items-center gap-4 mt-4">
-                <button className="px-4 py-2 border rounded-md bg-green-50 text-green-700">
-                  Rotating
-                </button>
-                <button className="px-4 py-2 border rounded-md bg-gray-100 text-gray-600">
-                  Sticky Session
-                </button>
-              </div>
-              <div className="mt-4">
-                <label className="text-sm text-gray-600">Lifetime (minutes)</label>
-                <input
-                  type="number"
-                  defaultValue={60}
-                  className="w-full p-2 border rounded-md mt-2"
-                />
-              </div>
-            </div>
+      <h2 className="text-lg font-bold">Session Settings</h2>
+      <p className="text-sm text-gray-600">
+        Keep the same IP address for up to 120 minutes with a sticky session or get a new IP address with each request.
+      </p>
+
+      {/* Buttons to Select Session Type */}
+      <div className="flex items-center gap-4 mt-4">
+        <button
+          className={`px-4 py-2 border rounded-md ${
+            sessionType === "rotating" ? "bg-green-50 text-green-700" : "bg-gray-100 text-gray-600"
+          }`}
+          onClick={() => setSessionType("rotating")}
+        >
+          Rotating
+        </button>
+        <button
+          className={`px-4 py-2 border rounded-md ${
+            sessionType === "sticky" ? "bg-green-50 text-green-700" : "bg-gray-100 text-gray-600"
+          }`}
+          onClick={() => setSessionType("sticky")}
+        >
+          Sticky Session
+        </button>
+      </div>
+
+      {/* Conditional Rendering Based on Selected Session Type */}
+      {sessionType === "sticky" ? (
+        <div className="mt-4">
+          <label className="text-sm text-gray-600">Lifetime (minutes)</label>
+          <input
+            type="number"
+            defaultValue={60}
+            className="w-full p-2 border rounded-md mt-2"
+          />
+        </div>
+      ) : (
+        <div className="mt-4 text-sm text-gray-600">
+          <p>
+            If proxies are set as <span className="font-bold text-green-600">rotating</span>, they will rotate with each request, and you will get a new IP from the pool every second, based on your settings.
+          </p>
+        </div>
+      )}
+    </div>
           </div>
         </div>
 
@@ -198,25 +221,22 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
           </div>
 
           {/* Proxy Details Box */}
-          <div className="p-6 bg-black text-white rounded-lg shadow-md space-y-4">
-            <div className="flex items-center justify-between">
+          <div className="p-6 bg-black text-white rounded-lg shadow-md">
+            <div className="flex items-center justify-between mb-2">
               <p className="text-sm">{`Plan ID: ${plan.planId}`}</p>
               <div className="flex gap-2">
-                <button className="px-2 py-1 bg-gray-700 rounded-md">
-                  COPY
-                </button>
-                <button className="px-2 py-1 bg-gray-700 rounded-md">
-                  DOWNLOAD
-                </button>
+                <button className="px-2 py-1 bg-gray-700 rounded-md hover:bg-gray-600 text-sm">COPY</button>
+                <button className="px-2 py-1 bg-gray-700 rounded-md hover:bg-gray-600 text-sm">DOWNLOAD</button>
               </div>
             </div>
-            <pre className="text-sm">
-              Residential-
-              <span className="text-green-500">Www.Catproxies.Com</span>:16666:
-              Quzymgdycnvny94326-Zone-Resi:
-              <span className="text-yellow-500">Xkqzdjzsu</span>
-            </pre>
-          </div>
+            <div className="overflow-x-auto max-h-40 bg-gray-800 p-4 rounded-lg">
+              <pre className="text-sm text-green-400 whitespace-pre-wrap break-words">
+                Residential-
+                <span className="text-blue-400">Www.Catproxies.Com</span>:16666:Quzymgdycnvny94326-Zone-Resi:
+                <span className="text-yellow-400">Xkqzdjzsu</span>
+              </pre>
+            </div>
+            </div>
         </div>
       </div>
     </DashboardLayout>
