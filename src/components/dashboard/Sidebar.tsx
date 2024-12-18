@@ -12,15 +12,15 @@ import {
   Settings,
   DollarSign,
   Package,
-  Menu,
   X,
 } from "lucide-react";
 import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
-import { useState } from "react";
 
 interface SidebarProps {
   activePath: string;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 const sidebarItems = [
@@ -111,22 +111,12 @@ const sidebarItems = [
   },
 ];
 
-const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
-  const [isOpen, setIsOpen] = useState(false); // State to toggle sidebar
-
+const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
   return (
     <>
-      {/* Hamburger Menu for Mobile */}
-      <button
-        className="fixed top-44 left-4 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg lg:hidden"
-        onClick={() => setIsOpen(true)}
-      >
-        <Menu className="w-6 h-6" />
-      </button>
-
       {/* Sidebar */}
       <aside
-        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-1/5 lg:h-screen lg:opacity-100 lg:scale-100 lg:pointer-events-auto ${
+        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-64 lg:h-screen lg:opacity-100 lg:scale-100 ${
           isOpen
             ? "scale-100 opacity-100 pointer-events-auto"
             : "scale-95 opacity-0 pointer-events-none lg:pointer-events-auto"
@@ -135,7 +125,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
         {/* Close Button for Mobile */}
         <button
           className="absolute top-4 right-4 p-2 text-gray-600 hover:bg-gray-200 rounded-full lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         >
           <X className="w-6 h-6" />
         </button>
@@ -149,51 +139,42 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
           </div>
 
           {/* Dashboard Link */}
-          <p className="text-xs font-semibold text-gray-500 mt-12">MAIN MENU</p>
+          <p className="text-xs font-semibold text-gray-500">MAIN MENU</p>
           <Link
             href="/dashboard"
-            className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 mt-6 transition ${
+            className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 mt-4 transition ${
               activePath === "/dashboard" ? "bg-green-50 text-green-500" : "text-gray-800"
             }`}
           >
-            <Home className="w-8 h-8 text-white p-1 bg-green-500 rounded-md" />
-            <span className="text-lg font-medium">Dashboard</span>
+            <Home className="w-5 h-5" />
+            <span className="font-medium">Dashboard</span>
           </Link>
 
           {/* Sidebar Items */}
-          <div className="space-y-8 mt-6">
+          <div className="mt-6 space-y-8">
             {sidebarItems.map((group, groupIndex) => (
               <div key={groupIndex} className="space-y-4">
                 {group.sections.map((item, index) =>
                   item.subItems ? (
                     <Accordion type="single" collapsible key={index}>
                       <AccordionItem value={item.name}>
-                        <AccordionTrigger
-                          className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
-                            activePath === item.href ? "bg-green-50 text-green-500" : "text-gray-800"
-                          }`}
-                        >
+                        <AccordionTrigger className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition">
                           {item.icon}
                           <span className="font-medium">{item.name}</span>
                         </AccordionTrigger>
-                        <AccordionContent className="ml-8 mt-2">
-                          <ul className="space-y-0">
-                            {item.subItems.map((subItem, subIndex) => (
-                              <li key={subIndex}>
-                                <Link
-                                  href={subItem.href}
-                                  className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
-                                    activePath === subItem.href
-                                      ? "text-green-500"
-                                      : "text-gray-600"
-                                  }`}
-                                >
-                                  {subItem.icon}
-                                  <span className="text-sm">{subItem.name}</span>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
+                        <AccordionContent className="ml-6">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={subItem.href}
+                              className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
+                                activePath === subItem.href ? "text-green-500" : "text-gray-600"
+                              }`}
+                            >
+                              {subItem.icon}
+                              <span className="text-sm">{subItem.name}</span>
+                            </Link>
+                          ))}
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
@@ -218,20 +199,20 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
           <div className="mt-12">
             <Link
               href="/logout"
-              className="flex items-center gap-3 px-4 py-2 text-red-500 hover:bg-red-50 rounded-md transition"
+              className="flex items-center gap-3 px-3 py-2 text-red-500 hover:bg-red-50 rounded-md transition"
             >
               <LogOut className="w-5 h-5" />
-              <span className="font-medium">Logout</span>
+              <span>Logout</span>
             </Link>
           </div>
         </div>
       </aside>
 
-      {/* Background Overlay for Mobile */}
+      {/* Translucent Background Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         ></div>
       )}
     </>
