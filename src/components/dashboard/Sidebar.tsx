@@ -146,8 +146,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
               activePath === "/dashboard" ? "bg-green-50 text-green-500" : "text-gray-800"
             }`}
           >
-            <Home className="w-5 h-5" />
-            <span className="font-medium">Dashboard</span>
+            <Home className="w-7 h-7 bg-green-400 p-1 text-white rounded-md" />
+            <span className="font-semibold">Dashboard</span>
           </Link>
 
           {/* Sidebar Items */}
