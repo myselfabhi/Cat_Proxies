@@ -31,7 +31,7 @@ const Contactus_db = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 container w-screen mx-auto px-4 py-8">
+      <div className="space-y-8 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-gray-800">
           <h1 className="text-2xl font-bold">Contact Us</h1>

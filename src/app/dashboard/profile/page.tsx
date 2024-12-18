@@ -26,7 +26,7 @@ export default function ProfilePage() {
 
   return (
     <DashboardLayout>
-      <div className="flex space-x-8 w-screen container">
+      <div className="flex space-x-8 container">
         {/* Sidebar */}
         <div className=" w-1/5 bg-white rounded-lg shadow-md p-4">
           <ul className="space-y-2">

@@ -62,7 +62,7 @@ const Invoices = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 w-screen container">
+      <div className="space-y-8 container">
         {/* Header */}
         <div className="text-gray-800">
           <h1 className="text-2xl font-semibold mt-4">Orders</h1>

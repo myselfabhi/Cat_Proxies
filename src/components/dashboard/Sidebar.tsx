@@ -116,112 +116,121 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath }) => {
 
   return (
     <>
-      {/* Hamburger Menu for Smaller Screens */}
+      {/* Hamburger Menu for Mobile */}
       <button
-        className="fixed top-4 left-4 z-50 p-2 bg-gray-100 rounded-md lg:hidden"
-        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-32 left-4 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg lg:hidden"
+        onClick={() => setIsOpen(true)}
       >
-        {isOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+        <Menu className="w-6 h-6" />
       </button>
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-screen w-68 bg-cream-800 px-6 py-8 overflow-y-auto z-50 transform transition-transform lg:translate-x-0 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-1/5 lg:h-screen lg:opacity-100 lg:scale-100 lg:pointer-events-auto ${
+          isOpen
+            ? "scale-100 opacity-100 pointer-events-auto"
+            : "scale-95 opacity-0 pointer-events-none lg:pointer-events-auto"
         }`}
       >
-        {/* Logo Section */}
-        <div className="flex items-center gap-3 mb-6">
-          <img src="/logo.svg" alt="Cat Proxies" className="w-16 h-16" />
-          <h1 className="text-lg font-semibold text-gray-800">Cat Proxies</h1>
-        </div>
-
-        {/* Dashboard Link */}
-        <p className="text-xs font-semibold text-gray-500 mt-12">MAIN MENU</p>
-        <Link
-          href="/dashboard"
-          className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 mt-6 transition ${
-            activePath === "/dashboard"
-          }`}
+        {/* Close Button for Mobile */}
+        <button
+          className="absolute top-4 right-4 p-2 text-gray-600 hover:bg-gray-200 rounded-full lg:hidden"
+          onClick={() => setIsOpen(false)}
         >
-          <Home className="w-8 h-8 text-white p-1 bg-green-500 rounded-md " />
-          <span className="text-lg font-medium">Dashboard</span>
-        </Link>
+          <X className="w-6 h-6" />
+        </button>
 
-        {/* Sidebar Items */}
-        <div className="mt-6 space-y-4">
-          {sidebarItems.map((group, groupIndex) => (
-            <div key={groupIndex} className="space-y-6">
-              {group.sections.map((item, index) =>
-                item.subItems ? (
-                  <Accordion type="single" collapsible key={index}>
-                    <AccordionItem value={item.name}>
-                      <AccordionTrigger
-                        className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
-                          activePath === item.href
-                            ? "bg-green-50 text-green-500"
-                            : "text-gray-800"
-                        }`}
-                      >
-                        {item.icon}
-                        <span className=" font-medium ">{item.name}</span>
-                      </AccordionTrigger>
-                      <AccordionContent className="ml-8 mt-2">
-                        <ul className="space-y-0">
-                          {item.subItems.map((subItem, subIndex) => (
-                            <li key={subIndex}>
-                              <Link
-                                href={subItem.href}
-                                className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
-                                  activePath === subItem.href
-                                    ? "text-green-500"
-                                    : "text-gray-600"
-                                }`}
-                              >
-                                {subItem.icon}
-                                <span className="text-sm">{subItem.name}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                ) : (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
-                      activePath === item.href
-                        ? "bg-green-50 text-green-500"
-                        : "text-gray-800"
-                    }`}
-                  >
-                    {item.icon}
-                    <span className=" font-medium">{item.name}</span>
-                  </Link>
-                )
-              )}
-            </div>
-          ))}
-        </div>
+        {/* Sidebar Content */}
+        <div className="px-6 py-8">
+          {/* Logo */}
+          <div className="flex items-center gap-3 mb-8">
+            <img src="/logo.svg" alt="Cat Proxies" className="w-12 h-12" />
+            <h1 className="text-lg font-semibold text-gray-800">Cat Proxies</h1>
+          </div>
 
-        {/* Logout Button */}
-        <div className="absolute bottom-6 left-4">
+          {/* Dashboard Link */}
+          <p className="text-xs font-semibold text-gray-500 mt-12">MAIN MENU</p>
           <Link
-            href="/logout"
-            className="flex items-center gap-3 px-3 py-2 text-sm font-medium text-red-500 hover:bg-red-50 rounded-md"
+            href="/dashboard"
+            className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 mt-6 transition ${
+              activePath === "/dashboard" ? "bg-green-50 text-green-500" : "text-gray-800"
+            }`}
           >
-            <LogOut className="w-5 h-5" />
-            Logout
+            <Home className="w-8 h-8 text-white p-1 bg-green-500 rounded-md" />
+            <span className="text-lg font-medium">Dashboard</span>
           </Link>
+
+          {/* Sidebar Items */}
+          <div className="space-y-8 mt-6">
+            {sidebarItems.map((group, groupIndex) => (
+              <div key={groupIndex} className="space-y-4">
+                {group.sections.map((item, index) =>
+                  item.subItems ? (
+                    <Accordion type="single" collapsible key={index}>
+                      <AccordionItem value={item.name}>
+                        <AccordionTrigger
+                          className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
+                            activePath === item.href ? "bg-green-50 text-green-500" : "text-gray-800"
+                          }`}
+                        >
+                          {item.icon}
+                          <span className="font-medium">{item.name}</span>
+                        </AccordionTrigger>
+                        <AccordionContent className="ml-8 mt-2">
+                          <ul className="space-y-0">
+                            {item.subItems.map((subItem, subIndex) => (
+                              <li key={subIndex}>
+                                <Link
+                                  href={subItem.href}
+                                  className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
+                                    activePath === subItem.href
+                                      ? "text-green-500"
+                                      : "text-gray-600"
+                                  }`}
+                                >
+                                  {subItem.icon}
+                                  <span className="text-sm">{subItem.name}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  ) : (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 transition ${
+                        activePath === item.href ? "bg-green-50 text-green-500" : "text-gray-800"
+                      }`}
+                    >
+                      {item.icon}
+                      <span className="font-medium">{item.name}</span>
+                    </Link>
+                  )
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Logout Button */}
+          <div className="mt-12">
+            <Link
+              href="/logout"
+              className="flex items-center gap-3 px-4 py-2 text-red-500 hover:bg-red-50 rounded-md transition"
+            >
+              <LogOut className="w-5 h-5" />
+              <span className="font-medium">Logout</span>
+            </Link>
+          </div>
         </div>
       </aside>
 
-      {/* Background Overlay for Mobile View */}
+      {/* Background Overlay for Mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-25 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}

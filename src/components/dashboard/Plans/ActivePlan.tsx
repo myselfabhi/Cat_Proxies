@@ -91,7 +91,7 @@ const plansData = {
 const ActivePlans = () => {
   return (
     <DashboardLayout>
-      <div className="space-y-8 w-screen container mx-auto px-4">
+      <div className="space-y-8 container mx-auto px-4">
         {/* Active Plans Section */}
         <div className="space-y-6">
           <h2 className="text-lg font-semibold text-gray-700">Active Plans</h2>
