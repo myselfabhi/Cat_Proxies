@@ -46,9 +46,9 @@ const PurchasePlan = () => {
     <DashboardLayout>
       <div className="container mx-auto px-4 space-y-8 py-8">
         {/* Header Section */}
-        <div className="text-gray-800 text-center md:text-left">
+        <div className="text-gray-800 dark:text-gray-100 text-center md:text-left">
           <h1 className="text-2xl font-bold">Pricing Plans</h1>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             Boost security with proxies, shielding your network, filtering
             traffic, and preserving anonymity online.
           </p>
@@ -63,7 +63,7 @@ const PurchasePlan = () => {
               className={`flex-1 text-center px-4 py-2 rounded-lg font-medium transition-all ${
                 selectedTab === tab
                   ? "bg-[#fd980c] text-white"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
               }`}
             >
               {tab}
@@ -79,28 +79,32 @@ const PurchasePlan = () => {
               {plansData.map((plan) => (
                 <div
                   key={plan.id}
-                  className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between"
+                  className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-lg font-bold text-gray-800">
+                      <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">
                         {plan.title}
                       </h2>
                       <div className="flex flex-col items-end">
-                        <p className="text-lg font-semibold text-black">
+                        <p className="text-lg font-semibold text-black dark:text-white">
                           {plan.price}
                         </p>
-                        <p className="text-sm text-gray-500">{plan.duration}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          {plan.duration}
+                        </p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-600">{plan.description}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {plan.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Right Section */}
-            <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md flex flex-col items-center space-y-6">
+            <div className="lg:col-span-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-center space-y-6">
               <div className="bg-green-500 text-white text-xs font-bold uppercase px-2 py-1 rounded-full">
                 Most Popular
               </div>
@@ -108,7 +112,9 @@ const PurchasePlan = () => {
                 <p className="text-4xl font-bold text-orange-500">
                   ${bandwidthPrice}
                 </p>
-                <p className="text-sm text-gray-600 ml-2">/ per month</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 ml-2">
+                  / per month
+                </p>
               </div>
               <input
                 type="range"
@@ -116,16 +122,22 @@ const PurchasePlan = () => {
                 max="50"
                 value={bandwidthPrice}
                 onChange={(e) => setBandwidthPrice(parseInt(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
                 style={{
-                  background: `linear-gradient(to right, #fd980c ${(bandwidthPrice - 10) * 2}%, #e5e5e5 ${(bandwidthPrice - 10) * 2}%)`,
+                  background: `linear-gradient(to right, #fd980c ${
+                    (bandwidthPrice - 10) * 2
+                  }%, ${
+                    bandwidthPrice >= 50
+                      ? "#e5e5e5"
+                      : "rgba(255, 255, 255, 0.1)"
+                  } ${(bandwidthPrice - 10) * 2}%)`,
                 }}
                 aria-label="Bandwidth Price Slider"
               />
-              <p className="text-sm font-medium text-gray-700 text-center">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
                 Up To 5GB Emails / mo <br /> No daily sending limit
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-600 text-left">
+              <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400 text-left">
                 <li>✔️ 10M+ Real Residential Peers</li>
                 <li>✔️ IP & User-Pass Authentication</li>
                 <li>✔️ Country, State, City & ISP Targeting</li>
@@ -135,7 +147,7 @@ const PurchasePlan = () => {
             </div>
           </div>
         ) : (
-          <div className="text-center text-gray-600 text-lg py-20">
+          <div className="text-center text-gray-600 dark:text-gray-400 text-lg py-20">
             No plans available for {selectedTab}.
           </div>
         )}
