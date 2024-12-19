@@ -30,14 +30,18 @@ const PlansSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8fbf9] rounded-2xl shadow-md px-6 py-7 mb-10">
+    <div className="w-full bg-[#f8fbf9] dark:bg-gray-800 rounded-2xl shadow-md px-6 py-7 mb-10">
       {/* Header */}
       <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
-        <h2 className="text-lg font-bold text-gray-800">My Plans</h2>
+        <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200">
+          My Plans
+        </h2>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600">Plan type:</span>
+          <span className="text-sm text-gray-600 dark:text-gray-400">
+            Plan type:
+          </span>
           <select
-            className="text-sm font-medium text-gray-700 border-none bg-transparent focus:outline-none"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300 dark:bg-gray-700 border-none rounded-md p-1 bg-transparent focus:outline-none"
             defaultValue="ongoing"
           >
             <option value="ongoing">Ongoing</option>
@@ -51,7 +55,7 @@ const PlansSection = () => {
         {plansData.map((plan) => (
           <div
             key={plan.id}
-            className="bg-[#fffefe] rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow flex flex-col space-y-6"
+            className="bg-[#fffefe] dark:bg-gray-700 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow flex flex-col space-y-6"
           >
             {/* Left and Right Section */}
             <div className="flex flex-wrap justify-between items-center gap-4">
@@ -59,35 +63,47 @@ const PlansSection = () => {
               <div className="flex items-center gap-4">
                 <div className={`w-6 h-6 rounded-full ${plan.color}`}></div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700">{`Plan ID ${plan.id}`}</p>
-                  <p className="text-md font-bold text-gray-900">{plan.name}</p>
+                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{`Plan ID ${plan.id}`}</p>
+                  <p className="text-md font-bold text-gray-900 dark:text-gray-100">
+                    {plan.name}
+                  </p>
                 </div>
               </div>
 
               {/* Right Section */}
               <div className="flex flex-col sm:flex-row items-end sm:items-center text-right gap-1 sm:gap-3">
-                <p className="text-2xl font-semibold text-gray-900">{plan.price}</p>
-                <p className="text-sm text-gray-500">per year</p>
+                <p className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+                  {plan.price}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  per year
+                </p>
               </div>
             </div>
 
             {/* Middle Section */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <p className="text-sm text-gray-600">Bandwidth Left:</p>
-                <p className="text-sm font-medium text-gray-800">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Bandwidth Left:
+                </p>
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
                   {plan.bandwidth}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-600">Status:</p>
-                <p className="text-sm font-medium text-gray-800">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Status:
+                </p>
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
                   {plan.status}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-600">Due Date:</p>
-                <p className="text-sm font-medium text-gray-800">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Due Date:
+                </p>
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
                   {plan.dueDate}
                 </p>
               </div>

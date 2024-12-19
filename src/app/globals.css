@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.sidebar-container::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: #9ca3af; /* Gray thumb color */
+  border-radius: 3px; /* Rounded scrollbar thumb */
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* Darker thumb color on hover */
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Light track color */
+}
+
+
 .tooltip {
   position: relative;
   display: inline-block;
