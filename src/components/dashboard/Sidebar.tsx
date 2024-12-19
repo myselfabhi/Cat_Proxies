@@ -107,7 +107,7 @@ const sidebarItems = [
           },
           {
             name: "Integrations",
-            href: "/dashboard/support/wintegrations",
+            href: "/dashboard/support/integrations",
             icon: <Folder className="w-4 h-4 text-purple-500" />,
           },
         ],
