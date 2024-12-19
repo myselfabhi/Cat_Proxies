@@ -1,4 +1,4 @@
-import DashboardLayout from "@/components/layout";
+import DashboardLayout from "@/components/DashboardLayout";
 import Link from "next/link";
 
 const plansData = {

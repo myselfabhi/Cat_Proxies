@@ -1,7 +1,7 @@
 "use client";
 
 import { CreditCard, Phone } from "lucide-react";
-import DashboardLayout from "../layout";
+import DashboardLayout from "../DashboardLayout";
 
 const Invoices = () => {
   const invoiceData: any[] = [

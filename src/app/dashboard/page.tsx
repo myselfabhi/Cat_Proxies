@@ -1,7 +1,7 @@
 import NewsSection from "@/components/dashboard/NewsSection";
 import Cards from "@/components/dashboard/Cards";
 import PlansSection from "@/components/dashboard/PlansSection";
-import DashboardLayout from "@/components/layout";
+import DashboardLayout from "@/components/DashboardLayout";
 
 const Dashboard = () => {
   return (

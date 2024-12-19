@@ -24,7 +24,7 @@ export default function RootLayout({
     "/dashboard/get-bonus",
     "/dashboard/contact-us",
     "/dashboard/invoices",
-    "/dashboard/profile",
+    "/dashboard/settings",
   ]
 
   const shouldShowLayout =

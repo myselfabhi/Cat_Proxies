@@ -1,6 +1,6 @@
 "use client";
 
-import DashboardLayout from "@/components/layout";
+import DashboardLayout from "@/components/DashboardLayout";
 import { useState } from "react";
 
 interface PlanDetailsProps {

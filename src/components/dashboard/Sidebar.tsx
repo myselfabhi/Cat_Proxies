@@ -67,7 +67,7 @@ const sidebarItems = [
         subItems: [
           {
             name: "Settings",
-            href: "/dashboard/profile",
+            href: "/dashboard/settings",
             icon: <Settings className="w-4 h-4 text-purple-500" />,
           },
           {

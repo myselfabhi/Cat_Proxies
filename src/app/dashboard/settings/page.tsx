@@ -5,9 +5,9 @@ import Offers from "@/components/dashboard/accounts/profile/Offers-form";
 import Preferences from "@/components/dashboard/accounts/profile/Preferences-form";
 import Social from "@/components/dashboard/accounts/profile/Social-form";
 import Verify from "@/components/dashboard/accounts/profile/Verify-form";
-import DashboardLayout from "@/components/layout";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import DashboardLayout from "@/components/DashboardLayout";
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState("General");

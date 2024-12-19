@@ -1,6 +1,6 @@
 "use client";
 
-import DashboardLayout from "../../layout";
+import DashboardLayout from "../../DashboardLayout";
 import { useState } from "react";
 
 const PurchasePlan = () => {
