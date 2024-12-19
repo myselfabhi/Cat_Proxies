@@ -19,12 +19,12 @@ export default function RootLayout({
   const pathname = usePathname()
   const noLayoutRoutes = [
     "/dashboard",
-    "/dashboard/activeplan",
-    "/dashboard/purchase-plan",
-    "/dashboard/get-bonus",
-    "/dashboard/contact-us",
+    "/dashboard/my-plans/active-plans",
+    "/dashboard/my-plans/purchase-plan",
+    "/dashboard/my-account/get-bonus",
+    "/dashboard/support/contact-us",
     "/dashboard/invoices",
-    "/dashboard/settings",
+    "/dashboard/my-account/settings",
     "/dashboard/deposit-balance",
     "/dashboard/support/guide",
     "/dashboard/support/integrations",

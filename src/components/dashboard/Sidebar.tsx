@@ -42,12 +42,12 @@ const sidebarItems = [
         subItems: [
           {
             name: "Active Plans",
-            href: "/dashboard/activeplan",
+            href: "/dashboard/my-plans/active-plans",
             icon: <Package className="w-4 h-4 text-purple-500" />,
           },
           {
             name: "Purchase Plans",
-            href: "/dashboard/purchase-plan",
+            href: "/dashboard/my-plans/purchase-plan",
             icon: <Package className="w-4 h-4 text-purple-500" />,
           },
         ],
@@ -67,12 +67,12 @@ const sidebarItems = [
         subItems: [
           {
             name: "Settings",
-            href: "/dashboard/settings",
+            href: "/dashboard/my-account/settings",
             icon: <Settings className="w-4 h-4 text-purple-500" />,
           },
           {
             name: "Get Bonus",
-            href: "/dashboard/get-bonus",
+            href: "/dashboard/my-account/get-bonus",
             icon: <Gift className="w-4 h-4 text-purple-500" />,
           },
         ],
@@ -107,7 +107,7 @@ const sidebarItems = [
           },
           {
             name: "Integrations",
-            href: "/dashboard/integrations",
+            href: "/dashboard/support/wintegrations",
             icon: <Folder className="w-4 h-4 text-purple-500" />,
           },
         ],
