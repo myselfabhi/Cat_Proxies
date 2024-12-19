@@ -7,11 +7,11 @@ import Social from "@/components/dashboard/accounts/profile/Social-form";
 import Verify from "@/components/dashboard/accounts/profile/Verify-form";
 import DashboardLayout from "@/components/layout";
 import { useState } from "react";
-import { Menu } from "lucide-react"; // Icon for dropdown menu
+import { Menu } from "lucide-react";
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState("General");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Mobile dropdown toggle
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const tabs = [
     { id: "General", component: <General /> },
@@ -30,20 +30,20 @@ export default function ProfilePage() {
         <div className="md:hidden mb-4">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center justify-between w-full p-3 bg-white rounded-lg shadow-md text-gray-700 font-medium"
+            className="flex items-center justify-between w-full p-3 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md text-gray-700 font-medium"
           >
             {activeTab}
             <Menu className="w-5 h-5" />
           </button>
           {isDropdownOpen && (
-            <ul className="mt-2 bg-white rounded-lg shadow-md">
+            <ul className="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
-                  className={`cursor-pointer py-2 px-4 hover:bg-green-100 ${
+                  className={`cursor-pointer py-2 px-4 hover:bg-green-100 dark:hover:bg-green-900 ${
                     activeTab === tab.id
-                      ? "bg-green-100 text-green-600 font-medium"
-                      : "text-gray-800"
+                      ? "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 font-medium"
+                      : "text-gray-800 dark:text-gray-300"
                   }`}
                   onClick={() => {
                     setActiveTab(tab.id);
@@ -60,15 +60,15 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white rounded-lg shadow-md p-4">
+          <div className="hidden md:block md:w-1/4 bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
                   className={`cursor-pointer py-2 px-4 rounded-md ${
                     activeTab === tab.id
-                      ? "bg-green-100 text-green-600 font-medium"
-                      : "text-gray-800"
+                      ? "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 font-medium"
+                      : "text-gray-800 dark:text-gray-300"
                   }`}
                   onClick={() => setActiveTab(tab.id)}
                 >
@@ -79,7 +79,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Main Content */}
-          <div className="w-full md:w-3/4 bg-white rounded-lg shadow-md p-6">
+          <div className="w-full md:w-3/4 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             {currentTab}
           </div>
         </div>

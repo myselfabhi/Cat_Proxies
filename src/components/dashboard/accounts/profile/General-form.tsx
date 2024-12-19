@@ -30,8 +30,10 @@ export default function General() {
           className="w-24 h-24 mr-4 md:w-16 md:h-16 rounded-full"
         />
         <div className="text-center md:text-left mt-4 md:mt-0">
-          <h2 className="text-lg font-bold text-gray-800">{formData.displayName}</h2>
-          <p className="text-sm text-gray-600">{formData.email}</p>
+          <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200">
+            {formData.displayName}
+          </h2>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{formData.email}</p>
         </div>
       </div>
 
@@ -40,23 +42,27 @@ export default function General() {
         {/* Name and Email */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-600">Display Name</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              Display Name
+            </label>
             <input
               type="text"
               name="displayName"
               value={formData.displayName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Email</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              Email
+            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>
@@ -64,58 +70,68 @@ export default function General() {
         {/* First Name and Last Name */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-600">First Name</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              First Name
+            </label>
             <input
               type="text"
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Last Name</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              Last Name
+            </label>
             <input
               type="text"
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>
 
         {/* Address */}
         <div>
-          <label className="block text-sm font-medium text-gray-600">Address</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+            Address
+          </label>
           <input
             type="text"
             name="address"
             value={formData.address}
             onChange={handleInputChange}
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+            className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
           />
         </div>
 
         {/* Date of Birth and Country */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-600">Date of Birth</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              Date of Birth
+            </label>
             <input
               type="date"
               name="dateOfBirth"
               value={formData.dateOfBirth}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Country of Residence</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-400">
+              Country of Residence
+            </label>
             <select
               name="country"
               value={formData.country}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
+              className="mt-1 w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="United Kingdom">United Kingdom</option>
               <option value="United States">United States</option>
@@ -125,15 +141,17 @@ export default function General() {
         </div>
 
         {/* Close Account */}
-        <div className="bg-red-50 p-4 rounded-lg border border-red-200 space-y-2">
-          <h3 className="text-sm font-medium text-red-600">Close Account</h3>
-          <p className="text-xs text-red-500">
+        <div className="bg-red-50 dark:bg-red-900 p-4 rounded-lg border border-red-200 dark:border-red-800 space-y-2">
+          <h3 className="text-sm font-medium text-red-600 dark:text-red-400">
+            Close Account
+          </h3>
+          <p className="text-xs text-red-500 dark:text-red-300">
             Closing your account can’t be undone. Please make sure your account balance is
             $0.00 before you begin.
           </p>
           <button
             type="button"
-            className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md font-medium hover:bg-red-600"
+            className="mt-4 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium"
           >
             Close Account
           </button>
