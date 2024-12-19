@@ -33,7 +33,7 @@ const sidebarItems = [
     sections: [
       {
         name: "Deposit Balance",
-        href: "/dashboard/deposit",
+        href: "/dashboard/page-not-found",
         icon: <DollarSign className="w-5 h-5 text-green-500" />,
       },
       {
@@ -79,12 +79,12 @@ const sidebarItems = [
       },
       {
         name: "Discord Server",
-        href: "/dashboard/discord",
+        href: "/dashboard/page-not-found",
         icon: <MessageCircle className="w-5 h-5 text-green-500" />,
       },
       {
         name: "Telegram ",
-        href: "/dashboard/telegram",
+        href: "/dashboard/page-not-found",
         icon: <Phone className="w-5 h-5 text-green-500" />,
       },
     ],
@@ -97,7 +97,7 @@ const sidebarItems = [
         subItems: [
           {
             name: "Guide",
-            href: "/dashboard/support/guide",
+            href: "/dashboard/page-not-found",
             icon: <File className="w-4 h-4 text-green-500" />,
           },
           {
@@ -107,7 +107,7 @@ const sidebarItems = [
           },
           {
             name: "Integrations",
-            href: "/dashboard/support/integrations",
+            href: "/dashboard/page-not-found",
             icon: <Folder className="w-4 h-4 text-purple-500" />,
           },
         ],

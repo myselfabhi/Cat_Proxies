@@ -25,6 +25,7 @@ export default function RootLayout({
     "/dashboard/contact-us",
     "/dashboard/invoices",
     "/dashboard/settings",
+    "/dashboard/page-not-found",
   ]
 
   const shouldShowLayout =
