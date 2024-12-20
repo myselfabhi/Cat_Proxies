@@ -2,17 +2,14 @@
 
 import {
   LogOut,
-  Home,
-  File,
-  Folder,
-  Gift,
-  MessageCircle,
-  Phone,
-  Bell,
-  Settings,
-  DollarSign,
-  Package,
+  Home, Settings, Package,
   X,
+  WalletIcon,
+  User,
+  Bookmark,
+  Bell,
+  Headphones,
+  CircleDashed
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -21,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import { FaDiscord, FaGuilded, FaTelegram } from "react-icons/fa6";
 
 interface SidebarProps {
   activePath: string;
@@ -34,11 +32,12 @@ const sidebarItems = [
       {
         name: "Deposit Balance",
         href: "/dashboard/deposit-balance",
-        icon: <DollarSign className="w-5 h-5 text-green-500" />,
+        icon: <WalletIcon className="w-5 h-5 text-green-500" />,
       },
+      
       {
         name: "My Plans",
-        icon: <Folder className="w-5 h-5 text-green-500" />,
+        icon: <Bookmark className="w-5 h-5 text-green-500" />,
         subItems: [
           {
             name: "Active Plans",
@@ -48,14 +47,14 @@ const sidebarItems = [
           {
             name: "Purchase Plans",
             href: "/dashboard/my-plans/purchase-plan",
-            icon: <Package className="w-4 h-4 text-purple-500" />,
+            icon: <Package className="w-4 h-4 text-blue-600" />,
           },
         ],
       },
       {
         name: "Invoices",
         href: "/dashboard/invoices",
-        icon: <File className="w-5 h-5 text-green-500" />,
+        icon: <WalletIcon className="w-5 h-5 text-green-500" />,
       },
     ],
   },
@@ -63,7 +62,7 @@ const sidebarItems = [
     sections: [
       {
         name: "My Account",
-        icon: <Settings className="w-5 h-5 text-green-500" />,
+        icon: <User className="w-5 h-5 text-green-500" />,
         subItems: [
           {
             name: "Settings",
@@ -73,19 +72,19 @@ const sidebarItems = [
           {
             name: "Get Bonus",
             href: "/dashboard/my-account/get-bonus",
-            icon: <Gift className="w-4 h-4 text-purple-500" />,
+            icon: <Bell className="w-4 h-4 text-purple-500" />,
           },
         ],
       },
       {
         name: "Discord Server",
         href: "https://discord.com/",
-        icon: <MessageCircle className="w-5 h-5 text-green-500" />,
+        icon: <FaDiscord className="w-5 h-5 text-green-500" />,
       },
       {
         name: "Telegram ",
         href: "https://t.me/catproxies",
-        icon: <Phone className="w-5 h-5 text-green-500" />,
+        icon: <FaTelegram className="w-5 h-5 text-green-500" />,
       },
     ],
   },
@@ -93,22 +92,22 @@ const sidebarItems = [
     sections: [
       {
         name: "Support",
-        icon: <Bell className="w-5 h-5 text-green-500" />,
+        icon: <User className="w-5 h-5 text-green-500" />,
         subItems: [
           {
             name: "Guide",
             href: "/dashboard/support/guide",
-            icon: <File className="w-4 h-4 text-green-500" />,
+            icon: <FaGuilded className="w-4 h-4 text-green-500" />,
           },
           {
             name: "Contact Us",
             href: "/dashboard/support/contact-us",
-            icon: <MessageCircle className="w-4 h-4 text-pink-500" />,
+            icon: <Headphones className="w-4 h-4 text-pink-500" />,
           },
           {
             name: "Integrations",
             href: "/dashboard/support/integrations",
-            icon: <Folder className="w-4 h-4 text-purple-500" />,
+            icon: <CircleDashed className="w-4 h-4 text-purple-500 " />,
           },
         ],
       },
@@ -139,26 +138,26 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
         <div className="px-6 py-8">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-8">
-            <img src="/logo.svg" alt="Cat Proxies" className="w-12 h-12" />
-            <h1 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <img src="/logo.svg" alt="Cat Proxies" className="w-10 h-11" />
+            <h1 className="text-base font-medium text-gray-800 dark:text-gray-200">
               Cat Proxies
             </h1>
           </div>
 
           {/* Dashboard Link */}
-          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400">
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
             MAIN MENU
           </p>
           <Link
             href="/dashboard"
             className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 mt-4 transition ${
               activePath === "/dashboard"
-                ? "bg-green-50 dark:bg-gray-700 text-green-500 dark:text-green-300"
+                ? " dark:bg-gray-700 dark:text-green-300"
                 : "text-gray-800 dark:text-gray-300"
             }`}
           >
-            <Home className="w-7 h-7 bg-green-400 p-1 text-white rounded-md" />
-            <span className="font-semibold">Dashboard</span>
+            <Home className="w-8 h-8 bg-[#05C067] p-2 text-white rounded-md" />
+            <span className="font-medium text-sm">Dashboard</span>
           </Link>
 
           {/* Sidebar Items */}
@@ -169,9 +168,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                   item.subItems ? (
                     <Accordion type="single" collapsible key={index}>
                       <AccordionItem value={item.name}>
-                        <AccordionTrigger className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 transition">
+                        <AccordionTrigger className="flex items-center gap-3 px-3 py-2 rounded-md  dark:hover:bg-gray-700 ">
                           {item.icon}
-                          <span className="font-medium">{item.name}</span>
+                          <span className="text-sm font-normal ">{item.name}</span>
                         </AccordionTrigger>
                         <AccordionContent className="ml-6">
                           {item.subItems.map((subItem, subIndex) => (
@@ -180,7 +179,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                               href={subItem.href}
                               className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 transition ${
                                 activePath === subItem.href
-                                  ? "text-green-500 dark:text-green-300"
+                                  ? "text-white bg-[#05C067] rounded-full p-1 dark:text-green-300"
                                   : "text-gray-600 dark:text-gray-400"
                               }`}
                             >
@@ -197,12 +196,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                       href={item.href}
                       className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 transition ${
                         activePath === item.href
-                          ? "bg-green-50 dark:bg-gray-700 text-green-500 dark:text-green-300"
+                          ? "dark:bg-gray-700 text-green-500 dark:text-green-300"
                           : "text-gray-800 dark:text-gray-300"
                       }`}
                     >
                       {item.icon}
-                      <span className="font-medium">{item.name}</span>
+                      <span className="text-sm">{item.name}</span>
                     </Link>
                   )
                 )}
