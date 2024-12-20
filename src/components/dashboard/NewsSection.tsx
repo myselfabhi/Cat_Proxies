@@ -9,19 +9,17 @@ const NewsItem = ({
 }) => {
   return (
     <div className="flex flex-col sm:flex-row items-start gap-4 py-5">
-      {/* Image */}
       <img
         src={image}
         alt={title}
-        className="w-full sm:w-20 sm:h-20 rounded-md object-cover"
+        className="w-full lg:w-20 lg:h-16 sm:w-20 sm:h-20 rounded-md object-cover"
       />
 
-      {/* Text Content */}
       <div className="flex-1">
-        <h3 className="text-md font-semibold text-gray-800 dark:text-gray-200 mb-1">
+        <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+        <p className="text-xs text-[#A8A8A8] dark:text-gray-400 line-clamp-2">
           {description}
         </p>
       </div>
@@ -60,7 +58,7 @@ const NewsSection = () => {
   return (
     <div className="w-full px-6 py-7 bg-white dark:bg-gray-800 rounded-2xl mb-10">
       {/* Header */}
-      <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+      <h2 className="text-base font-medium text-gray-800 dark:text-gray-200 mb-2">
         Recent News & Updates
       </h2>
 
