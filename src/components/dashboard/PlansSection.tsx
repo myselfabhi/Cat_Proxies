@@ -30,7 +30,7 @@ const PlansSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#F8FAF8] dark:bg-gray-800 rounded-2xl shadow-md px-6 py-7 mb-10">
+    <div className="w-full bg-[#F8FAF8] dark:bg-[#1E2327] rounded-2xl shadow-md px-6 py-7 mb-10">
       {/* Header */}
       <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
         <h2 className="text-base font-medium text-gray-800 dark:text-gray-200">
@@ -41,7 +41,7 @@ const PlansSection = () => {
             Plan type:
           </span>
           <select
-            className="text-xs font-medium text-gray-700 dark:text-gray-300 dark:bg-gray-700 border-none rounded-md dark:p-1 bg-transparent focus:outline-none"
+            className="text-xs font-medium text-gray-700 dark:text-gray-300 dark:bg-[#161B1E] border-none rounded-md dark:p-1 bg-transparent focus:outline-none"
             defaultValue="ongoing"
           >
             <option value="ongoing">Ongoing</option>
@@ -55,7 +55,7 @@ const PlansSection = () => {
         {plansData.map((plan) => (
           <div
             key={plan.id}
-            className="bg-[#FFFFFF] dark:bg-gray-700 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow flex flex-col space-y-6"
+            className="bg-[#FFFFFF] dark:bg-[#161B1E] rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow flex flex-col space-y-6"
           >
             {/* Left and Right Section */}
             <div className="flex flex-wrap justify-between items-center gap-4">

@@ -30,13 +30,13 @@ export default function ProfilePage() {
         <div className="md:hidden mb-4">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center justify-between w-full p-3 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md text-gray-700 font-medium"
+            className="flex items-center justify-between w-full p-3 bg-white dark:bg-[#1E2327] dark:text-gray-300 rounded-lg shadow-md text-gray-700 font-medium"
           >
             {activeTab}
             <Menu className="w-5 h-5" />
           </button>
           {isDropdownOpen && (
-            <ul className="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <ul className="mt-2 bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
@@ -60,7 +60,7 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white dark:bg-gray-800 rounded-lg p-4">
+          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
@@ -79,7 +79,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Main Content */}
-          <div className="w-full md:w-3/4 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-sm">
+          <div className="w-full md:w-3/4 bg-white dark:bg-[#1E2327] rounded-lg p-2 shadow-sm">
             {currentTab}
           </div>
         </div>

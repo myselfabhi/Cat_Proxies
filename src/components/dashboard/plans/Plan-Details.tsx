@@ -41,7 +41,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
     <DashboardLayout>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 container mx-auto px-6 py-8">
         {/* Left Section */}
-        <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm space-y-4">
+        <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm space-y-4">
           <h1 className="text-2xl font-medium text-gray-800 dark:text-gray-100">{plan.name}</h1>
           <p className="text-gray-500 dark:text-gray-400 text-sm font-normal">
             Boost security with proxies, shielding your network, filtering
@@ -51,7 +51,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
             {/* Bandwidth */}
             <div>
               
-              <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div className="w-full h-3 bg-gray-200 dark:bg-[#161B1E] rounded-full overflow-hidden">
                 <div
                   className="h-full bg-green-500"
                   style={{
@@ -86,10 +86,10 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
             <div>
               <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100">Protocol</h2>
               <div className="flex items-center gap-4 mt-2">
-                <button className="px-4 py-2 text-xs font-medium border rounded-md bg-green-50 text-green-700 dark:bg-gray-700 dark:text-green-400">
+                <button className="px-4 py-2 text-xs font-medium border rounded-md bg-green-50 text-green-700 dark:bg-[#161B1E] dark:text-green-400">
                   HTTP
                 </button>
-                <button className="px-4 py-2 border text-xs font-medium rounded-md bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400">
+                <button className="px-4 py-2 border text-xs font-medium rounded-md bg-gray-100 text-gray-600 dark:bg-[#161B1E] dark:text-gray-400">
                   SOCKS5
                 </button>
               </div>
@@ -98,7 +98,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
             {/* Format */}
             <div className="space-y-2">
               <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100">Format</h2>
-              <select className="w-full p-2 border rounded-md text-xs font-medium bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
+              <select className="w-full p-2 border rounded-md text-xs font-medium bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                 <option>hostname:port:username:password</option>
                 <option>username:password@hostname:port</option>
               </select>
@@ -112,19 +112,19 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
               </p>
               <div className="flex flex-col gap-2 mt-4">
               <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">Country</h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
+                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>United States of America</option>
                   <option>United Kingdom</option>
                   <option>India</option>
                 </select>
                 <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">State</h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
+                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>Random</option>
                   <option>California</option>
                   <option>Texas</option>
                 </select>
                 <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">ISP</h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
+                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>Random</option>
                   <option>AT&T</option>
                   <option>Verizon</option>
@@ -145,8 +145,8 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                 <button
                   className={`px-4 py-2 border rounded-md ${
                     sessionType === "rotating"
-                      ? "bg-green-50 text-green-700 text-xs font-medium dark:bg-gray-700 dark:text-green-400"
-                      : "bg-gray-100 text-gray-600 text-xs font-medium dark:bg-gray-700 dark:text-gray-400"
+                      ? "bg-green-50 text-green-700 text-xs font-medium dark:bg-[#161B1E] dark:text-green-400"
+                      : "bg-gray-100 text-gray-600 text-xs font-medium dark:bg-[#161B1E] dark:text-gray-400"
                   }`}
                   onClick={() => setSessionType("rotating")}
                 >
@@ -155,8 +155,8 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                 <button
                   className={`px-4 py-2 border rounded-md ${
                     sessionType === "sticky"
-                      ? "bg-green-50 text-green-700 text-xs font-medium dark:bg-gray-700 dark:text-green-400"
-                      : "bg-gray-100 text-gray-600 text-xs font-medium dark:bg-gray-700 dark:text-gray-400"
+                      ? "bg-green-50 text-green-700 text-xs font-medium dark:bg-[#161B1E] dark:text-green-400"
+                      : "bg-gray-100 text-gray-600 text-xs font-medium dark:bg-[#161B1E] dark:text-gray-400"
                   }`}
                   onClick={() => setSessionType("sticky")}
                 >
@@ -170,7 +170,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                   <input
                     type="number"
                     defaultValue={60}
-                    className="w-full text-xs  p-2 border rounded-md mt-2 bg-gray-50 dark:bg-gray-700 dark:text-gray-300"
+                    className="w-full text-xs  p-2 border rounded-md mt-2 bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300"
                   />
                 </div>
               ) : (
@@ -189,7 +189,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
         {/* Right Section */}
         <div className="space-y-6">
           {/* Plan Details */}
-          <div className="p-6 bg-green-50 dark:bg-gray-800 rounded-lg shadow-sm space-y-2">
+          <div className="p-6 bg-green-50 dark:bg-[#1E2327] rounded-lg shadow-sm space-y-2">
             <div className="grid grid-cols-2 gap-4">
               <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
                 Plan Name: <span className="text-xs ml-3 font-medium">{plan.name}</span>
@@ -210,7 +210,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
           </div>
 
           {/* Copy Proxy Details */}
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg ">
+          <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg ">
             <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-4">
               Copy proxy details manually:
             </h2>
@@ -248,7 +248,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
           {/* Proxy Details Box */}
           <div className="p-6 bg-black text-white rounded-lg shadow-md">
             <div className="justify-between mb-2 flex flex-col space-y-4">
-            <select className="w-full p-2 border rounded-md text-sm font-medium bg-black dark:bg-gray-700 dark:text-gray-300">
+            <select className="w-full p-2 border rounded-md text-sm font-medium bg-black dark:bg-[#161B1E] dark:text-gray-300">
                 <option>{`Plan ID: ${plan.planId}`}</option>
               </select>
               <div className="flex gap-2">

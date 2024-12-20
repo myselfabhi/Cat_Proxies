@@ -10,7 +10,7 @@ export default function Preferences() {
 
   return (
     <div className="container mx-auto p-2">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 container">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md p-6 container">
         {/* Header */}
         <div className="text-gray-800 dark:text-gray-200 mb-6">
           <h2 className="text-2xl font-medium">Account Preferences</h2>
@@ -26,7 +26,7 @@ export default function Preferences() {
             <select
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
-              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="USD($)">USD($)</option>
               <option value="EUR(€)">EUR(€)</option>
@@ -44,7 +44,7 @@ export default function Preferences() {
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="EN">EN</option>
               <option value="FR">FR</option>
@@ -67,7 +67,7 @@ export default function Preferences() {
               onClick={() => setEmailOffers(!emailOffers)}
             >
               <div
-                className={`absolute w-6 h-6 bg-white dark:bg-gray-800 rounded-full shadow-md transform transition-transform ${
+                className={`absolute w-6 h-6 bg-white dark:bg-[#1E2327] rounded-full shadow-md transform transition-transform ${
                   emailOffers ? "translate-x-6" : "translate-x-0"
                 }`}
               ></div>
@@ -92,7 +92,7 @@ export default function Preferences() {
                 }
               >
                 <div
-                  className={`absolute w-6 h-6 bg-white dark:bg-gray-800 rounded-full shadow-md transform transition-transform ${
+                  className={`absolute w-6 h-6 bg-white dark:bg-[#1E2327] rounded-full shadow-md transform transition-transform ${
                     appearance === "Dark" ? "translate-x-6" : "translate-x-0"
                   }`}
                 ></div>

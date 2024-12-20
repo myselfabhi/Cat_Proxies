@@ -1,7 +1,7 @@
 export default function Offers() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md p-6">
         {/* Header */}
         <div className="text-gray-800 dark:text-gray-200 mb-6">
           <h2 className="text-base font-medium">Redeem Your Bonus Code</h2>
@@ -24,7 +24,7 @@ export default function Offers() {
               type="text"
               id="bonus-code"
               placeholder="ENTER THE CODE HERE"
-              className="mt-2 w-full p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+              className="mt-2 w-full p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
             />
           </div>
 

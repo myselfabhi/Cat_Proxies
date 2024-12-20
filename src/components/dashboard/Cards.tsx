@@ -19,13 +19,13 @@ const Card = ({
   icon: JSX.Element;
 }) => {
   return (
-    <div className="flex flex-col p-3 md:p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200 relative">
+    <div className="flex flex-col p-3 md:p-4 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200 relative">
       <div className="flex flex-col gap-2 flex-grow space-y-2">
         <p className="text-xs font-medium text-[#525252] dark:text-gray-400 truncate">
           {title}
         </p>
         <div className="flex items-center gap-2">
-          <div className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full">
+          <div className="p-2 bg-gray-100 dark:bg-[#161B1E] rounded-full">
             {icon}
           </div>
           <p className="text-xl md:text-lg font-bold text-gray-800 dark:text-gray-200 truncate">
@@ -51,7 +51,7 @@ const Card = ({
 
 const Notification = () => {
   return (
-    <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div className="p-4 bg-white dark:bg-[#1E2327] rounded-lg shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-4">
       <div className="px-3 py-5">
         <BellIcon className="w-6 h-6 text-gray-400 dark:text-gray-300" />
       </div>

@@ -103,7 +103,7 @@ const PurchasePlan = () => {
               className={`flex-1 text-center px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedTab === tab
                   ? "bg-[#fd980c] font-medium"
-                  : " text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                  : " text-gray-800 hover:bg-gray-200 dark:bg-[#161B1E] dark:text-gray-300 dark:hover:bg-gray-600"
               }`}
             >
               {tab}
@@ -119,7 +119,7 @@ const PurchasePlan = () => {
               {plansData.map((plan) => (
                 <div
                   key={plan.id}
-                  className="p-6 bg-white dark:bg-gray-800 rounded-lg  hover:shadow-lg transition-shadow flex flex-col justify-between"
+                  className="p-6 bg-white dark:bg-[#1E2327] rounded-lg  hover:shadow-lg transition-shadow flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-4">
@@ -144,7 +144,7 @@ const PurchasePlan = () => {
             </div>
 
             {/* Right Section */}
-            <div className="lg:col-span-1 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm flex flex-col items-center space-y-4">
+            <div className="lg:col-span-1 bg-white dark:bg-[#1E2327] p-4 rounded-lg shadow-sm flex flex-col items-center space-y-4">
               <div className="bg-[#05C067] text-white text-[11px] font-bold uppercase px-2 py-1 rounded-full">
                 Most Popular
               </div>
@@ -170,7 +170,7 @@ const PurchasePlan = () => {
                 max="50"
                 value={bandwidthPrice}
                 onChange={(e) => setBandwidthPrice(parseInt(e.target.value))}
-                className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                className="w-full h-2 bg-gray-200 dark:bg-[#161B1E] rounded-lg appearance-none cursor-pointer"
                 style={{
                   background: `linear-gradient(to right, #fd980c ${
                     (bandwidthPrice - 10) * 2

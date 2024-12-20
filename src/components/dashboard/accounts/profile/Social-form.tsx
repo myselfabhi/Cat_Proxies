@@ -3,7 +3,7 @@ import { FaDiscord, FaTelegram } from "react-icons/fa6";
 export default function Social() {
   return (
     <div className="container mx-auto px-2">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md p-6">
 
         <div className="space-y-6">
           {/* Telegram */}
@@ -15,7 +15,7 @@ export default function Social() {
             <input
               type="text"
               value="@tgfigure"
-              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
 
@@ -28,7 +28,7 @@ export default function Social() {
             <input
               type="text"
               value="@dglxyz"
-              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>

@@ -56,7 +56,7 @@ const NewsSection = () => {
   ];
 
   return (
-    <div className="w-full px-6 py-7 bg-white dark:bg-gray-800 rounded-2xl mb-10">
+    <div className="w-full px-6 py-7 bg-white dark:bg-[#1E2327] rounded-2xl mb-10">
       {/* Header */}
       <h2 className="text-base font-medium text-gray-800 dark:text-gray-200 mb-2">
         Recent News & Updates

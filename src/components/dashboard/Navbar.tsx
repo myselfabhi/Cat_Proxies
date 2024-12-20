@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-2 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+    <nav className="flex items-center justify-between p-2 bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           </button>
         </div>
 
-        <div className="hidden lg:flex flex-col w-24 bg-[#f4f4f4] dark:bg-gray-700 rounded-md p-2">
+        <div className="hidden lg:flex flex-col w-24 bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md p-2">
         <div className="flex items-center">
             <Wallet className="w-2 h-2 text-black dark:text-gray-400 mr-1" />
             <span className="text-[5px] font-normal font-sora text-black dark:text-gray-400">Wallet Balance</span>
@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           <span className="text-xs font-normal text-[#019B83]">$1870</span>
         </div>
 
-        <div className="flex items-center lg:hidden bg-[#f4f4f4] dark:bg-gray-700 rounded-md shadow-md px-3 py-2">
+        <div className="flex items-center lg:hidden bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md shadow-md px-3 py-2">
           <Wallet className="w-2 h-2 text-gray-600 dark:text-gray-400 mr-2" />
           <span className="text-sm font-semibold text-[#019B83]">$1870</span>
         </div>

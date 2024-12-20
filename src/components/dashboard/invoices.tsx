@@ -70,7 +70,7 @@ const Invoices = () => {
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg ">
+        <div className="overflow-x-auto bg-white dark:bg-[#1E2327] rounded-lg ">
           {invoiceData.length === 0 ? (
             <div className="py-10 text-center text-gray-600 dark:text-gray-400">
               <div className="flex flex-col items-center space-y-4">
@@ -85,7 +85,7 @@ const Invoices = () => {
           ) : (
             <table className="w-full text-sm text-gray-700 dark:text-gray-300 hidden md:table">
               {/* Table Header */}
-              <thead className="bg-[#FAFAFB] dark:bg-gray-700 text-gray-500 dark:text-gray-300 border-b">
+              <thead className="bg-[#FAFAFB] dark:bg-[#161B1E] text-gray-500 dark:text-gray-300 border-b">
                 <tr>
                   <th className="py-2 px-4 text-[10px] font-medium text-left">INVOICE ID</th>
                   <th className="py-2 px-4 text-[10px] font-medium text-left">PLAN NAME</th>
@@ -131,7 +131,7 @@ const Invoices = () => {
             {invoiceData.map((invoice) => (
               <div
                 key={invoice.id}
-                className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-2"
+                className="p-4 bg-white dark:bg-[#1E2327] rounded-lg shadow-md space-y-2"
               >
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-gray-800 dark:text-gray-100">

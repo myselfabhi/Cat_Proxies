@@ -120,7 +120,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
     <>
       {/* Sidebar */}
       <aside
-        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white dark:bg-gray-800 rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-64 lg:h-screen lg:opacity-100 lg:scale-100 ${
+        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white dark:bg-[#09090B] rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-64 lg:h-screen lg:opacity-100 lg:scale-100 ${
           isOpen
             ? "scale-100 opacity-100 pointer-events-auto"
             : "scale-95 opacity-0 pointer-events-none lg:pointer-events-auto"
@@ -152,7 +152,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
             href="/dashboard"
             className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 mt-4 transition ${
               activePath === "/dashboard"
-                ? " dark:bg-gray-700 dark:text-green-300"
+                ? " dark:bg-[#161B1E] dark:text-green-300"
                 : "text-gray-800 dark:text-gray-300"
             }`}
           >
@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                       href={item.href}
                       className={`flex items-center gap-3 px-3 py-2 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 transition ${
                         activePath === item.href
-                          ? "dark:bg-gray-700 text-green-500 dark:text-green-300"
+                          ? "dark:bg-[#161B1E] text-green-500 dark:text-green-300"
                           : "text-gray-800 dark:text-gray-300"
                       }`}
                     >

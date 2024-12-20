@@ -10,7 +10,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [isSidebarOpen, setSidebarOpen] = useState(false); // Sidebar toggle state
 
   return (
-    <div className="flex h-screen bg-cream-800 dark-dashboard">
+    <div className="flex h-screen bg-cream-800">
       {/* Sidebar */}
       <Sidebar
         activePath={pathname}

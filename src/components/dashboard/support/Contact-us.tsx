@@ -36,7 +36,7 @@ const Contactus_db = () => {
           {contactMethods.map((method) => (
             <div
               key={method.id}
-              className="flex flex-col border border-t-4 border-t-red-500 items-center text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="flex flex-col border border-t-4 border-t-red-500 items-center text-center p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
               {/* Icon */}
               {method.icon ? (
@@ -58,7 +58,7 @@ const Contactus_db = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-md">
+        <div className="bg-white dark:bg-[#1E2327] p-6 md:p-8 rounded-lg shadow-md">
           <div className="flex justify-center mb-6">
             <img
               src="/cat_contact.svg"
@@ -76,7 +76,7 @@ const Contactus_db = () => {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we know how to address you"
                 />
               </div>
@@ -86,7 +86,7 @@ const Contactus_db = () => {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="Tailor the services to your business needs"
                 />
               </div>
@@ -100,7 +100,7 @@ const Contactus_db = () => {
                 </label>
                 <input
                   type="email"
-                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we can respond promptly to your inquiry"
                 />
               </div>
@@ -110,7 +110,7 @@ const Contactus_db = () => {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we can say thank you"
                 />
               </div>
@@ -122,7 +122,7 @@ const Contactus_db = () => {
                 MESSAGE
               </label>
               <textarea
-                className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                className="mt-1 w-full p-3 text-sm border-b border-gray-500 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                 placeholder="Provide details about your request"
                 rows={1}
               ></textarea>
@@ -133,7 +133,7 @@ const Contactus_db = () => {
               <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
                 Any Document to Upload for Us
               </label>
-              <div className="border-b border-gray-300 dark:border-gray-700 rounded-md ml-4 cursor-pointer bg-white dark:bg-gray-700">
+              <div className="border-b border-gray-300 dark:border-gray-700 rounded-md ml-4 cursor-pointer bg-white dark:bg-[#161B1E]">
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Click here to upload document
                 </p>

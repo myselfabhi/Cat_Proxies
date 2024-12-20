@@ -17,7 +17,7 @@ export default function Verify() {
   return (
     <div className="container mx-auto px-4 py-6 space-y-6">
       {/* Level 1 */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(1)}
@@ -47,7 +47,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full p-2 border text-xs font-medium border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 border text-xs font-medium border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Samosa"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -67,7 +67,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ export default function Verify() {
                   <input
                     type="email"
                     defaultValue="andresamosa@mail.com"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
@@ -107,14 +107,14 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div>
                   <label className="block text-xs text-gray-600 dark:text-gray-400">
                     Occupation Industry
                   </label>
-                  <select className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                  <select className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                     <option value="service" selected>
                       Service
                     </option>
@@ -129,7 +129,7 @@ export default function Verify() {
                   <input
                     type="date"
                     defaultValue="1999-03-03"
-                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function Verify() {
       </div>
 
       {/* Level 2 */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(2)}
@@ -176,7 +176,7 @@ export default function Verify() {
                 <label className="block text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Document Type
                 </label>
-                <select className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                <select className="w-full p-2 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                   <option>Driver License</option>
                   <option>Passport</option>
                   <option>ID Card</option>
@@ -188,7 +188,7 @@ export default function Verify() {
 
               {/* Upload Boxes */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-700">
+                <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
                   <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
                     Front side
@@ -198,7 +198,7 @@ export default function Verify() {
                   </p>
                   <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
                 </div>
-                <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-700">
+                <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
                   <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
                     Back side
@@ -225,7 +225,7 @@ export default function Verify() {
       </div>
 
      {/* Level 3 */}
-     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
+     <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(3)}
@@ -245,7 +245,7 @@ export default function Verify() {
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-6">
             Please upload your proof of address. All documents must be laying on a flat surface with all 4 corners inside the frame. All information should be clear and identifiable.
             </p>
-            <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-700">
+            <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
                   <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
                   <p className="text-xs text-gray-400">
                     Click to Upload or drag and drop
@@ -266,7 +266,7 @@ export default function Verify() {
       </div>
 
       {/* Level 4 */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(4)}
@@ -286,7 +286,7 @@ export default function Verify() {
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-6">
             Please upload supporting documentation for your Source of Funds. Document laying on a flat surface must show all 4 corners and all information should be clear and identifiable.
             </p>
-            <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-700">
+            <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
                   <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
                   <p className="text-xs text-gray-400">
                     Click to Upload or drag and drop

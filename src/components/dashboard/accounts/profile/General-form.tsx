@@ -50,7 +50,7 @@ export default function General() {
               name="displayName"
               value={formData.displayName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs  border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs  border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
@@ -62,7 +62,7 @@ export default function General() {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function General() {
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
@@ -90,7 +90,7 @@ export default function General() {
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function General() {
             name="address"
             value={formData.address}
             onChange={handleInputChange}
-            className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+            className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
           />
         </div>
 
@@ -120,7 +120,7 @@ export default function General() {
               name="dateOfBirth"
               value={formData.dateOfBirth}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
           <div>
@@ -131,7 +131,7 @@ export default function General() {
               name="country"
               value={formData.country}
               onChange={handleInputChange}
-              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="mt-1 w-full p-2 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#1E2327] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="United Kingdom">United Kingdom</option>
               <option value="United States">United States</option>
