@@ -36,8 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-      {/* Left Section: Sidebar Toggle and Profile Icon */}
+    <nav className="flex items-center justify-between p-2 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
@@ -51,14 +50,12 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           className="w-12 h-12 rounded-full shadow-md"
         />
         <div className="hidden lg:block">
-          <p className="text-lg font-semibold dark:text-gray-200">Hi Maxlin!</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">support@MaxLin.com</p>
+          <p className="text-sm font-medium dark:text-white">Hi Maxlin!</p>
+          <p className="text-sm font-medium text-gray-500 dark:text-white">support@MaxLin.com</p>
         </div>
       </div>
 
-      {/* Right Section */}
-      <div className="flex items-center gap-4">
-        {/* Dark Mode Toggle */}
+      <div className="flex items-center gap-4 mr-8">
         <div className="flex items-center gap-2">
           <button
             onClick={toggleDarkMode}
@@ -67,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
             }`}
           >
             <div
-              className={`w-6 h-6 rounded-full flex items-center justify-center transition-transform transform ${
+              className={`w-5 h-5 rounded-full flex items-center justify-center transition-transform transform ${
                 isDarkMode ? "translate-x-6 bg-blue-300" : "translate-x-0 bg-yellow-200"
               }`}
             >
@@ -80,25 +77,22 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           </button>
         </div>
 
-        {/* Wallet Balance */}
-        <div className="hidden lg:flex flex-col items-end w-40 bg-gray-100 dark:bg-gray-700 rounded-md shadow-md px-3 py-2">
+        <div className="hidden lg:flex flex-col w-24 bg-[#f4f4f4] dark:bg-gray-700 rounded-md p-2">
         <div className="flex items-center">
-            <Wallet className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
-            <span className="text-sm text-gray-500 dark:text-gray-400">Wallet Balance</span>
+            <Wallet className="w-2 h-2 text-black dark:text-gray-400 mr-1" />
+            <span className="text-[5px] font-normal font-sora text-black dark:text-gray-400">Wallet Balance</span>
           </div>
-          <span className="text-lg font-semibold text-[#019B83]">$1870</span>
+          <span className="text-xs font-normal text-[#019B83]">$1870</span>
         </div>
 
-        {/* Wallet Balance for Mobile */}
-        <div className="flex items-center lg:hidden bg-gray-100 dark:bg-gray-700 rounded-md shadow-md px-3 py-2">
-          <Wallet className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
+        <div className="flex items-center lg:hidden bg-[#f4f4f4] dark:bg-gray-700 rounded-md shadow-md px-3 py-2">
+          <Wallet className="w-2 h-2 text-gray-600 dark:text-gray-400 mr-2" />
           <span className="text-sm font-semibold text-[#019B83]">$1870</span>
         </div>
 
-        {/* Settings Icon (Visible Only on Desktop) */}
-        <Link href="/dashboard/settings">
+        <Link href="/dashboard/my-account/settings">
           <button className="hidden lg:block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition">
-            <Settings className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+            <Settings className="w-3 h-3 text-[#6f6f6f] dark:text-gray-400" />
           </button>
         </Link>
       </div>

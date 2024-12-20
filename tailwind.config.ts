@@ -31,6 +31,9 @@ const config: Config = {
   			'800': '#fdfcfd',
   			'900': '#f8fbf9'
   		},
+		subtitle: {
+			500: '#525252'
+		},
   		color: {
   			customDark: '#121118'
   		},
