@@ -161,7 +161,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
           </Link>
 
           {/* Sidebar Items */}
-          <div className="mt-6 space-y-8">
+          <div className="mt-6 ml-2 space-y-8">
             {sidebarItems.map((group, groupIndex) => (
               <div key={groupIndex} className="space-y-4">
                 {group.sections.map((item, index) =>
