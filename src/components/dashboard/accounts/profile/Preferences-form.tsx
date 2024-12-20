@@ -13,20 +13,20 @@ export default function Preferences() {
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 container">
         {/* Header */}
         <div className="text-gray-800 dark:text-gray-200 mb-6">
-          <h2 className="text-xl font-bold">Account Preferences</h2>
+          <h2 className="text-2xl font-medium">Account Preferences</h2>
         </div>
 
         {/* Preferences Form */}
         <form className="space-y-6">
           {/* Currency */}
           <div className="flex justify-between items-center">
-            <label className="block text-md font-medium text-gray-600 dark:text-gray-400">
+            <label className="block text-gray-600 dark:text-gray-400">
               View in currency
             </label>
             <select
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
-              className="p-2 text-sm rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="USD($)">USD($)</option>
               <option value="EUR(€)">EUR(€)</option>
@@ -38,13 +38,13 @@ export default function Preferences() {
 
           {/* Language */}
           <div className="flex justify-between items-center">
-            <label className="block text-md font-medium text-gray-600 dark:text-gray-400">
+            <label className="block  text-gray-600 dark:text-gray-400">
               Change Language
             </label>
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="p-2 text-md rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="p-2 text-xs font-medium rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             >
               <option value="EN">EN</option>
               <option value="FR">FR</option>
@@ -57,7 +57,7 @@ export default function Preferences() {
 
           {/* Email Offers */}
           <div className="flex justify-between items-center">
-            <label className="block text-md font-medium text-gray-600 dark:text-gray-400">
+            <label className="block  text-gray-600 dark:text-gray-400">
               Receive email offers from us
             </label>
             <div
@@ -76,11 +76,11 @@ export default function Preferences() {
 
           {/* Appearance */}
           <div>
-            <label className="block text-md font-medium text-gray-600 dark:text-gray-400 mb-2">
+            <label className="block  text-gray-600 dark:text-gray-400 mb-2">
               Dashboard Appearance
             </label>
             <div className="flex justify-between items-center">
-              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+              <span className=" text-gray-600 dark:text-gray-400">
                 {appearance === "Light" ? "Light Mode" : "Dark Mode"}
               </span>
               <div

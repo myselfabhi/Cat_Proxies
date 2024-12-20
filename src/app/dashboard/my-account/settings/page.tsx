@@ -60,14 +60,14 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+          <div className="hidden md:block md:w-1/4 bg-white dark:bg-gray-800 rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
                   className={`cursor-pointer py-2 px-4 rounded-md ${
                     activeTab === tab.id
-                      ? "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 font-medium"
+                      ? "bg-green-100 dark:bg-green-900  dark:text-green-300 "
                       : "text-gray-800 dark:text-gray-300"
                   }`}
                   onClick={() => setActiveTab(tab.id)}
@@ -79,7 +79,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Main Content */}
-          <div className="w-full md:w-3/4 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <div className="w-full md:w-3/4 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-sm">
             {currentTab}
           </div>
         </div>
