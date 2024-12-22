@@ -77,9 +77,9 @@ const Invoices = () => {
                 <img
                   src="/cat_invoices.svg"
                   alt="No Invoices"
-                  className="w-40 h-40"
+                  className="w-[166px] h-[190px]"
                 />
-                <p>No Invoices Available</p>
+                <p>No Invoices Found!!</p>
               </div>
             </div>
           ) : (
