@@ -63,7 +63,7 @@ const Notification = () => {
         <p className="text-xs font-medium text-gray-800 dark:text-gray-200">
           Notification
         </p>
-        <p className="text-[10px] w-[617px] font-normal text-[#525252] dark:text-gray-400">
+        <p className="text-[10px] w-full sm:w-[617px] font-normal text-[#525252] dark:text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
           congue odio, at condimentum nisl. Nam vitae scelerisque mauris, ac
           efficitur ex.
@@ -105,12 +105,13 @@ const Cards = () => {
   ]
 
   return (
-    <div className="container mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Notification */}
       <Notification />
 
       {/* Responsive Grid Layout */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+
         {cardData.map((card, index) => (
           <Card
             key={index}
