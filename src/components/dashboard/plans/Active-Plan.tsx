@@ -97,10 +97,10 @@ const ActivePlans = () => {
           <h2 className="text-base font-medium text-gray-700 dark:text-gray-200">
             Active Plans
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             {plansData.active.map((plan) => (
               <Link href={`/dashboard/my-plans/active-plans/${plan.id}`} key={plan.id}>
-                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-full ${plan.color}`} />
@@ -155,7 +155,7 @@ const ActivePlans = () => {
           <h2 className="text-base font-medium text-gray-700 dark:text-gray-200">
             Expired Plans
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             {plansData.expired.map((plan) => (
               <Link href={`/dashboard/my-plans/active-plans/${plan.id}`} key={plan.id}>
                 <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
