@@ -79,7 +79,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Main Content */}
-          <div className="w-full md:w-3/4 bg-white dark:bg-[#1E2327] rounded-lg p-2 shadow-sm">
+          <div className="w-full md:w-3/4 dark:bg-[#1E2327] ">
             {currentTab}
           </div>
         </div>
