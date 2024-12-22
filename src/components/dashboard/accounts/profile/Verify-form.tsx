@@ -15,7 +15,7 @@ export default function Verify() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 space-y-4 border border-[#F4F4F4] rounded-lg">
+    <div className="container mx-auto px-4 py-6 space-y-4 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
       {/* Level 1 */}
       <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
@@ -286,7 +286,7 @@ export default function Verify() {
                     <p className="text-sm font-medium text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535]">or drag and drop</p>
+                    <p className="text-sm text-[#353535] dark:text-white">or drag and drop</p>
                   </div>
                   <p className="text-xs text-gray-400">
                     (Max. File size: 25 MB)
@@ -378,9 +378,9 @@ export default function Verify() {
                     <p className="text-sm font-medium text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535]">or drag and drop</p>
+                    <p className="text-sm text-[#353535] dark:text-white">or drag and drop</p>
                   </div>
-                  <p className="text-xs text-[#353535]">
+                  <p className="text-xs text-[#353535] dark:text-gray-400">
                     (Max. File size: 25 MB)
                   </p>
                 </div>
@@ -431,7 +431,7 @@ export default function Verify() {
               on a flat surface with all 4 corners inside the frame. All
               information should be clear and identifiable.
             </p>
-            <p className="text-[10px] text-[#161616] bg-[#ffdfdf] px-[20px] py-[5px] rounded-tl-[34px] mb-8 w-[244px] h-[24px] flex items-center">
+            <p className="text-[10px] text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-[244px] h-[24px] flex items-center">
               ⚠️ Please complete level two verification first.
             </p>
 
@@ -524,9 +524,9 @@ export default function Verify() {
                 <p className="text-sm font-medium text-[#019B83]">
                   Click to Upload
                 </p>
-                <p className="text-sm text-[#353535]">or drag and drop</p>
+                <p className="text-sm text-[#353535] dark:text-gray-400">or drag and drop</p>
               </div>
-              <p className="text-xs text-[#353535]">(Max. File size: 25 MB)</p>
+              <p className="text-xs text-[#353535] dark:text-gray-400">(Max. File size: 25 MB)</p>
             </div>
             <p className="mt-1 text-[10px] font-medium text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf
@@ -575,7 +575,7 @@ export default function Verify() {
               Document laying on a flat surface must show all 4 corners and all
               information should be clear and identifiable.
             </p>
-            <p className="text-[10px] text-[#161616] bg-[#ffdfdf] px-[20px] py-[5px] rounded-tl-[34px] mb-8 w-[244px] h-[24px] flex items-center">
+            <p className="text-[10px] text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-[244px] h-[24px] flex items-center">
               ⚠️ Please complete level two verification first.
             </p>
             <label
@@ -667,9 +667,9 @@ export default function Verify() {
                 <p className="text-sm font-medium text-[#019B83]">
                   Click to Upload
                 </p>
-                <p className="text-sm text-[#353535]">or drag and drop</p>
+                <p className="text-sm text-[#353535] dark:text-gray-400">or drag and drop</p>
               </div>
-              <p className="text-xs text-[#353535]">(Max. File size: 25 MB)</p>
+              <p className="text-xs text-[#353535] dark:text-gray-400">(Max. File size: 25 MB)</p>
             </div>
             <p className="mt-1 text-[10px] font-medium text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf

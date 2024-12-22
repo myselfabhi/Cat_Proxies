@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   }
 
   return (
-    <nav className="flex items-center border border-[16px] border-white gap-[8px] justify-between  bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
+    <nav className="flex items-center border-[16px] dark:border-[#1E2327] border-white gap-[8px] justify-between  bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         <div className="flex items-center gap-2">
           <button
             onClick={toggleDarkMode}
-            className={`w-14 h-7 flex items-center rounded-full p-1 ${
+            className={`w-10 h-5 flex items-center rounded-full  ${
               isDarkMode ? "bg-blue-600" : "bg-yellow-400"
             }`}
           >
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
 
         <Link href="/dashboard/my-account/settings">
           <button className="hidden lg:block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition">
-            <Settings className="w-3 h-3 text-[#6f6f6f] dark:text-gray-400" />
+            <Settings className="w-3 h-3 dark:w-6 dark:h-6 text-[#6f6f6f] dark:text-white dark:bg-[#161B1E] dark:rounded-full dark:p-1" />
           </button>
         </Link>
       </div>

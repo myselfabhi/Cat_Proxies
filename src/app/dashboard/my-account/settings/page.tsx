@@ -60,7 +60,7 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] shadow-sm border border-gray-50 lg:h-[260px] rounded-lg p-4">
+          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] dark:border-[#1E2327] shadow-sm border border-gray-50 lg:h-[260px] rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
