@@ -4,7 +4,7 @@
 
 
 .sidebar-container::-webkit-scrollbar {
-  width: 6px; /* Width of the scrollbar */
+  width: 0px; /* Width of the scrollbar */
 }
 
 .sidebar-container::-webkit-scrollbar-thumb {

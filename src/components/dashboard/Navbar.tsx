@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-2 bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
+    <nav className="flex items-center border border-[16px] border-white gap-[8px] justify-between  bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
