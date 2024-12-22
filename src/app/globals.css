@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .sidebar-container::-webkit-scrollbar {
   width: 0px; /* Width of the scrollbar */
 }
@@ -19,7 +18,6 @@
 .sidebar-container::-webkit-scrollbar-track {
   background: #f3f4f6; /* Light track color */
 }
-
 
 .tooltip {
   position: relative;
@@ -227,8 +225,8 @@
     --chart-5: 340 75% 55%;
   }
 
-  .dark-dashboard{
-    --cream-800: 240 10% 3.9%; 
+  .dark-dashboard {
+    --cream-800: 240 10% 3.9%;
   }
 }
 

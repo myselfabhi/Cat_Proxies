@@ -1,16 +1,17 @@
-import { FaDiscord, FaTelegram } from "react-icons/fa6";
+import { FaDiscord, FaTelegram } from "react-icons/fa6"
 
 export default function Social() {
   return (
     <div className="container mx-auto px-2">
       <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md p-6">
-
         <div className="space-y-6">
           {/* Telegram */}
           <div className="flex flex-col  gap-4">
             <div className="flex  items-center gap-2">
               <FaTelegram className="w-6 h-6 text-green-500" />
-              <label className="text-sm  text-gray-600 dark:text-gray-400">Telegram</label>
+              <label className="text-sm  text-gray-600 dark:text-gray-400">
+                Telegram
+              </label>
             </div>
             <input
               type="text"
@@ -23,7 +24,9 @@ export default function Social() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <FaDiscord className="w-6 h-6 text-green-500" />
-              <label className="text-sm  text-gray-600 dark:text-gray-400">Discord</label>
+              <label className="text-sm  text-gray-600 dark:text-gray-400">
+                Discord
+              </label>
             </div>
             <input
               type="text"
@@ -34,5 +37,5 @@ export default function Social() {
         </div>
       </div>
     </div>
-  );
+  )
 }

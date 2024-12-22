@@ -1,13 +1,17 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { usePathname } from "next/navigation";
-import Sidebar from "@/components/dashboard/Sidebar";
-import Navbar from "@/components/dashboard/Navbar";
+import { useState } from "react"
+import { usePathname } from "next/navigation"
+import Sidebar from "@/components/dashboard/Sidebar"
+import Navbar from "@/components/dashboard/Navbar"
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  const [isSidebarOpen, setSidebarOpen] = useState(false); 
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const pathname = usePathname()
+  const [isSidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className="flex h-screen bg-cream-800">
@@ -28,5 +32,5 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <main className="mt-6">{children}</main>
       </div>
     </div>
-  );
+  )
 }

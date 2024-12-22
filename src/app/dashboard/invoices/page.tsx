@@ -1,12 +1,9 @@
-import Invoices from "@/components/dashboard/Invoices";
-
-
+import Invoices from "@/components/dashboard/Invoices"
 
 export default function Contact() {
-
-    return (
-            <div>
-              <Invoices />
-            </div>
-        )
-  }
+  return (
+    <div>
+      <Invoices />
+    </div>
+  )
+}

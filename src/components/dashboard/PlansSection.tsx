@@ -27,7 +27,7 @@ const PlansSection = () => {
       dueDate: "25/05/2025",
       color: "bg-teal-500",
     },
-  ];
+  ]
 
   return (
     <div className="w-full bg-[#F8FAF8] dark:bg-[#1E2327] rounded-2xl shadow-sm px-6 py-7 mb-12">
@@ -112,7 +112,7 @@ const PlansSection = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PlansSection;
+export default PlansSection

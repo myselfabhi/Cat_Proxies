@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
 export default function General() {
   const [formData, setFormData] = useState({
@@ -11,14 +11,14 @@ export default function General() {
     address: "B/80 - A north America 27029",
     dateOfBirth: "1999-03-03",
     country: "United Kingdom",
-  });
+  })
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   return (
     <div className="">
@@ -143,24 +143,23 @@ export default function General() {
         {/* Close Account */}
         <div className=" dark:bg-black p-4 rounded-lg flex border dark:gray-100 space-y-2">
           <div>
-          <h3 className="text-sm font-medium text-black dark:text-white">
-            Close Account
-          </h3>
-          <p className="text-xs text-black dark:text-white">
-            Closing your account can’t be undone. Please make sure your account balance is
-            $0.00 before you begin.
-          </p>
+            <h3 className="text-sm font-medium text-black dark:text-white">
+              Close Account
+            </h3>
+            <p className="text-xs text-black dark:text-white">
+              Closing your account can’t be undone. Please make sure your
+              account balance is $0.00 before you begin.
+            </p>
           </div>
-         
+
           <button
             type="button"
             className=" px-4 py-2 border border-red-400 bg-white hover:bg-red-600 text-red-400 rounded-md text-xs font-medium"
           >
             Close account
           </button>
-          
         </div>
       </form>
     </div>
-  );
+  )
 }

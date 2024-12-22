@@ -1,7 +1,7 @@
-import NewsSection from "@/components/dashboard/NewsSection";
-import Cards from "@/components/dashboard/Cards";
-import PlansSection from "@/components/dashboard/PlansSection";
-import DashboardLayout from "@/components/DashboardLayout";
+import NewsSection from "@/components/dashboard/NewsSection"
+import Cards from "@/components/dashboard/Cards"
+import PlansSection from "@/components/dashboard/PlansSection"
+import DashboardLayout from "@/components/DashboardLayout"
 
 const Dashboard = () => {
   return (
@@ -10,7 +10,7 @@ const Dashboard = () => {
         <div>
           {/* Cards Section */}
           <Cards />
-          
+
           {/* Plans and News Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 container">
             <PlansSection />
@@ -19,7 +19,7 @@ const Dashboard = () => {
         </div>
       </DashboardLayout>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

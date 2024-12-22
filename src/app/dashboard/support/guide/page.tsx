@@ -1,14 +1,14 @@
-import DashboardLayout from "@/components/DashboardLayout";
-import Link from "next/link";
+import DashboardLayout from "@/components/DashboardLayout"
+import Link from "next/link"
 
 const PageNotFound = () => {
   const facts = [
     "Did you know? Proxies help improve security and privacy!",
     "Fun Fact: The first web proxy server was created in 1993.",
     "Proxy Tip: Use sticky sessions for better user tracking.",
-  ];
+  ]
 
-  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  const randomFact = facts[Math.floor(Math.random() * facts.length)]
 
   return (
     <DashboardLayout>
@@ -43,7 +43,7 @@ const PageNotFound = () => {
         </Link>
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default PageNotFound;
+export default PageNotFound

@@ -18,7 +18,7 @@ export default function Offers() {
               htmlFor="bonus-code"
               className="block text-xs text-gray-600 dark:text-gray-400"
             >
-              Code<span >*</span>
+              Code<span>*</span>
             </label>
             <input
               type="text"
@@ -40,5 +40,5 @@ export default function Offers() {
         </form>
       </div>
     </div>
-  );
+  )
 }

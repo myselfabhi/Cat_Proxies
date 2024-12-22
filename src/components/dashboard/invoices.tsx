@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { CreditCard, Phone } from "lucide-react";
-import DashboardLayout from "../DashboardLayout";
+import { CreditCard, Phone } from "lucide-react"
+import DashboardLayout from "../DashboardLayout"
 
 const Invoices = () => {
   const invoiceData: any[] = [
@@ -59,7 +59,7 @@ const Invoices = () => {
       paymentType: <Phone className="w-5 h-5 text-gray-500" />,
       status: "PAID",
     },
-  ];
+  ]
 
   return (
     <DashboardLayout>
@@ -87,12 +87,24 @@ const Invoices = () => {
               {/* Table Header */}
               <thead className="bg-[#FAFAFB] dark:bg-[#161B1E] text-gray-500 dark:text-gray-300 border-b">
                 <tr>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">INVOICE ID</th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">PLAN NAME</th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">DATE</th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">AMOUNT</th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">PAYMENT METHOD</th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">STATUS</th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    INVOICE ID
+                  </th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    PLAN NAME
+                  </th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    DATE
+                  </th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    AMOUNT
+                  </th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    PAYMENT METHOD
+                  </th>
+                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                    STATUS
+                  </th>
                 </tr>
               </thead>
 
@@ -103,9 +115,15 @@ const Invoices = () => {
                     key={invoice.id}
                     className="border-b hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                   >
-                    <td className="py-2 px-4 font-medium text-xs">{invoice.id}</td>
-                    <td className="py-2 px-4 font-medium text-xs">{invoice.planName}</td>
-                    <td className="py-2 px-4 font-medium text-xs">{invoice.date}</td>
+                    <td className="py-2 px-4 font-medium text-xs">
+                      {invoice.id}
+                    </td>
+                    <td className="py-2 px-4 font-medium text-xs">
+                      {invoice.planName}
+                    </td>
+                    <td className="py-2 px-4 font-medium text-xs">
+                      {invoice.date}
+                    </td>
                     <td className="py-2 px-4 font-medium text-xs ">
                       {invoice.amount}
                     </td>
@@ -162,7 +180,7 @@ const Invoices = () => {
         )}
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default Invoices;
+export default Invoices

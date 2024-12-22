@@ -1,5 +1,5 @@
-import DashboardLayout from "@/components/DashboardLayout";
-import { Mail } from "lucide-react";
+import DashboardLayout from "@/components/DashboardLayout"
+import { Mail } from "lucide-react"
 
 const Contactus_db = () => {
   const contactMethods = [
@@ -25,9 +25,9 @@ const Contactus_db = () => {
       id: 4,
       title: "support@catproxies.com",
       description: "Email us",
-      icon: null, 
+      icon: null,
     },
-  ];
+  ]
 
   return (
     <DashboardLayout>
@@ -169,7 +169,7 @@ const Contactus_db = () => {
         </div>
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default Contactus_db;
+export default Contactus_db

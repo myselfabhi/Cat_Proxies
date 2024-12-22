@@ -1,29 +1,31 @@
-"use client";
+"use client"
 
 import {
   LogOut,
-  Home, Settings, Package,
+  Home,
+  Settings,
+  Package,
   X,
   WalletIcon,
   User,
   Bookmark,
   Bell,
   Headphones,
-  CircleDashed
-} from "lucide-react";
-import Link from "next/link";
+  CircleDashed,
+} from "lucide-react"
+import Link from "next/link"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion";
-import { FaDiscord, FaGuilded, FaTelegram } from "react-icons/fa6";
+} from "../ui/accordion"
+import { FaDiscord, FaGuilded, FaTelegram } from "react-icons/fa6"
 
 interface SidebarProps {
-  activePath: string;
-  isOpen: boolean;
-  onClose: () => void;
+  activePath: string
+  isOpen: boolean
+  onClose: () => void
 }
 
 const sidebarItems = [
@@ -34,7 +36,7 @@ const sidebarItems = [
         href: "/dashboard/deposit-balance",
         icon: <WalletIcon className="w-5 h-5 text-green-500" />,
       },
-      
+
       {
         name: "My Plans",
         icon: <Bookmark className="w-5 h-5 text-green-500" />,
@@ -113,7 +115,7 @@ const sidebarItems = [
       },
     ],
   },
-];
+]
 
 const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
   return (
@@ -170,7 +172,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                       <AccordionItem value={item.name}>
                         <AccordionTrigger className="flex items-center gap-3 px-3 py-2 rounded-md  dark:hover:bg-gray-700 ">
                           {item.icon}
-                          <span className="text-sm font-normal ">{item.name}</span>
+                          <span className="text-sm font-normal ">
+                            {item.name}
+                          </span>
                         </AccordionTrigger>
                         <AccordionContent className="ml-6">
                           {item.subItems.map((subItem, subIndex) => (
@@ -230,7 +234,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
         ></div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

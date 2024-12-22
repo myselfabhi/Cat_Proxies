@@ -31,7 +31,8 @@ export default function RootLayout({
   ]
 
   const shouldShowLayout =
-    !noLayoutRoutes.includes(pathname) && !pathname.startsWith("/dashboard/my-plans/active-plans/")
+    !noLayoutRoutes.includes(pathname) &&
+    !pathname.startsWith("/dashboard/my-plans/active-plans/")
 
   return (
     <html lang="en">

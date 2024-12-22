@@ -3,9 +3,9 @@ const NewsItem = ({
   description,
   image,
 }: {
-  title: string;
-  description: string;
-  image: string;
+  title: string
+  description: string
+  image: string
 }) => {
   return (
     <div className="flex flex-col sm:flex-row items-start gap-4 py-5">
@@ -24,8 +24,8 @@ const NewsItem = ({
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const NewsSection = () => {
   const newsData = [
@@ -53,7 +53,7 @@ const NewsSection = () => {
         "Morelogin is a privacy-focused browser that allows you to connect to a single browser with complete privacy.",
       image: "/cat_news.svg",
     },
-  ];
+  ]
 
   return (
     <div className="w-full border-[12px] border-[#fffefe] bg-[#fffefe] dark:bg-[#1E2327] rounded-2xl gap-6 mt-5">
@@ -74,7 +74,7 @@ const NewsSection = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NewsSection;
+export default NewsSection

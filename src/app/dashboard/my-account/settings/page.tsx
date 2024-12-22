@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import General from "@/components/dashboard/accounts/profile/General-form";
-import Offers from "@/components/dashboard/accounts/profile/Offers-form";
-import Preferences from "@/components/dashboard/accounts/profile/Preferences-form";
-import Social from "@/components/dashboard/accounts/profile/Social-form";
-import Verify from "@/components/dashboard/accounts/profile/Verify-form";
-import { useState } from "react";
-import { Menu } from "lucide-react";
-import DashboardLayout from "@/components/DashboardLayout";
+import General from "@/components/dashboard/accounts/profile/General-form"
+import Offers from "@/components/dashboard/accounts/profile/Offers-form"
+import Preferences from "@/components/dashboard/accounts/profile/Preferences-form"
+import Social from "@/components/dashboard/accounts/profile/Social-form"
+import Verify from "@/components/dashboard/accounts/profile/Verify-form"
+import { useState } from "react"
+import { Menu } from "lucide-react"
+import DashboardLayout from "@/components/DashboardLayout"
 
 export default function ProfilePage() {
-  const [activeTab, setActiveTab] = useState("General");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("General")
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const tabs = [
     { id: "General", component: <General /> },
@@ -19,9 +19,9 @@ export default function ProfilePage() {
     { id: "Verify", component: <Verify /> },
     { id: "Offers", component: <Offers /> },
     { id: "Social", component: <Social /> },
-  ];
+  ]
 
-  const currentTab = tabs.find((tab) => tab.id === activeTab)?.component;
+  const currentTab = tabs.find((tab) => tab.id === activeTab)?.component
 
   return (
     <DashboardLayout>
@@ -46,8 +46,8 @@ export default function ProfilePage() {
                       : "text-gray-800 dark:text-gray-300"
                   }`}
                   onClick={() => {
-                    setActiveTab(tab.id);
-                    setIsDropdownOpen(false);
+                    setActiveTab(tab.id)
+                    setIsDropdownOpen(false)
                   }}
                 >
                   {tab.id}
@@ -85,5 +85,5 @@ export default function ProfilePage() {
         </div>
       </div>
     </DashboardLayout>
-  );
+  )
 }

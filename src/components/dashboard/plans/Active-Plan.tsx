@@ -1,5 +1,5 @@
-import DashboardLayout from "@/components/DashboardLayout";
-import Link from "next/link";
+import DashboardLayout from "@/components/DashboardLayout"
+import Link from "next/link"
 
 const plansData = {
   active: [
@@ -86,7 +86,7 @@ const plansData = {
       link: "/dashboard/activeplan/8",
     },
   ],
-};
+}
 
 const ActivePlans = () => {
   return (
@@ -99,7 +99,10 @@ const ActivePlans = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             {plansData.active.map((plan) => (
-              <Link href={`/dashboard/my-plans/active-plans/${plan.id}`} key={plan.id}>
+              <Link
+                href={`/dashboard/my-plans/active-plans/${plan.id}`}
+                key={plan.id}
+              >
                 <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
@@ -130,7 +133,9 @@ const ActivePlans = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">Status</p>
+                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                        Status
+                      </p>
                       <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
                         {plan.status}
                       </p>
@@ -157,7 +162,10 @@ const ActivePlans = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             {plansData.expired.map((plan) => (
-              <Link href={`/dashboard/my-plans/active-plans/${plan.id}`} key={plan.id}>
+              <Link
+                href={`/dashboard/my-plans/active-plans/${plan.id}`}
+                key={plan.id}
+              >
                 <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
@@ -188,7 +196,9 @@ const ActivePlans = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">Status</p>
+                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                        Status
+                      </p>
                       <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
                         {plan.status}
                       </p>
@@ -209,7 +219,7 @@ const ActivePlans = () => {
         </div>
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default ActivePlans;
+export default ActivePlans

@@ -1,18 +1,18 @@
-"use client";
+"use client"
 
-import { Upload } from "lucide-react";
-import { useState } from "react";
+import { Upload } from "lucide-react"
+import { useState } from "react"
 
 export default function Verify() {
-  const [activeLevel, setActiveLevel] = useState(1);
-  const [completedLevels, setCompletedLevels] = useState<number[]>([]);
+  const [activeLevel, setActiveLevel] = useState(1)
+  const [completedLevels, setCompletedLevels] = useState<number[]>([])
 
   const handleSubmit = (level: number) => {
     if (!completedLevels.includes(level)) {
-      setCompletedLevels((prev) => [...prev, level]);
+      setCompletedLevels((prev) => [...prev, level])
     }
-    setActiveLevel(level + 1);
-  };
+    setActiveLevel(level + 1)
+  }
 
   return (
     <div className="container mx-auto px-4 py-6 space-y-6">
@@ -196,7 +196,9 @@ export default function Verify() {
                   <p className="text-xs text-gray-400">
                     Click to Upload or drag and drop
                   </p>
-                  <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
+                  <p className="text-xs text-gray-400">
+                    (Max. File size: 25 MB)
+                  </p>
                 </div>
                 <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
                   <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
@@ -206,7 +208,9 @@ export default function Verify() {
                   <p className="text-xs text-gray-400">
                     Click to Upload or drag and drop
                   </p>
-                  <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
+                  <p className="text-xs text-gray-400">
+                    (Max. File size: 25 MB)
+                  </p>
                 </div>
               </div>
 
@@ -224,8 +228,8 @@ export default function Verify() {
         )}
       </div>
 
-     {/* Level 3 */}
-     <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
+      {/* Level 3 */}
+      <div className="bg-white dark:bg-[#1E2327] rounded-lg shadow-md">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(3)}
@@ -243,15 +247,17 @@ export default function Verify() {
               Verification
             </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-6">
-            Please upload your proof of address. All documents must be laying on a flat surface with all 4 corners inside the frame. All information should be clear and identifiable.
+              Please upload your proof of address. All documents must be laying
+              on a flat surface with all 4 corners inside the frame. All
+              information should be clear and identifiable.
             </p>
             <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
-                  <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
-                  <p className="text-xs text-gray-400">
-                    Click to Upload or drag and drop
-                  </p>
-                  <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
-                </div>
+              <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
+              <p className="text-xs text-gray-400">
+                Click to Upload or drag and drop
+              </p>
+              <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
+            </div>
             <div className="flex justify-end">
               <button
                 type="button"
@@ -284,15 +290,17 @@ export default function Verify() {
               Source of Funds
             </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-6">
-            Please upload supporting documentation for your Source of Funds. Document laying on a flat surface must show all 4 corners and all information should be clear and identifiable.
+              Please upload supporting documentation for your Source of Funds.
+              Document laying on a flat surface must show all 4 corners and all
+              information should be clear and identifiable.
             </p>
             <div className="border-dashed border-2 border-gray-300 dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-[#161B1E]">
-                  <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
-                  <p className="text-xs text-gray-400">
-                    Click to Upload or drag and drop
-                  </p>
-                  <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
-                </div>
+              <Upload className="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2" />
+              <p className="text-xs text-gray-400">
+                Click to Upload or drag and drop
+              </p>
+              <p className="text-xs text-gray-400">(Max. File size: 25 MB)</p>
+            </div>
             <div className="flex justify-end">
               <button
                 type="button"
@@ -306,5 +314,5 @@ export default function Verify() {
         )}
       </div>
     </div>
-  );
+  )
 }

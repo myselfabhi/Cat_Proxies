@@ -1,39 +1,39 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Wallet, Menu, X, Settings, Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Wallet, Menu, X, Settings, Sun, Moon } from "lucide-react"
 
 interface NavbarProps {
-  isSidebarOpen: boolean;
-  onSidebarToggle: () => void;
+  isSidebarOpen: boolean
+  onSidebarToggle: () => void
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const storedTheme = localStorage.getItem("theme")
     if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
+      setIsDarkMode(true)
+      document.documentElement.classList.add("dark")
     } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false)
+      document.documentElement.classList.remove("dark")
     }
-  }, []);
+  }, [])
 
   const toggleDarkMode = () => {
-    const newTheme = isDarkMode ? "light" : "dark";
-    setIsDarkMode(!isDarkMode);
-    localStorage.setItem("theme", newTheme);
+    const newTheme = isDarkMode ? "light" : "dark"
+    setIsDarkMode(!isDarkMode)
+    localStorage.setItem("theme", newTheme)
 
     if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add("dark")
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("dark")
     }
-  };
+  }
 
   return (
     <nav className="flex items-center border border-[16px] border-white gap-[8px] justify-between  bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
@@ -42,7 +42,11 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
           onClick={onSidebarToggle}
         >
-          {isSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isSidebarOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
         <img
           src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
@@ -51,7 +55,9 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         />
         <div className="hidden lg:block">
           <p className="text-sm font-medium dark:text-white">Hi Maxlin!</p>
-          <p className="text-sm font-medium text-gray-500 dark:text-white">support@MaxLin.com</p>
+          <p className="text-sm font-medium text-gray-500 dark:text-white">
+            support@MaxLin.com
+          </p>
         </div>
       </div>
 
@@ -65,7 +71,9 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           >
             <div
               className={`w-5 h-5 rounded-full flex items-center justify-center transition-transform transform ${
-                isDarkMode ? "translate-x-6 bg-blue-300" : "translate-x-0 bg-yellow-200"
+                isDarkMode
+                  ? "translate-x-6 bg-blue-300"
+                  : "translate-x-0 bg-yellow-200"
               }`}
             >
               {isDarkMode ? (
@@ -78,9 +86,11 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         </div>
 
         <div className="hidden lg:flex flex-col w-24 bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md p-2">
-        <div className="flex items-center">
+          <div className="flex items-center">
             <Wallet className="w-2 h-2 text-black dark:text-gray-400 mr-1" />
-            <span className="text-[5px] font-normal font-sora text-black dark:text-gray-400">Wallet Balance</span>
+            <span className="text-[5px] font-normal font-sora text-black dark:text-gray-400">
+              Wallet Balance
+            </span>
           </div>
           <span className="text-xs font-normal text-[#019B83]">$1870</span>
         </div>
@@ -97,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         </Link>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

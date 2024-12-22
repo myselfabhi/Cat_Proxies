@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
 export default function Preferences() {
-  const [currency, setCurrency] = useState("USD($)");
-  const [language, setLanguage] = useState("EN");
-  const [emailOffers, setEmailOffers] = useState(true);
-  const [appearance, setAppearance] = useState("Light");
+  const [currency, setCurrency] = useState("USD($)")
+  const [language, setLanguage] = useState("EN")
+  const [emailOffers, setEmailOffers] = useState(true)
+  const [appearance, setAppearance] = useState("Light")
 
   return (
     <div className="container mx-auto p-2">
@@ -85,7 +85,9 @@ export default function Preferences() {
               </span>
               <div
                 className={`relative w-12 h-6 flex items-center rounded-full cursor-pointer ${
-                  appearance === "Dark" ? "bg-green-500" : "bg-gray-300 dark:bg-gray-600"
+                  appearance === "Dark"
+                    ? "bg-green-500"
+                    : "bg-gray-300 dark:bg-gray-600"
                 }`}
                 onClick={() =>
                   setAppearance(appearance === "Light" ? "Dark" : "Light")
@@ -102,5 +104,5 @@ export default function Preferences() {
         </form>
       </div>
     </div>
-  );
+  )
 }
