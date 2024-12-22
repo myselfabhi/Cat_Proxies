@@ -1,4 +1,4 @@
-import DashboardLayout from "@/components/DashboardLayout"
+import DashboardLayout from "@/components/DashboardLayout";
 
 const GetBonus = () => {
   const bonusData = [
@@ -26,35 +26,43 @@ const GetBonus = () => {
       buttonText: "Contact Us",
       icon: "/setting_bonus.svg",
     },
-  ]
+  ];
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 container px-4 mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
+      <div className="space-y-8 container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-40">
           {bonusData.map((bonus) => (
             <div
               key={bonus.id}
-              className="relative flex flex-col items-center text-center p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="relative flex flex-col space-y-12 justify-between p-8 bg-white dark:bg-[#1E2327] rounded-lg shadow-lg hover:shadow-lg border"
             >
-              {/* Icon */}
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-52 lg:h-40 flex items-center justify-center -mt-12">
-                <img
-                  src={bonus.icon}
-                  alt={bonus.title}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="mt-8 space-y-5">
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-800 dark:text-gray-200">
+              {/* Icon, Title, and Description */}
+              <div className="text-center">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-52 lg:h-40 flex items-center justify-center lg:-mt-24 mx-auto">
+                  <img
+                    src={bonus.icon}
+                    alt={bonus.title}
+                    className="object-contain "
+                  />
+                </div>
+                <h2 className="mt-8 text-lg sm:text-xl lg:text-2xl font-medium text-gray-800 dark:text-gray-200">
                   {bonus.title}
                 </h2>
-                <p className="text-sm font-medium text-gray-600 dark:text-gray-400 px-2">
-                  {bonus.description}
-                </p>
-                <button className="px-4 py-2 bg-[#FB9400] rounded-md font-medium hover:bg-orange-600 ">
+                <p className="mt-4 text-sm font-medium text-[#6F6F6F] dark:text-gray-400 px-4 text-center  underline-offset-[from-font] [text-underline-position:from-font] font-[Satoshi Variable] leading-5">
+  {bonus.description}
+</p>
+
+              </div>
+
+              {/* Button */}
+              <div className="mt-6 text-center">
+                <button
+                  className="w-3/4 px-4 py-2  rounded-md font-medium "
+                  style={{
+                    background: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
+                  }}
+                >
                   {bonus.buttonText}
                 </button>
               </div>
@@ -63,7 +71,7 @@ const GetBonus = () => {
         </div>
       </div>
     </DashboardLayout>
-  )
-}
+  );
+};
 
-export default GetBonus
+export default GetBonus;
