@@ -11,7 +11,7 @@ const Invoices = () => {
       date: "Mar 15, 2020",
       amount: "$143.00",
       paymentMethod: "**** 4231",
-      paymentType: <CreditCard className="w-5 h-5 text-gray-500" />,
+      paymentType: <CreditCard className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
     {
@@ -20,7 +20,7 @@ const Invoices = () => {
       date: "Feb 15, 2020",
       amount: "$439.00",
       paymentMethod: "**** 4231",
-      paymentType: <Phone className="w-5 h-5 text-gray-500" />,
+      paymentType: <Phone className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
     {
@@ -29,7 +29,7 @@ const Invoices = () => {
       date: "Jan 10, 2020",
       amount: "$125.00",
       paymentMethod: "**** 4231",
-      paymentType: <Phone className="w-5 h-5 text-gray-500" />,
+      paymentType: <Phone className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
     {
@@ -38,7 +38,7 @@ const Invoices = () => {
       date: "Dec 16, 2019",
       amount: "$49.00",
       paymentMethod: "**** 4231",
-      paymentType: <Phone className="w-5 h-5 text-gray-500" />,
+      paymentType: <Phone className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
     {
@@ -47,7 +47,7 @@ const Invoices = () => {
       date: "Dec 15, 2019",
       amount: "$49.00",
       paymentMethod: "**** 4231",
-      paymentType: <Phone className="w-5 h-5 text-gray-500" />,
+      paymentType: <Phone className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
     {
@@ -56,7 +56,7 @@ const Invoices = () => {
       date: "Dec 01, 2019",
       amount: "$150.00",
       paymentMethod: "**** 4231",
-      paymentType: <Phone className="w-5 h-5 text-gray-500" />,
+      paymentType: <Phone className="w-4 h-4 text-gray-500" />,
       status: "PAID",
     },
   ]
@@ -87,22 +87,22 @@ const Invoices = () => {
               {/* Table Header */}
               <thead className="bg-[#FAFAFB] dark:bg-[#161B1E] text-gray-500 dark:text-gray-300 border-b">
                 <tr>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     INVOICE ID
                   </th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     PLAN NAME
                   </th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     DATE
                   </th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     AMOUNT
                   </th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     PAYMENT METHOD
                   </th>
-                  <th className="py-2 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-[10px] font-medium text-left">
                     STATUS
                   </th>
                 </tr>
@@ -113,26 +113,26 @@ const Invoices = () => {
                 {invoiceData.map((invoice) => (
                   <tr
                     key={invoice.id}
-                    className="border-b hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    className="border-b hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors space-y-4 "
                   >
                     <td className="py-2 px-4 font-medium text-xs">
                       {invoice.id}
                     </td>
-                    <td className="py-2 px-4 font-medium text-xs">
+                    <td className="py-2 px-4 font-medium text-xs text-[#6F6F6F]">
                       {invoice.planName}
                     </td>
-                    <td className="py-2 px-4 font-medium text-xs">
+                    <td className="py-2 px-4 text-[#425466] text-xs">
                       {invoice.date}
                     </td>
-                    <td className="py-2 px-4 font-medium text-xs ">
+                    <td className="py-2 px-4 font-medium text-xs text-[#425466] ">
                       {invoice.amount}
                     </td>
-                    <td className="py-2 px-4 font-medium text-xs flex items-center gap-2">
+                    <td className="py-2 px-4 text-[#425466] text-xs flex items-center gap-2">
                       {invoice.paymentType}
                       <span>{invoice.paymentMethod}</span>
                     </td>
                     <td className="py-2 px-4 font-medium text-xs">
-                      <span className="px-3 py-1 text-sm text-green-700 bg-green-50 dark:bg-green-900 dark:text-green-300 rounded-md">
+                      <span className="px-3 py-1 text-[10px] font-medium text-[#66CB9F] bg-[#DEFFEE] dark:bg-green-900 dark:text-green-300 rounded-md">
                         {invoice.status}
                       </span>
                     </td>
