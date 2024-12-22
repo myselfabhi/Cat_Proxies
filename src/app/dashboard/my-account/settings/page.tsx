@@ -30,7 +30,7 @@ export default function ProfilePage() {
         <div className="md:hidden mb-4">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center justify-between w-full p-3 bg-white dark:bg-[#1E2327] dark:text-gray-300 rounded-lg shadow-md text-gray-700 font-medium"
+            className="flex items-center justify-between w-full p-3 bg-[#FCFCFC] dark:bg-[#1E2327] dark:text-gray-300 rounded-lg shadow-md text-gray-700 font-medium"
           >
             {activeTab}
             <Menu className="w-5 h-5" />
@@ -60,14 +60,14 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] rounded-lg p-4">
+          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] shadow-sm border border-gray-50 lg:h-[260px] rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
                   className={`cursor-pointer py-2 px-4 rounded-md ${
                     activeTab === tab.id
-                      ? "bg-green-100 dark:bg-green-900  dark:text-green-300 "
+                      ? "bg-[#05C06738] dark:bg-green-900  dark:text-green-300 "
                       : "text-gray-800 dark:text-gray-300"
                   }`}
                   onClick={() => setActiveTab(tab.id)}
