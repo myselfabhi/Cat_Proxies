@@ -351,6 +351,20 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
         >
           <X className="w-6 h-6" />
         </button>
+        {/* Profile Section */}
+        <div className="flex items-center gap-4 p-4 border-b border-gray-200 dark:border-gray-800 lg:hidden ">
+          <img
+            src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
+            alt="Profile"
+            className="w-12 h-12 rounded-full"
+          />
+          <div>
+            <p className="text-sm font-medium dark:text-white">Hi Maxlin!</p>
+            <p className="text-xs font-medium text-gray-500 dark:text-gray-400">
+              support@MaxLin.com
+            </p>
+          </div>
+        </div>
 
         {/* Sidebar Content */}
         <div className="px-6 py-8">

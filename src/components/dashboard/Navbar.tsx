@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   }
 
   return (
-    <nav className="flex items-center border-[16px] dark:border-[#1E2327] border-white gap-[8px] justify-between  bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
+    <nav className="flex items-center lg:border-[16px] border-[5px] dark:border-[#1E2327] border-white gap-[8px] justify-between bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
@@ -48,11 +48,17 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
             <Menu className="w-6 h-6" />
           )}
         </button>
-        <img
-          src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
-          alt="Profile"
-          className="w-12 h-12 rounded-full shadow-md"
-        />
+
+
+          <div className="hidden lg:block">
+            <img
+              src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
+              alt="Profile"
+              className="w-12 h-12 rounded-full shadow-md"
+            />
+          </div>
+        
+
         <div className="hidden lg:block">
           <p className="text-sm font-medium dark:text-white">Hi Maxlin!</p>
           <p className="text-sm font-medium text-gray-500 dark:text-white">
@@ -61,16 +67,19 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 mr-8">
+      <div className="flex items-center gap-4 lg:mr-8">
+        {/* Creative Mode Toggle */}
         <div className="flex items-center gap-2">
           <button
             onClick={toggleDarkMode}
-            className={`w-10 h-5 flex items-center rounded-full  ${
-              isDarkMode ? "bg-blue-600" : "bg-yellow-400"
-            }`}
+            className={`relative w-12 h-6 flex items-center rounded-full ${
+              isDarkMode
+                ? "bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800"
+                : "bg-gradient-to-r from-yellow-400 to-orange-600"
+            } transition-colors duration-500`}
           >
             <div
-              className={`w-5 h-5 rounded-full flex items-center justify-center transition-transform transform ${
+              className={`w-6 h-6 rounded-full flex items-center justify-center transition-transform transform shadow-md ${
                 isDarkMode
                   ? "translate-x-6 bg-blue-300"
                   : "translate-x-0 bg-yellow-200"
@@ -85,6 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           </button>
         </div>
 
+        {/* Wallet Balance */}
         <div className="hidden lg:flex flex-col w-24 bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md p-2">
           <div className="flex items-center">
             <Wallet className="w-2 h-2 text-black dark:text-gray-400 mr-1" />
