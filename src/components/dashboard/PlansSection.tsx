@@ -30,7 +30,7 @@ const PlansSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#F8FAF8] dark:bg-[#1E2327] rounded-2xl shadow-md px-6 py-7 mb-10">
+    <div className="w-full bg-[#F8FAF8] dark:bg-[#1E2327] rounded-2xl shadow-md px-6 py-7 mb-12">
       {/* Header */}
       <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
         <h2 className="text-base font-medium text-gray-800 dark:text-gray-200">

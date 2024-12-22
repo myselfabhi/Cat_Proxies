@@ -28,7 +28,7 @@ const config: Config = {
 
 		},
   		cream: {
-  			'800': '#fdfcfd',
+  			'800': '#fdfdfc',
   			'900': '#f8fbf9'
   		},
 		subtitle: {
