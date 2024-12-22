@@ -1,4 +1,4 @@
-import DashboardLayout from "@/components/DashboardLayout";
+import DashboardLayout from "@/components/DashboardLayout"
 
 const GetBonus = () => {
   const bonusData = [
@@ -26,7 +26,7 @@ const GetBonus = () => {
       buttonText: "Contact Us",
       icon: "/setting_bonus.svg",
     },
-  ];
+  ]
 
   return (
     <DashboardLayout>
@@ -50,9 +50,8 @@ const GetBonus = () => {
                   {bonus.title}
                 </h2>
                 <p className="mt-4 text-sm font-medium text-[#6F6F6F] dark:text-gray-400 px-4 text-center  underline-offset-[from-font] [text-underline-position:from-font] font-[Satoshi Variable] leading-5">
-  {bonus.description}
-</p>
-
+                  {bonus.description}
+                </p>
               </div>
 
               {/* Button */}
@@ -60,7 +59,8 @@ const GetBonus = () => {
                 <button
                   className="w-3/4 px-4 py-2  rounded-md font-medium "
                   style={{
-                    background: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
+                    background:
+                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
                   }}
                 >
                   {bonus.buttonText}
@@ -71,7 +71,7 @@ const GetBonus = () => {
         </div>
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default GetBonus;
+export default GetBonus

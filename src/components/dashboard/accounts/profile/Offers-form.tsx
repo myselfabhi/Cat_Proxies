@@ -34,7 +34,8 @@ export default function Offers() {
               type="submit"
               className="px-10 py-2  rounded-lg font-medium  hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-600"
               style={{
-                background: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
+                background:
+                  "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
               }}
             >
               Submit

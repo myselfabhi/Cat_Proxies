@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
 export default function General() {
   const [formData, setFormData] = useState({
@@ -11,14 +11,14 @@ export default function General() {
     address: "B/80 - A north America 27029",
     dateOfBirth: "1999-03-03",
     country: "United Kingdom",
-  });
+  })
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   return (
     <div className="space-y-8">
@@ -144,25 +144,25 @@ export default function General() {
 
       {/* Close Account Section */}
       <div className="bg-white dark:bg-[#1E2327] p-8 rounded-lg shadow-sm border">
-  {/* Title */}
-  <div>
-    <h3 className="text-[#131316] dark:text-white">Close Account</h3>
-  </div>
+        {/* Title */}
+        <div>
+          <h3 className="text-[#131316] dark:text-white">Close Account</h3>
+        </div>
 
-  {/* Description and Button */}
-  <div className="flex justify-between items-center mt-2">
-    <p className="text-sm text-[#717184] lg:w-[520px] dark:text-gray-400">
-      Closing your account can’t be undone. Please make sure your account balance is $0.00 before you begin.
-    </p>
-    <button
-      type="button"
-      className="px-4 py-2 border border-[#E3E3E8] bg-white hover:bg-red-600 text-[#FB3766] hover:text-white rounded-md transition"
-    >
-      Close account
-    </button>
-  </div>
-</div>
-
+        {/* Description and Button */}
+        <div className="flex justify-between items-center mt-2">
+          <p className="text-sm text-[#717184] lg:w-[520px] dark:text-gray-400">
+            Closing your account can’t be undone. Please make sure your account
+            balance is $0.00 before you begin.
+          </p>
+          <button
+            type="button"
+            className="px-4 py-2 border border-[#E3E3E8] bg-white hover:bg-red-600 text-[#FB3766] hover:text-white rounded-md transition"
+          >
+            Close account
+          </button>
+        </div>
+      </div>
     </div>
-  );
+  )
 }

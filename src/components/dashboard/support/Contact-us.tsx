@@ -1,4 +1,4 @@
-import DashboardLayout from "@/components/DashboardLayout";
+import DashboardLayout from "@/components/DashboardLayout"
 
 const Contactus_db = () => {
   const contactMethods = [
@@ -30,7 +30,7 @@ const Contactus_db = () => {
       icon: null,
       color: "linear-gradient(286.17deg, #246BFD 0%, #5089FD 100%)",
     },
-  ];
+  ]
 
   return (
     <DashboardLayout>
@@ -166,81 +166,79 @@ const Contactus_db = () => {
 
             {/* Document Upload */}
             <div>
-  <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
-    Any Document to Upload for Us
-  </label>
-  <div className="flex items-center gap-2 rounded-md cursor-pointer bg-white dark:bg-[#161B1E]">
-    <svg
-      width="25"
-      height="24"
-      viewBox="0 0 25 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        opacity="0.4"
-        d="M3.5 6.00018C3.5 3.79104 5.29086 2.00018 7.5 2.00018H14.5L21.5 9.00018V18.0002C21.5 20.2093 19.7091 22.0002 17.5 22.0002H7.5C5.29086 22.0002 3.5 20.2093 3.5 18.0002V6.00018Z"
-        fill="#28303F"
-      />
-      <path
-        d="M21.5 9.00018L14.5 2.00018V5.00018C14.5 7.20932 16.2909 9.00018 18.5 9.00018H21.5Z"
-        fill="#28303F"
-      />
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M7.75 11.0002C7.75 10.586 8.08579 10.2502 8.5 10.2502L12.5 10.2502C12.9142 10.2502 13.25 10.586 13.25 11.0002C13.25 11.4144 12.9142 11.7502 12.5 11.7502L8.5 11.7502C8.08579 11.7502 7.75 11.4144 7.75 11.0002Z"
-        fill="#28303F"
-      />
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M7.75 16.0002C7.75 15.586 8.08579 15.2502 8.5 15.2502H16.5C16.9142 15.2502 17.25 15.586 17.25 16.0002C17.25 16.4144 16.9142 16.7502 16.5 16.7502H8.5C8.08579 16.7502 7.75 16.4144 7.75 16.0002Z"
-        fill="#28303F"
-      />
-    </svg>
-    <p className="text-sm text-gray-600 dark:text-gray-400">
-      Click here to upload document
-    </p>
-  </div>
-</div>
-
+              <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+                Any Document to Upload for Us
+              </label>
+              <div className="flex items-center gap-2 rounded-md cursor-pointer bg-white dark:bg-[#161B1E]">
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M3.5 6.00018C3.5 3.79104 5.29086 2.00018 7.5 2.00018H14.5L21.5 9.00018V18.0002C21.5 20.2093 19.7091 22.0002 17.5 22.0002H7.5C5.29086 22.0002 3.5 20.2093 3.5 18.0002V6.00018Z"
+                    fill="#28303F"
+                  />
+                  <path
+                    d="M21.5 9.00018L14.5 2.00018V5.00018C14.5 7.20932 16.2909 9.00018 18.5 9.00018H21.5Z"
+                    fill="#28303F"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.75 11.0002C7.75 10.586 8.08579 10.2502 8.5 10.2502L12.5 10.2502C12.9142 10.2502 13.25 10.586 13.25 11.0002C13.25 11.4144 12.9142 11.7502 12.5 11.7502L8.5 11.7502C8.08579 11.7502 7.75 11.4144 7.75 11.0002Z"
+                    fill="#28303F"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.75 16.0002C7.75 15.586 8.08579 15.2502 8.5 15.2502H16.5C16.9142 15.2502 17.25 15.586 17.25 16.0002C17.25 16.4144 16.9142 16.7502 16.5 16.7502H8.5C8.08579 16.7502 7.75 16.4144 7.75 16.0002Z"
+                    fill="#28303F"
+                  />
+                </svg>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Click here to upload document
+                </p>
+              </div>
+            </div>
 
             {/* Checkbox */}
             <div className="flex items-start justify-between space-x-2 ">
-  <div className="flex items-center space-x-2">
-    <input
-      type="checkbox"
-      className="w-4 h-4"
-      id="privacy-policy"
-    />
-    <label
-      htmlFor="privacy-policy"
-      className="text-xs text-gray-600 dark:text-gray-400"
-    >
-      I agree and consent to the Privacy Policy, its terms of processing of my personal data.
-    </label>
-  </div>
-  <div className="text-right">
-    <button
-      type="submit"
-      className="px-10 py-2 text-sm rounded-md font-medium hover:opacity-90 transition mt-2"
-      style={{
-        background: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-      }}
-    >
-      Get It
-    </button>
-  </div>
-</div>
-
-
- 
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  className="w-4 h-4"
+                  id="privacy-policy"
+                />
+                <label
+                  htmlFor="privacy-policy"
+                  className="text-xs text-gray-600 dark:text-gray-400"
+                >
+                  I agree and consent to the Privacy Policy, its terms of
+                  processing of my personal data.
+                </label>
+              </div>
+              <div className="text-right">
+                <button
+                  type="submit"
+                  className="px-10 py-2 text-sm rounded-md font-medium hover:opacity-90 transition mt-2"
+                  style={{
+                    background:
+                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
+                  }}
+                >
+                  Get It
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </DashboardLayout>
-  );
-};
+  )
+}
 
-export default Contactus_db;
+export default Contactus_db

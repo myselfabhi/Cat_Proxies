@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
 export default function Preferences() {
-  const [currency, setCurrency] = useState("USD($)");
-  const [language, setLanguage] = useState("EN");
-  const [emailOffers, setEmailOffers] = useState(true);
-  const [appearance, setAppearance] = useState("Light");
+  const [currency, setCurrency] = useState("USD($)")
+  const [language, setLanguage] = useState("EN")
+  const [emailOffers, setEmailOffers] = useState(true)
+  const [appearance, setAppearance] = useState("Light")
 
   return (
     <div className="container mx-auto px-4 py-6 border border-[#F4F4F4] rounded-lg">
@@ -76,41 +76,40 @@ export default function Preferences() {
 
           {/* Appearance */}
           <div>
-  <label className="block text-gray-600 dark:text-gray-400 mb-2">
-    Dashboard Appearance
-  </label>
-  <div className="flex space-x-32 mt-4">
-    <label className="flex items-center space-x-2">
-      <input
-        type="radio"
-        name="appearance"
-        value="Light"
-        checked={appearance === "Light"}
-        onChange={() => setAppearance("Light")}
-        className="w-4 h-4 text-black bg-black border-black focus:ring-green-500 dark:focus:ring-green-300 dark:bg-gray-800 dark:border-gray-600"
-      />
-      <span className="text-sm text-gray-600 dark:text-gray-400">
-        Light Mode
-      </span>
-    </label>
-    <label className="flex items-center space-x-2 ">
-      <input
-        type="radio"
-        name="appearance"
-        value="Dark"
-        checked={appearance === "Dark"}
-        onChange={() => setAppearance("Dark")}
-        className="w-4 h-4 text-black bg-black border-black focus:ring-green-500 dark:focus:ring-green-300 dark:bg-gray-800 dark:border-gray-600"
-      />
-      <span className="text-sm text-gray-600  dark:text-gray-400">
-        Dark Mode
-      </span>
-    </label>
-  </div>
-</div>
-
+            <label className="block text-gray-600 dark:text-gray-400 mb-2">
+              Dashboard Appearance
+            </label>
+            <div className="flex space-x-32 mt-4">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="appearance"
+                  value="Light"
+                  checked={appearance === "Light"}
+                  onChange={() => setAppearance("Light")}
+                  className="w-4 h-4 text-black bg-black border-black focus:ring-green-500 dark:focus:ring-green-300 dark:bg-gray-800 dark:border-gray-600"
+                />
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Light Mode
+                </span>
+              </label>
+              <label className="flex items-center space-x-2 ">
+                <input
+                  type="radio"
+                  name="appearance"
+                  value="Dark"
+                  checked={appearance === "Dark"}
+                  onChange={() => setAppearance("Dark")}
+                  className="w-4 h-4 text-black bg-black border-black focus:ring-green-500 dark:focus:ring-green-300 dark:bg-gray-800 dark:border-gray-600"
+                />
+                <span className="text-sm text-gray-600  dark:text-gray-400">
+                  Dark Mode
+                </span>
+              </label>
+            </div>
+          </div>
         </form>
       </div>
     </div>
-  );
+  )
 }

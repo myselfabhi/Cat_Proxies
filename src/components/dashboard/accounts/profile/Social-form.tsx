@@ -1,4 +1,3 @@
-
 export default function Social() {
   return (
     <div className="container mx-auto px-4 py-6 border border-[#F4F4F4] rounded-lg">
@@ -60,4 +59,3 @@ export default function Social() {
     </div>
   )
 }
-
