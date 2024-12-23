@@ -16,7 +16,7 @@ const NewsItem = ({
       />
 
       <div className="flex-1">
-        <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
+        <h3 className="text-sm font-satoshi font-medium text-gray-800 dark:text-gray-200 mb-1">
           {title}
         </h3>
         <p className="text-xs text-[#A8A8A8] dark:text-gray-400 line-clamp-2">
@@ -58,7 +58,7 @@ const NewsSection = () => {
   return (
     <div className="w-full mx-auto border-[12px] dark:border-[#1E2327] border-[#fffefe] bg-[#fffefe] dark:bg-[#1E2327] rounded-2xl gap-6 px-6 py-6 mb-12">
       {/* Header */}
-      <h2 className="text-base font-medium text-gray-800 dark:text-gray-200 mb-2">
+      <h2 className="text-base font-satoshi font-medium text-gray-800 dark:text-gray-200 mb-2">
         Recent News & Updates
       </h2>
 
