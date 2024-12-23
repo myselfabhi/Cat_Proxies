@@ -41,7 +41,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
   return (
     <DashboardLayout>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 container mx-auto px-6 py-8">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 container mx-auto px-6 py-8 font-satoshi">
         {/* Left Section */}
         <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm space-y-4">
           <h1 className="text-2xl font-medium text-gray-800 dark:text-gray-100">

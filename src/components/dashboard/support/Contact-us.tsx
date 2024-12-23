@@ -34,7 +34,7 @@ const Contactus_db = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 container mx-auto px-4 py-8">
+      <div className="space-y-8 container mx-auto px-4 py-8 font-satoshi">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactMethods.map((method) => (
             <div

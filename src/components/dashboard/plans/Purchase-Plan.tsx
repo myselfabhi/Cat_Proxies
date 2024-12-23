@@ -84,7 +84,7 @@ const PurchasePlan = () => {
 
   return (
     <DashboardLayout>
-      <div className="container mx-auto px-4 space-y-8 py-8 bg-cream-800">
+      <div className="container mx-auto px-4 space-y-8 py-8 font-satoshi">
         {/* Header Section */}
         <div className="text-gray-800 dark:text-gray-100 text-center md:text-left space-y-2">
           <h1 className="text-2xl font-medium">Pricing Plans</h1>

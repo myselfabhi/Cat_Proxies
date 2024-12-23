@@ -30,7 +30,7 @@ const GetBonus = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 container mx-auto">
+      <div className="space-y-8 container mx-auto font-satoshi">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-40">
           {bonusData.map((bonus) => (
             <div
