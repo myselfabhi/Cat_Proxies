@@ -241,8 +241,9 @@
 
 @font-face {
   font-family: "Satoshi Variable";
-  src: url("/path-to-font/Satoshi-Variable.woff2") format("woff2"),
-       url("/path-to-font/Satoshi-Variable.woff") format("woff");
+  src:
+    url("/path-to-font/Satoshi-Variable.woff2") format("woff2"),
+    url("/path-to-font/Satoshi-Variable.woff") format("woff");
   font-weight: 100 900;
   font-style: normal;
 }

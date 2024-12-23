@@ -422,7 +422,9 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
               </p>
               <p className="text-[#525252] text-xs font-medium dark:text-gray-400">
                 Port:{" "}
-                <span className=" text-[#525252] text-xs font-medium ml-3">{plan.port}</span>{" "}
+                <span className=" text-[#525252] text-xs font-medium ml-3">
+                  {plan.port}
+                </span>{" "}
                 <button className="text-blue-500 hover:underline text-xs font-medium ml-2">
                   <svg
                     width="11"

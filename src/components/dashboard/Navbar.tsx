@@ -49,18 +49,18 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           )}
         </button>
 
-
-          <div className="hidden lg:block">
-            <img
-              src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
-              alt="Profile"
-              className="w-12 h-12 rounded-full shadow-md"
-            />
-          </div>
-        
+        <div className="hidden lg:block">
+          <img
+            src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
+            alt="Profile"
+            className="w-12 h-12 rounded-full shadow-md"
+          />
+        </div>
 
         <div className="hidden lg:block">
-          <p className="text-sm font-medium dark:text-white font-satoshi">Hi Maxlin!</p>
+          <p className="text-sm font-medium dark:text-white font-satoshi">
+            Hi Maxlin!
+          </p>
           <p className="text-sm font-medium text-gray-500 dark:text-white font-satoshi">
             support@MaxLin.com
           </p>
@@ -73,9 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
           <button
             onClick={toggleDarkMode}
             className={`relative w-12 h-6 flex items-center rounded-full ${
-              isDarkMode
-                ? "bg-purple-600"
-                : "bg-yellow-400"
+              isDarkMode ? "bg-purple-600" : "bg-yellow-400"
             } transition-colors duration-500`}
           >
             <div
@@ -102,7 +100,9 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
               Wallet Balance
             </span>
           </div>
-          <span className="text-xs font-normal font-sora text-[#019B83]">$1870</span>
+          <span className="text-xs font-normal font-sora text-[#019B83]">
+            $1870
+          </span>
         </div>
 
         <div className="flex items-center lg:hidden bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md shadow-md px-3 py-2">

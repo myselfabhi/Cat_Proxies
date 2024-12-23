@@ -163,8 +163,12 @@ const PurchasePlan = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <p className="text-md font-bold font-[Cabinet Grotesk Variable] self-start">$</p>
-                <p className="text-4xl text-black font-bold">{bandwidthPrice}</p>
+                <p className="text-md font-bold font-[Cabinet Grotesk Variable] self-start">
+                  $
+                </p>
+                <p className="text-4xl text-black font-bold">
+                  {bandwidthPrice}
+                </p>
                 <p className="font-medium  dark:text-gray-400 ml-1">
                   / per month
                 </p>

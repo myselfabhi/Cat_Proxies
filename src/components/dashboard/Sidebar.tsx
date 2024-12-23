@@ -3,12 +3,13 @@
 import {
   LogOut,
   Home,
-  Settings, X,
+  Settings,
+  X,
   WalletIcon,
   User,
   Bookmark,
   Bell,
-  Headphones
+  Headphones,
 } from "lucide-react"
 import Link from "next/link"
 import {
@@ -73,15 +74,15 @@ const sidebarItems = [
               </svg>
             ),
           },
-          
+
           {
             name: "Purchase Plans",
             href: "/dashboard/my-plans/purchase-plan",
             icon: (
               <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -126,7 +127,6 @@ const sidebarItems = [
               </svg>
             ),
           },
-          
         ],
       },
       {
@@ -159,11 +159,11 @@ const sidebarItems = [
         href: "https://discord.com/",
         icon: <FaDiscord className="w-5 h-5 text-green-500" />,
       },
-        {
-          name: "Telegram ",
-          href: "https://t.me/catproxies",
-          icon: <FaTelegram className="w-5 h-5 text-green-500" />,
-        },
+      {
+        name: "Telegram ",
+        href: "https://t.me/catproxies",
+        icon: <FaTelegram className="w-5 h-5 text-green-500" />,
+      },
     ],
   },
   {
@@ -204,7 +204,7 @@ const sidebarItems = [
               </svg>
             ),
           },
-          
+
           {
             name: "Contact Us",
             href: "/dashboard/support/contact-us",
@@ -326,7 +326,6 @@ const sidebarItems = [
               </svg>
             ),
           },
-          
         ],
       },
     ],
@@ -359,7 +358,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
             className="w-12 h-12 rounded-full"
           />
           <div>
-            <p className="text-sm  font-satoshi font-medium dark:text-white">Hi Maxlin!</p>
+            <p className="text-sm  font-satoshi font-medium dark:text-white">
+              Hi Maxlin!
+            </p>
             <p className="text-xs  font-satoshi font-medium text-gray-500 dark:text-gray-400">
               support@MaxLin.com
             </p>
@@ -367,107 +368,115 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
         </div>
 
         {/* Sidebar Content */}
-        <div className="px-6 py-8 bg-cream-800">
+        <div className="px-6 py-8 ">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-8 bg-[#fffefe] rounded-3xl">
             <img src="/logo.svg" alt="Cat Proxies" className="w-10 h-11" />
-            <h1 className="text-base  font-satoshi font-medium text-gray-800 dark:text-gray-200">
+            <h1 className="text-base font-satoshi font-medium text-gray-800 dark:text-gray-200">
               Cat Proxies
             </h1>
           </div>
 
           {/* Dashboard Link */}
-          <p className="text-sm  font-satoshi font-medium text-gray-500 dark:text-gray-400">
-            MAIN MENU
-          </p>
-          <Link
-            href="/dashboard"
-            className={`flex items-center gap-3 px-3 py-2 rounded-3xl hover:bg-green-100 dark:hover:bg-gray-700 mt-4 transition ${
-              activePath === "/dashboard"
-                ? " dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2 "
-                : "text-gray-800 dark:text-gray-300"
-            }`}
-          >
-            <Home className="w-8 h-8 bg-[#05C067] p-2 text-white rounded-md" />
-            <span className= "font-satoshi font-medium text-sm">Dashboard</span>
-          </Link>
+          <div className="lg:w-52">
+            <p className="text-sm  font-satoshi font-medium text-[#A8A8A8] dark:text-gray-400 mb-8">
+              MAIN MENU
+            </p>
+            <Link
+              href="/dashboard"
+              className={`flex items-center gap-3 px-3 py-2 rounded-3xl hover:bg-green-100 dark:hover:bg-gray-700 mt-4 transition ${
+                activePath === "/dashboard"
+                  ? " dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2 "
+                  : "text-gray-800 dark:text-gray-300"
+              }`}
+            >
+              <Home className="w-8 h-8 bg-[#05C067] p-2 text-white rounded-md" />
+              <span className="font-satoshi font-medium text-sm">
+                Dashboard
+              </span>
+            </Link>
 
-          {/* Sidebar Items */}
-          <div className="mt-6 ml-2 space-y-8 gap-3">
-            {sidebarItems.map((group, groupIndex) => (
-              <div key={groupIndex} className="space-y-4">
-                {group.sections.map((item, index) =>
-                  item.subItems ? (
-                    <Accordion type="single" collapsible key={index}>
-                      <AccordionItem value={item.name}>
-                      <AccordionTrigger className="flex justify-between items-center gap-3 px-3 py-2 rounded-3xl dark:hover:bg-gray-700">
-  <div className="flex items-center gap-3">
-    <span
-      className={`${
-        activePath.includes(item.name.toLowerCase()) ? "text-white" : "text-gray-600 dark:text-gray-400"
-      }`}
-    >
-      {item.icon}
-    </span>
-    <span className="text-sm font-satoshi font-normal">
-      {item.name}
-    </span>
-  </div>
-  <div>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className={`w-4 h-4 transition-transform transform ${
-      isOpen ? "rotate-180" : ""
-    }`}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 9l-7 7-7-7"
-    />
-  </svg>
-  </div>
-</AccordionTrigger>
+            {/* Sidebar Items */}
+            <div className="mt-6 ml-2 space-y-8 gap-3">
+              {sidebarItems.map((group, groupIndex) => (
+                <div key={groupIndex} className="space-y-4">
+                  {group.sections.map((item, index) =>
+                    item.subItems ? (
+                      <Accordion type="single" collapsible key={index}>
+                        <AccordionItem value={item.name}>
+                          <AccordionTrigger className="flex justify-between items-center gap-3 px-3 py-2 rounded-3xl dark:hover:bg-gray-700">
+                            <div className="flex items-center gap-3">
+                              <span
+                                className={`${
+                                  activePath.includes(item.name.toLowerCase())
+                                    ? "text-white"
+                                    : "text-gray-600 dark:text-gray-400"
+                                }`}
+                              >
+                                {item.icon}
+                              </span>
+                              <span className="text-sm font-satoshi font-normal">
+                                {item.name}
+                              </span>
+                            </div>
+                            <div>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={`w-4 h-4 transition-transform transform ${
+                                  isOpen ? "rotate-180" : ""
+                                }`}
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </div>
+                          </AccordionTrigger>
 
-                        <AccordionContent className="ml-5 border-l-[1px] border-gray-200 dark:border-gray-700 pl-3">
-                          {item.subItems.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              href={subItem.href}
-                              className={`flex items-center gap-2 px-2 py-1 mt-3 rounded-3xl  dark:hover:bg-gray-700 transition ${
-                                activePath === subItem.href
-                                  ? "text-white bg-[#05C067] rounded-3xl  dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
-                                  : "text-gray-600 dark:text-gray-400"
-                              }`}
-                            >
-                              {subItem.icon}
-                              <span className="text-sm font-satoshi">{subItem.name}</span>
-                            </Link>
-                          ))}
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  ) : (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className={`flex items-center gap-3 px-3 py-2 rounded-3xl hover:bg-green-50 dark:hover:bg-gray-700 transition ${
-                        activePath === item.href
-                          ? "dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
-                          : "text-gray-800 dark:text-gray-300"
-                      }`}
-                    >
-                      {item.icon}
-                      <span className="text-sm">{item.name}</span>
-                    </Link>
-                  )
-                )}
-              </div>
-            ))}
+                          <AccordionContent className="ml-5 border-l-[1px] border-gray-200 dark:border-gray-700 pl-3">
+                            {item.subItems.map((subItem, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                href={subItem.href}
+                                className={`flex items-center gap-2 px-2 py-1 mt-3 rounded-3xl  dark:hover:bg-gray-700 transition ${
+                                  activePath === subItem.href
+                                    ? "text-white bg-[#05C067] rounded-3xl  dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
+                                    : "text-gray-600 dark:text-gray-400"
+                                }`}
+                              >
+                                {subItem.icon}
+                                <span className="text-sm font-satoshi">
+                                  {subItem.name}
+                                </span>
+                              </Link>
+                            ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className={`flex items-center gap-3 px-3 py-2 rounded-3xl hover:bg-green-50 dark:hover:bg-gray-700 transition ${
+                          activePath === item.href
+                            ? "dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
+                            : "text-gray-800 dark:text-gray-300"
+                        }`}
+                      >
+                        {item.icon}
+                        <span className="text-sm">{item.name}</span>
+                      </Link>
+                    )
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Logout Button */}

@@ -286,7 +286,9 @@ export default function Verify() {
                     <p className="text-sm font-medium text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535] dark:text-white">or drag and drop</p>
+                    <p className="text-sm text-[#353535] dark:text-white">
+                      or drag and drop
+                    </p>
                   </div>
                   <p className="text-xs text-gray-400">
                     (Max. File size: 25 MB)
@@ -378,7 +380,9 @@ export default function Verify() {
                     <p className="text-sm font-medium text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535] dark:text-white">or drag and drop</p>
+                    <p className="text-sm text-[#353535] dark:text-white">
+                      or drag and drop
+                    </p>
                   </div>
                   <p className="text-xs text-gray-400">
                     (Max. File size: 25 MB)
@@ -524,9 +528,13 @@ export default function Verify() {
                 <p className="text-sm font-medium text-[#019B83]">
                   Click to Upload
                 </p>
-                <p className="text-sm text-[#353535] dark:text-gray-400">or drag and drop</p>
+                <p className="text-sm text-[#353535] dark:text-gray-400">
+                  or drag and drop
+                </p>
               </div>
-              <p className="text-xs text-[#353535] dark:text-gray-400">(Max. File size: 25 MB)</p>
+              <p className="text-xs text-[#353535] dark:text-gray-400">
+                (Max. File size: 25 MB)
+              </p>
             </div>
             <p className="mt-1 text-[10px] font-medium text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf
@@ -667,9 +675,13 @@ export default function Verify() {
                 <p className="text-sm font-medium text-[#019B83]">
                   Click to Upload
                 </p>
-                <p className="text-sm text-[#353535] dark:text-gray-400">or drag and drop</p>
+                <p className="text-sm text-[#353535] dark:text-gray-400">
+                  or drag and drop
+                </p>
               </div>
-              <p className="text-xs text-[#353535] dark:text-gray-400">(Max. File size: 25 MB)</p>
+              <p className="text-xs text-[#353535] dark:text-gray-400">
+                (Max. File size: 25 MB)
+              </p>
             </div>
             <p className="mt-1 text-[10px] font-medium text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf
