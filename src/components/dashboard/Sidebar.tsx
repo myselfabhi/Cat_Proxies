@@ -397,7 +397,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
             </Link>
 
             {/* Sidebar Items */}
-            <div className="mt-6 ml-2 space-y-8 gap-3">
+            <div className="mt-4 ml-2 space-y-8 gap-3">
               {sidebarItems.map((group, groupIndex) => (
                 <div key={groupIndex} className="space-y-4">
                   {group.sections.map((item, index) =>
@@ -405,7 +405,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                       <Accordion type="single" collapsible key={index}>
                         <AccordionItem value={item.name}>
                           <AccordionTrigger className="flex justify-between items-center gap-3 px-3 py-2 rounded-3xl dark:hover:bg-gray-700">
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-5">
                               <span
                                 className={`${
                                   activePath.includes(item.name.toLowerCase())
@@ -439,12 +439,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                             </div>
                           </AccordionTrigger>
 
-                          <AccordionContent className="ml-5 border-l-[1px] border-gray-200 dark:border-gray-700 pl-3">
+                          <AccordionContent className="ml-4 border-l-[1px] border-gray-200 dark:border-gray-700 pl-3 lg:w-36">
                             {item.subItems.map((subItem, subIndex) => (
                               <Link
                                 key={subIndex}
                                 href={subItem.href}
-                                className={`flex items-center gap-2 px-2 py-1 mt-3 rounded-3xl  dark:hover:bg-gray-700 transition ${
+                                className={`flex items-center gap-2 px-2 py-1 mt-3 ml-3 rounded-3xl  dark:hover:bg-gray-700 transition ${
                                   activePath === subItem.href
                                     ? "text-white bg-[#05C067] rounded-3xl  dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
                                     : "text-gray-600 dark:text-gray-400"
@@ -463,7 +463,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                       <Link
                         key={index}
                         href={item.href}
-                        className={`flex items-center gap-3 px-3 py-2 rounded-3xl hover:bg-green-50 dark:hover:bg-gray-700 transition ${
+                        className={`flex items-center gap-5 px-3 py-2 rounded-3xl hover:bg-green-50 dark:hover:bg-gray-700 transition ${
                           activePath === item.href
                             ? "dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
                             : "text-gray-800 dark:text-gray-300"

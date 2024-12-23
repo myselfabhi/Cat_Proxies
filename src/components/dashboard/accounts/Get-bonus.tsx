@@ -35,7 +35,7 @@ const GetBonus = () => {
           {bonusData.map((bonus) => (
             <div
               key={bonus.id}
-              className="relative flex flex-col space-y-12 justify-between p-8 bg-white dark:bg-[#1E2327] rounded-lg shadow-lg hover:shadow-lg border"
+              className="relative flex flex-col space-y-12 justify-between p-8 bg-white dark:bg-[#1E2327] rounded-lg shadow-deep hover:shadow-lg border"
             >
               {/* Icon, Title, and Description */}
               <div className="text-center">
