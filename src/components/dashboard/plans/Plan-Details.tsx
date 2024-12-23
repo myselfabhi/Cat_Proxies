@@ -11,7 +11,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
   const plansData = [
     {
       id: "1",
-      name: "Residential Proxy",
+      name: "Residential Proxy Generator",
       bandwidthLeft: "74 GB",
       totalBandwidth: "250 GB",
       paidAt: "25/05/2025",
@@ -44,10 +44,10 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 container mx-auto px-6 py-8 font-satoshi">
         {/* Left Section */}
         <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm space-y-4">
-          <h1 className="text-2xl font-medium text-gray-800 dark:text-gray-100">
+          <h1 className="text-2xl font-medium text-[#121118] dark:text-gray-100">
             {plan.name}
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 text-sm font-normal">
+          <p className="text-[#525252] dark:text-gray-400 text-sm font-normal">
             Boost security with proxies, shielding your network, filtering
             traffic, and preserving anonymity online.
           </p>
@@ -68,18 +68,18 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
               </div>
               <div className="flex gap-5 justify-end mt-2">
                 <div>
-                  <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                  <p className="text-[#525252] text-[8px] dark:text-gray-400">
                     Bandwidth Left:
                   </p>
-                  <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                  <p className="font-medium text-[10px] text-[#121118] dark:text-gray-100">
                     {plan.bandwidthLeft}
                   </p>
                 </div>
                 <div className="lg:ml-6">
-                  <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                  <p className="text-[#525252] text-[8px] dark:text-gray-400">
                     Total Bandwidth:
                   </p>
-                  <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                  <p className="font-medium text-[10px] text-[#121118] dark:text-gray-100">
                     {plan.totalBandwidth}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
             {/* Protocol */}
             <div>
-              <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100">
+              <h2 className="text-sm font-medium text-[#121118] dark:text-gray-100">
                 Protocol
               </h2>
               <div className="flex items-center gap-4 mt-2">
@@ -138,10 +138,10 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
             {/* Format */}
             <div className="space-y-2">
-              <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100">
+              <h2 className="text-xs font-normal text-[#121118] dark:text-gray-100">
                 Format
               </h2>
-              <select className="w-full p-2 border rounded-md text-xs font-medium bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
+              <select className="w-full p-2 border rounded-md text-xs text-[#525252] font-medium bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                 <option>hostname:port:username:password</option>
                 <option>username:password@hostname:port</option>
               </select>
@@ -149,33 +149,33 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
             {/* Location Settings */}
             <div>
-              <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100">
+              <h2 className="text-sm font-medium text-[#121118] dark:text-gray-100">
                 Location Settings
               </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-[#525252] dark:text-gray-400">
                 Select a precise proxy location or leave it random.
               </p>
               <div className="flex flex-col gap-2 mt-4">
-                <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">
+                <h2 className="text-xs font-normal text-[#121118] dark:text-gray-100 mt-2">
                   Country
                 </h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
+                <select className="p-2 border text-xs text-[#525252] font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>United States of America</option>
                   <option>United Kingdom</option>
                   <option>India</option>
                 </select>
-                <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">
+                <h2 className="text-xs font-normal text-[#121118] dark:text-gray-100 mt-2">
                   State
                 </h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
+                <select className="p-2 border text-xs text-[#525252] font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>Random</option>
                   <option>California</option>
                   <option>Texas</option>
                 </select>
-                <h2 className="text-xs font-normal text-gray-800 dark:text-gray-100 mt-2">
+                <h2 className="text-xs font-normal text-[#121118] dark:text-gray-100 mt-2">
                   ISP
                 </h2>
-                <select className="p-2 border text-xs font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
+                <select className="p-2 border text-xs text-[#525252] font-medium rounded-md bg-gray-50 dark:bg-[#161B1E] dark:text-gray-300">
                   <option>Random</option>
                   <option>AT&T</option>
                   <option>Verizon</option>
@@ -185,14 +185,14 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
             {/* Session Settings */}
             <div>
-              <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100">
+              <h2 className="text-sm font-medium text-[#121118] dark:text-gray-100">
                 Session Settings
               </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-[#525252] dark:text-gray-400">
                 Keep the same IP address for up to 120 minutes with a sticky
                 session or get a new IP address with each request.
               </p>
-              <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100 mt-4">
+              <h2 className="text-sm font-medium text-[#121118] dark:text-gray-100 mt-4">
                 Type
               </h2>
               <div className="flex items-center gap-4 mt-2">
@@ -289,7 +289,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                   />
                 </div>
               ) : (
-                <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                <div className="mt-4 text-sm text-[#525252] dark:text-gray-400">
                   <p>
                     If proxies are set as{" "}
                     <span className="font-bold text-green-600 dark:text-green-400">
@@ -309,25 +309,25 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
           {/* Plan Details */}
           <div className="p-6 bg-green-50 dark:bg-[#1E2327] rounded-lg shadow-sm space-y-2">
             <div className="grid grid-cols-2 gap-4">
-              <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
+              <p className="text-[#525252] dark:text-gray-400 text-xs font-medium">
                 Plan Name:{" "}
                 <span className="text-xs ml-3 font-medium">{plan.name}</span>
               </p>
-              <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
+              <p className="text-[#525252] dark:text-gray-400 text-xs font-medium">
                 Paid at:{" "}
                 <span className="text-xs ml-3 font-medium">{plan.paidAt}</span>
               </p>
-              <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
+              <p className="text-[#525252] dark:text-gray-400 text-xs font-medium">
                 Plan ID:{" "}
                 <span className="text-xs ml-3 font-medium">{plan.planId}</span>
               </p>
-              <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
+              <p className="text-[#525252] dark:text-gray-400 text-xs font-medium">
                 Valid until:{" "}
                 <span className="text-xs ml-3 font-medium">
                   {plan.validUntil}
                 </span>
               </p>
-              <p className="text-gray-700 dark:text-gray-400 text-xs font-medium">
+              <p className="text-[#525252] dark:text-gray-400 text-xs font-medium">
                 Bandwidth left:{" "}
                 <span className="text-xs ml-3 font-medium">
                   {plan.bandwidthLeft}
@@ -338,13 +338,13 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
 
           {/* Copy Proxy Details */}
           <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg ">
-            <h2 className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-4">
+            <h2 className="text-sm font-medium text-[#121118] dark:text-gray-100 mb-4">
               Copy proxy details manually:
             </h2>
             <div className="grid grid-cols-2 gap-4">
-              <p className="text-gray-700 text-xs font-medium dark:text-gray-400">
+              <p className="text-[#525252] text-xs font-medium dark:text-gray-400">
                 Username:{" "}
-                <span className="text-xs font-medium ml-3">
+                <span className=" text-[#525252] text-xs font-medium ml-3">
                   {plan.username}
                 </span>{" "}
                 <button className="text-blue-500 hover:underline text-xs font-medium ml-2">
@@ -368,9 +368,9 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                   </svg>
                 </button>
               </p>
-              <p className="text-gray-700 text-xs font-medium dark:text-gray-400">
+              <p className="text-[#525252] text-xs font-medium dark:text-gray-400">
                 Hostname:{" "}
-                <span className="text-xs font-medium ml-3">
+                <span className=" text-[#525252] text-xs font-medium ml-3">
                   {plan.hostname}
                 </span>{" "}
                 <button className="text-blue-500 hover:underline text-xs font-medium ml-2">
@@ -394,9 +394,9 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                   </svg>
                 </button>
               </p>
-              <p className="text-gray-700 text-xs font-medium dark:text-gray-400">
+              <p className="text-[#525252] text-xs font-medium dark:text-gray-400">
                 Password:{" "}
-                <span className="text-xs font-medium ml-3">
+                <span className=" text-[#525252] text-xs font-medium ml-3">
                   {plan.password}
                 </span>{" "}
                 <button className="text-blue-500 hover:underline text-xs font-medium ml-2">
@@ -420,9 +420,9 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
                   </svg>
                 </button>
               </p>
-              <p className="text-gray-700 text-xs font-medium dark:text-gray-400">
+              <p className="text-[#525252] text-xs font-medium dark:text-gray-400">
                 Port:{" "}
-                <span className="text-xs font-medium ml-3">{plan.port}</span>{" "}
+                <span className=" text-[#525252] text-xs font-medium ml-3">{plan.port}</span>{" "}
                 <button className="text-blue-500 hover:underline text-xs font-medium ml-2">
                   <svg
                     width="11"
@@ -501,7 +501,7 @@ const PlanDetails: React.FC<PlanDetailsProps> = ({ planId }) => {
             {/* Line Numbers and Code Content */}
             <div className="flex">
               {/* Line Numbers */}
-              <div className="text-gray-500 text-sm pr-4">
+              <div className="text-[#525252] text-sm pr-4">
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
