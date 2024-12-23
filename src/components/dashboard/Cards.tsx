@@ -20,15 +20,15 @@ const Card = ({
 }) => {
   return (
     <div className="flex flex-col border-[14px] dark:border-[#1E2327] border-white gap-[10px] bg-white dark:bg-[#1E2327] rounded-lg shadow-soft hover:shadow-md transition-shadow duration-200 relative">
-      <div className="flex flex-col gap-2 flex-grow space-y-2">
-        <p className="text-xs font-medium text-[#525252] dark:text-gray-400 truncate">
+      <div className="flex flex-col gap-3 flex-grow space-y-2">
+        <p className="text-xs font-medium font-satoshi text-[#525252] dark:text-gray-400 truncate">
           {title}
         </p>
         <div className="flex items-center gap-2">
           <div className="p-2 bg-gray-100 dark:bg-[#161B1E] rounded-full">
             {icon}
           </div>
-          <p className="text-xl md:text-lg font-bold text-gray-800 dark:text-gray-200 truncate">
+          <p className="text-xl md:text-lg font-bold font-satoshi text-gray-800 dark:text-gray-200 truncate">
             {value}
           </p>
         </div>
@@ -59,11 +59,11 @@ const Notification = () => {
       <div className="px-3">
         <BellIcon className="w-6 h-6 dark:fill-white dark:bg-[#F9AA4B] dark:p-2 text-gray-400 dark:text-white dark:rounded-full dark:w-10 dark:h-10" />
       </div>
-      <div className="space-y-2">
-        <p className="text-xs font-medium text-gray-800 dark:text-gray-200">
+      <div className="space-y-1">
+        <p className="text-xs font-medium font-satoshi text-gray-800 dark:text-gray-200">
           Notification
         </p>
-        <p className="text-[10px] w-full sm:w-[617px] font-normal text-[#525252] dark:text-gray-400">
+        <p className="text-[10px] w-full sm:w-[617px] font-normal font-satoshi text-[#525252] dark:text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
           congue odio, at condimentum nisl. Nam vitae scelerisque mauris, ac
           efficitur ex.
