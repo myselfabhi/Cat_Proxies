@@ -25,7 +25,7 @@ export default function ProfilePage() {
 
   return (
     <DashboardLayout>
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 font-satoshi">
         {/* Mobile Dropdown for Tabs */}
         <div className="md:hidden mb-4">
           <button

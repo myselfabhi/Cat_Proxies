@@ -15,9 +15,9 @@ export default function Verify() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 space-y-4 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
+    <div className="container font-satoshi mx-auto px-4 py-6 space-y-4 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
       {/* Level 1 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(1)}
@@ -35,7 +35,7 @@ export default function Verify() {
         </div>
         {activeLevel === 1 && (
           <div className="p-6 border-t border-[#C6C6C6] dark:border-gray-700">
-            <h3 className=" font-medium text-black dark:text-gray-200 mb-2">
+            <h3 className=" text- font-medium text-black dark:text-gray-200 mb-1">
               Confirm your details
             </h3>
             <p className="text-xs text-[#525252] lg:w-[433px] dark:text-gray-400 mb-6">
@@ -51,7 +51,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full px-3 py-6 border text-xs font-medium border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-xs font-medium border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -61,7 +61,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Samosa"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -71,7 +71,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -81,7 +81,7 @@ export default function Verify() {
                   <input
                     type="email"
                     defaultValue="andresamosa@mail.com"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -91,7 +91,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -101,7 +101,7 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
@@ -111,14 +111,14 @@ export default function Verify() {
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="block text-xs text-gray-600 dark:text-gray-400">
                     Occupation Industry
                   </label>
-                  <select className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                  <select className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                     <option value="service" selected>
                       Service
                     </option>
@@ -133,7 +133,7 @@ export default function Verify() {
                   <input
                     type="date"
                     defaultValue="1999-03-03"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function Verify() {
       </div>
 
       {/* Level 2 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(2)}
@@ -188,7 +188,7 @@ export default function Verify() {
                 <label className="block text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Document Type*
                 </label>
-                <select className="w-full px-2 py-3 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                <select className="w-full px-2 py-3 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                   <option>Driver License</option>
                   <option>Passport</option>
                   <option>ID Card</option>
@@ -380,7 +380,7 @@ export default function Verify() {
                     </p>
                     <p className="text-sm text-[#353535] dark:text-white">or drag and drop</p>
                   </div>
-                  <p className="text-xs text-[#353535] dark:text-gray-400">
+                  <p className="text-xs text-gray-400">
                     (Max. File size: 25 MB)
                   </p>
                 </div>
@@ -405,7 +405,7 @@ export default function Verify() {
       </div>
 
       {/* Level 3 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(3)}
@@ -549,7 +549,7 @@ export default function Verify() {
       </div>
 
       {/* Level 4 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(4)}

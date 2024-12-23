@@ -9,8 +9,8 @@ export default function Preferences() {
   const [appearance, setAppearance] = useState("Light")
 
   return (
-    <div className="container mx-auto px-4 py-6 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md p-6 container">
+    <div className="container font-satoshi mx-auto px-4 py-6 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep p-6 container">
         {/* Header */}
         <div className="text-gray-800 dark:text-gray-200 mb-6">
           <h2 className="text-2xl font-medium">Account Preferences</h2>
@@ -67,7 +67,7 @@ export default function Preferences() {
               onClick={() => setEmailOffers(!emailOffers)}
             >
               <div
-                className={`absolute w-5 h-5 bg-white dark:bg-[#1E2327] rounded-full shadow-md transform transition-transform ${
+                className={`absolute w-5 h-5 bg-white dark:bg-[#1E2327] rounded-full shadow-deep transform transition-transform ${
                   emailOffers ? "translate-x-6" : "translate-x-0"
                 }`}
               ></div>

@@ -1,7 +1,7 @@
 export default function Offers() {
   return (
-    <div className="container mx-auto px-4 py-6 border border-[#F4F4F4] dark:border-[#1E2327] rounded-lg">
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-md p-6">
+    <div className="container font-satoshi mx-auto px-4 py-6 border border-[#F4F4F4] dark:border-[#1E2327] rounded-lg">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep p-6">
         {/* Header */}
         <div className="text-gray-800 dark:text-gray-200 mb-6 space-y-1">
           <h2 className=" font-medium">Redeem Your Bonus Code</h2>

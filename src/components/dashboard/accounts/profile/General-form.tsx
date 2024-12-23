@@ -21,7 +21,7 @@ export default function General() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 font-satoshi">
       {/* Profile Information and Form */}
       <div className="bg-[#FCFCFC] dark:bg-[#1E2327] p-8 rounded-lg shadow-sm">
         <div className="flex flex-col md:flex-row items-center gap-4 md:items-start mb-6">
