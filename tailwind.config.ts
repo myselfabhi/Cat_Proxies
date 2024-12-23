@@ -17,8 +17,11 @@ const config: Config = {
       fontFamily: {
         giest: ["Giest", "sans-serif"],
         sora: ["Sora", "sans-serif"],
+        satoshi: ['"Satoshi Variable"', 'sans-serif'],
       },
       boxShadow: {
+        soft: '0px 3px 8px -1px #0000000D', 
+        deep: '0px 4px 16px 2px #00000014', 
         custom: "-2px 4px 20px 0px rgba(0, 0, 0, 0.12)",
         outline:
           "0px -8px 20.6px 0px rgba(0, 0, 0, 0.02) inset, 0px 2px 7px 0px rgba(0, 0, 0, 0.15)",
@@ -30,7 +33,7 @@ const config: Config = {
         neon: "linear-gradient(286.17deg, #019B83 0%, #18C6AB 100%)",
       },
       cream: {
-        "800": "#fdfdfc",
+        "800": "#fdfcfd",
         "900": "#f8fbf9",
       },
       subtitle: {

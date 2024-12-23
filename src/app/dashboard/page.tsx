@@ -5,7 +5,7 @@ import DashboardLayout from "@/components/DashboardLayout"
 
 const Dashboard = () => {
   return (
-    <div className="flex bg-cream-800">
+    <div className="flex bg-[#fdfcfd]">
       <DashboardLayout>
         <div>
           <Cards />

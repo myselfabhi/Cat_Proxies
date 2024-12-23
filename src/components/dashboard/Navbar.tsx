@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
   }
 
   return (
-    <nav className="flex items-center lg:border-[16px] border-[5px] dark:border-[#1E2327] border-white gap-[8px] justify-between bg-white dark:bg-[#1E2327] rounded-xl shadow-md">
+    <nav className="flex items-center lg:border-[16px] border-[5px] dark:border-[#1E2327] border-white gap-[8px] justify-between bg-white dark:bg-[#1E2327] rounded-xl shadow-deep">
       <div className="flex items-center gap-4">
         <button
           className="p-2 rounded-full bg-green-500 text-white shadow-md lg:hidden"
@@ -60,8 +60,8 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
         
 
         <div className="hidden lg:block">
-          <p className="text-sm font-medium dark:text-white">Hi Maxlin!</p>
-          <p className="text-sm font-medium text-gray-500 dark:text-white">
+          <p className="text-sm font-medium dark:text-white font-satoshi">Hi Maxlin!</p>
+          <p className="text-sm font-medium text-gray-500 dark:text-white font-satoshi">
             support@MaxLin.com
           </p>
         </div>
@@ -74,14 +74,14 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
             onClick={toggleDarkMode}
             className={`relative w-12 h-6 flex items-center rounded-full ${
               isDarkMode
-                ? "bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800"
-                : "bg-gradient-to-r from-yellow-400 to-orange-600"
+                ? "bg-purple-600"
+                : "bg-yellow-400"
             } transition-colors duration-500`}
           >
             <div
               className={`w-6 h-6 rounded-full flex items-center justify-center transition-transform transform shadow-md ${
                 isDarkMode
-                  ? "translate-x-6 bg-blue-300"
+                  ? "translate-x-6 bg-purple-300"
                   : "translate-x-0 bg-yellow-200"
               }`}
             >
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
               Wallet Balance
             </span>
           </div>
-          <span className="text-xs font-normal text-[#019B83]">$1870</span>
+          <span className="text-xs font-normal font-sora text-[#019B83]">$1870</span>
         </div>
 
         <div className="flex items-center lg:hidden bg-[#f4f4f4] dark:bg-[#161B1E] rounded-md shadow-md px-3 py-2">
