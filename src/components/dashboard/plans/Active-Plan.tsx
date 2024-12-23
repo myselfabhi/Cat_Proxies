@@ -108,43 +108,43 @@ const ActivePlans = () => {
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-full ${plan.color}`} />
                       <div>
-                        <p className="text-sm font-normal text-gray-500 dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
-                        <p className="text-sm font-medium text-gray-800 dark:text-gray-100">
+                        <p className="text-sm font-normal text-[#525252] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
+                        <p className="text-sm font-medium text-[#27272E] dark:text-gray-100">
                           {plan.name}
                         </p>
                       </div>
                     </div>
                     <div className="text-right flex gap-3">
-                      <p className=" text-gray-800 dark:text-gray-100">
+                      <p className=" text-[#27272E] dark:text-gray-100">
                         {plan.price}
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                      <p className="text-xs mt-1 text-[#718096] dark:text-gray-400">
                         per year
                       </p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div>
-                      <p className="text-[8px] text-gray-500 dark:text-gray-400">
+                      <p className="text-[8px] text-[#525252] dark:text-gray-400">
                         Bandwidth Left
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.bandwidth}
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
                         Status
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.status}
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
                         Due Date
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.dueDate}
                       </p>
                     </div>
@@ -171,43 +171,43 @@ const ActivePlans = () => {
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-full ${plan.color}`} />
                       <div>
-                        <p className="text-sm font-normal text-gray-500 dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
-                        <p className="text-sm font-medium text-gray-800 dark:text-gray-100">
+                        <p className="text-sm font-normal text-[#525252] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
+                        <p className="text-sm font-medium text-[#27272E] dark:text-gray-100">
                           {plan.name}
                         </p>
                       </div>
                     </div>
-                    <div className="text-right flex gap-3 ">
-                      <p className=" text-gray-800 dark:text-gray-100">
+                    <div className="text-right flex gap-3">
+                      <p className=" text-[#27272E] dark:text-gray-100">
                         {plan.price}
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                      <p className="text-xs mt-1 text-[#718096] dark:text-gray-400">
                         per year
                       </p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
                         Bandwidth Left
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.bandwidth}
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
                         Status
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.status}
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-[8px] dark:text-gray-400">
+                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
                         Due Date
                       </p>
-                      <p className="font-medium text-[10px] text-gray-800 dark:text-gray-100">
+                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
                         {plan.dueDate}
                       </p>
                     </div>
