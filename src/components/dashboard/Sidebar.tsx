@@ -338,7 +338,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
     <>
       {/* Sidebar */}
       <aside
-        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6 bg-white dark:bg-[#09090B] rounded-lg  transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-64 lg:h-screen lg:opacity-100 lg:scale-100 ${
+        className={`fixed top-1/2 left-1/2 w-11/12 max-w-sm h-5/6  dark:bg-[#09090B] rounded-lg  transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 overflow-y-auto lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 lg:w-64 lg:h-screen lg:opacity-100 lg:scale-100 ${
           isOpen
             ? "scale-100 opacity-100 pointer-events-auto"
             : "scale-95 opacity-0 pointer-events-none lg:pointer-events-auto"

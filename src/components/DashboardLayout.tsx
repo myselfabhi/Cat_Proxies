@@ -14,7 +14,7 @@ export default function DashboardLayout({
   const [isSidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex h-screen bg-cream-800">
+    <div className="flex h-screen bg-[#fdfcfd]">
       {/* Sidebar */}
       <Sidebar
         activePath={pathname}

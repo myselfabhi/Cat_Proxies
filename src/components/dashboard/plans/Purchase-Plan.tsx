@@ -84,11 +84,11 @@ const PurchasePlan = () => {
 
   return (
     <DashboardLayout>
-      <div className="container mx-auto px-4 space-y-8 py-8 font-satoshi">
+      <div className="container mx-auto px-4 space-y-8  dark:bg-[#161B1E] py-8 font-satoshi">
         {/* Header Section */}
         <div className="text-gray-800 dark:text-gray-100 text-center md:text-left space-y-2">
-          <h1 className="text-2xl font-medium">Pricing Plans</h1>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <h1 className="text-2xl text-[#161616] font-medium">Pricing Plans</h1>
+          <p className="text-sm text-[#525252] dark:text-gray-400">
             Boost security with proxies, shielding your network, filtering
             traffic, and preserving anonymity online.
           </p>
@@ -101,10 +101,10 @@ const PurchasePlan = () => {
               <button
                 key={tab}
                 onClick={() => setSelectedTab(tab)}
-                className={`flex-1 text-center px-4 py-2 rounded-xl font-medium text-sm transition-all ${
+                className={`flex-1 text-center px-4 py-2 rounded-xl font-medium  transition-all ${
                   selectedTab === tab
                     ? "bg-gradient-to-r from-[#FB9400] to-[#FFAB38] font-medium "
-                    : "text-gray-800 hover:bg-gray-200 dark:bg-[#161B1E] dark:text-gray-300 dark:hover:bg-gray-600"
+                    : "text-black hover:bg-gray-200 dark:bg-[#161B1E] dark:text-gray-300 dark:hover:bg-gray-600"
                 }`}
               >
                 {tab}
@@ -125,7 +125,7 @@ const PurchasePlan = () => {
                 >
                   <div>
                     <div className="flex justify-between items-center mb-4">
-                      <h2 className="font-medium text-gray-800 dark:text-gray-100">
+                      <h2 className="font-medium text-black dark:text-gray-100">
                         {plan.title}
                       </h2>
                       <div className="flex flex-col items-end">
@@ -137,12 +137,12 @@ const PurchasePlan = () => {
                             {plan.price}
                           </p>
                         </div>
-                        <p className="text-[10px] font-medium text-gray-500 dark:text-gray-400">
+                        <p className="text-[10px] font-medium text-black dark:text-gray-400">
                           {plan.duration}
                         </p>
                       </div>
                     </div>
-                    <p className="text-[10px] mt-8 font-normal text-gray-600 dark:text-gray-400">
+                    <p className="text-[10px] mt-8 font-normal text-[#555555] dark:text-gray-400">
                       {plan.description}
                     </p>
                   </div>
@@ -151,21 +151,21 @@ const PurchasePlan = () => {
             </div>
 
             {/* Right Section */}
-            <div className="lg:col-span-1 bg-white dark:bg-[#1E2327] p-4 rounded-lg shadow-sm flex flex-col items-center space-y-8">
+            <div className="lg:col-span-1 bg-white  dark:bg-[#1E2327] p-4 lg:w-[276px] rounded-lg shadow-sm flex flex-col items-center space-y-8">
               <div className="space-y-3">
                 <div className="bg-[#05C067] text-white text-[10px] font-normal uppercase px-3 py-1 rounded-full">
                   Most Popular
                 </div>
                 <div>
-                  <p className="text-base font-medium text-gray-800 dark:text-gray-100">
+                  <p className=" font-medium text-black text-center dark:text-gray-100">
                     Bandwidth
                   </p>
                 </div>
               </div>
               <div className="flex items-center">
-                <p className="text-md font-bold self-start">$</p>
-                <p className="text-4xl font-bold ml-1">{bandwidthPrice}</p>
-                <p className="font-medium text-gray-600 dark:text-gray-400 ml-2">
+                <p className="text-md font-bold font-[Cabinet Grotesk Variable] self-start">$</p>
+                <p className="text-4xl text-black font-bold">{bandwidthPrice}</p>
+                <p className="font-medium  dark:text-gray-400 ml-1">
                   / per month
                 </p>
               </div>
@@ -220,17 +220,17 @@ const PurchasePlan = () => {
               `}</style>
 
               <div>
-                <p className="text-sm font-medium mt-4  text-gray-700 dark:text-gray-300 text-center">
+                <p className="text-sm font-medium mt-4  text-[#161616] dark:text-gray-300 text-center">
                   Up To 5GB Emails / mo
                 </p>
-                <p className="text-xs text-gray-700 dark:text-gray-300 text-center">
+                <p className="text-xs text-[#161616] dark:text-gray-300 text-center mt-2">
                   No daily sending limit
                 </p>
               </div>
 
               <div>
-                <ul className=" space-y-2 text-sm text-gray-600 dark:text-gray-400 text-left">
-                  <li className="flex">
+                <ul className=" space-y-2 text-[13px]  text-[#6B7280] dark:text-gray-400 text-left">
+                  <li className="flex gap-1">
                     <svg
                       width="20"
                       height="20"
@@ -247,7 +247,7 @@ const PurchasePlan = () => {
                     </svg>
                     10M+ Real Residential Peers
                   </li>
-                  <li className="flex">
+                  <li className="flex gap-1">
                     <svg
                       width="20"
                       height="20"
@@ -264,7 +264,7 @@ const PurchasePlan = () => {
                     </svg>{" "}
                     IP & User-Pass Authentication
                   </li>
-                  <li className="flex">
+                  <li className="flex gap-1">
                     <svg
                       width="20"
                       height="20"
@@ -281,7 +281,7 @@ const PurchasePlan = () => {
                     </svg>{" "}
                     Country, State, City & ISP Targeting
                   </li>
-                  <li className="flex">
+                  <li className="flex gap-1">
                     <svg
                       width="20"
                       height="20"
@@ -298,7 +298,7 @@ const PurchasePlan = () => {
                     </svg>{" "}
                     Rotating & Sticky Sessions
                   </li>
-                  <li className="flex">
+                  <li className="flex gap-1">
                     <svg
                       width="20"
                       height="20"
