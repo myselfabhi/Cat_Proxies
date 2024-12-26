@@ -359,7 +359,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
           />
           <div>
             <p className="text-sm  font-satoshi font-medium dark:text-white">
-              Hi Maxlin!
+              Hi Maxlin!!!
             </p>
             <p className="text-xs  font-satoshi font-medium text-gray-500 dark:text-gray-400">
               support@MaxLin.com
