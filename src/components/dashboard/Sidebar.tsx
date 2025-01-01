@@ -682,7 +682,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                                 }`}
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke="currentColor"
+                                stroke="gray"
                               >
                                 <path
                                   strokeLinecap="round"
