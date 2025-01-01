@@ -1,8 +1,6 @@
 "use client"
 
-import {
-  LogOut, X
-} from "lucide-react"
+import { LogOut, X } from "lucide-react"
 import Link from "next/link"
 import {
   Accordion,
@@ -55,7 +53,6 @@ const sidebarItems = [
           </svg>
         ),
       },
-      
 
       {
         name: "My Plans",
@@ -153,21 +150,52 @@ const sidebarItems = [
             name: "Purchase Plans",
             href: "/dashboard/my-plans/purchase-plan",
             icon: (
-<svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.53045 4.37732H11.4061C12.1928 3.31463 11.1329 1.82734 9.81625 2.25208L9.18834 2.45464C9.04538 2.50076 8.89117 2.50076 8.74821 2.45464L8.1203 2.25208C6.80366 1.82734 5.74371 3.31463 6.53045 4.37732Z" stroke="url(#paint0_linear_607_7890)" stroke-width="0.696133" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3329 5.39251H6.60368C5.7108 5.8869 5.01324 6.71235 4.69383 7.73446L3.84783 10.4416C3.03069 13.0565 4.9842 15.7136 7.72376 15.7136H10.2128C12.9524 15.7136 14.9059 13.0565 14.0887 10.4416L13.2428 7.73446C12.9233 6.71235 12.2258 5.8869 11.3329 5.39251ZM11.245 13.4503C11.4901 13.3142 11.5785 13.0052 11.4425 12.7601C11.3064 12.515 10.9974 12.4266 10.7523 12.5627C9.96108 13.0019 9.41869 13.1758 8.92777 13.1738C8.43938 13.1718 7.92648 12.9954 7.19362 12.568C6.95145 12.4268 6.64065 12.5086 6.49942 12.7508C6.3582 12.9929 6.44002 13.3037 6.68219 13.4449C7.47508 13.9073 8.17291 14.1859 8.92365 14.189C9.67185 14.192 10.397 13.921 11.245 13.4503Z" stroke="url(#paint1_linear_607_7890)" stroke-width="0.696133" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_607_7890" x1="14.2764" y1="15.7136" x2="1.2554" y2="12.7526" gradientUnits="userSpaceOnUse">
-<stop stop-color="#6949FF"/>
-<stop offset="1" stop-color="#876DFF"/>
-</linearGradient>
-<linearGradient id="paint1_linear_607_7890" x1="14.2764" y1="15.7136" x2="1.2554" y2="12.7526" gradientUnits="userSpaceOnUse">
-<stop stop-color="#6949FF"/>
-<stop offset="1" stop-color="#876DFF"/>
-</linearGradient>
-</defs>
-</svg>
-
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.53045 4.37732H11.4061C12.1928 3.31463 11.1329 1.82734 9.81625 2.25208L9.18834 2.45464C9.04538 2.50076 8.89117 2.50076 8.74821 2.45464L8.1203 2.25208C6.80366 1.82734 5.74371 3.31463 6.53045 4.37732Z"
+                  stroke="url(#paint0_linear_607_7890)"
+                  stroke-width="0.696133"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.3329 5.39251H6.60368C5.7108 5.8869 5.01324 6.71235 4.69383 7.73446L3.84783 10.4416C3.03069 13.0565 4.9842 15.7136 7.72376 15.7136H10.2128C12.9524 15.7136 14.9059 13.0565 14.0887 10.4416L13.2428 7.73446C12.9233 6.71235 12.2258 5.8869 11.3329 5.39251ZM11.245 13.4503C11.4901 13.3142 11.5785 13.0052 11.4425 12.7601C11.3064 12.515 10.9974 12.4266 10.7523 12.5627C9.96108 13.0019 9.41869 13.1758 8.92777 13.1738C8.43938 13.1718 7.92648 12.9954 7.19362 12.568C6.95145 12.4268 6.64065 12.5086 6.49942 12.7508C6.3582 12.9929 6.44002 13.3037 6.68219 13.4449C7.47508 13.9073 8.17291 14.1859 8.92365 14.189C9.67185 14.192 10.397 13.921 11.245 13.4503Z"
+                  stroke="url(#paint1_linear_607_7890)"
+                  stroke-width="0.696133"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_607_7890"
+                    x1="14.2764"
+                    y1="15.7136"
+                    x2="1.2554"
+                    y2="12.7526"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#6949FF" />
+                    <stop offset="1" stop-color="#876DFF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_607_7890"
+                    x1="14.2764"
+                    y1="15.7136"
+                    x2="1.2554"
+                    y2="12.7526"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#6949FF" />
+                    <stop offset="1" stop-color="#876DFF" />
+                  </linearGradient>
+                </defs>
+              </svg>
             ),
           },
         ],
@@ -212,11 +240,33 @@ const sidebarItems = [
     sections: [
       {
         name: "My Account",
-        icon: <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="9.39093" cy="13.8888" rx="5.41436" ry="2.70718" stroke="#05C067" stroke-width="1.16022" stroke-linejoin="round"/>
-        <circle cx="9.3908" cy="5.76775" r="3.09392" stroke="#05C067" stroke-width="1.16022" stroke-linejoin="round"/>
-        </svg>
-        ,
+        icon: (
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="9.39093"
+              cy="13.8888"
+              rx="5.41436"
+              ry="2.70718"
+              stroke="#05C067"
+              stroke-width="1.16022"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="9.3908"
+              cy="5.76775"
+              r="3.09392"
+              stroke="#05C067"
+              stroke-width="1.16022"
+              stroke-linejoin="round"
+            />
+          </svg>
+        ),
         subItems: [
           {
             name: "Settings",
@@ -275,8 +325,8 @@ const sidebarItems = [
                 </defs>
               </svg>
             ),
-          },   
-          
+          },
+
           {
             name: "Get Bonus",
             href: "/dashboard/my-account/get-bonus",
@@ -332,8 +382,7 @@ const sidebarItems = [
                 </defs>
               </svg>
             ),
-          }
-          
+          },
         ],
       },
       {
@@ -358,18 +407,40 @@ const sidebarItems = [
             />
           </svg>
         ),
-      }
-      
+      },
     ],
   },
   {
     sections: [
       {
         name: "Support",
-        icon: <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="9.39093" cy="13.8888" rx="5.41436" ry="2.70718" stroke="#05C067" stroke-width="1.16022" stroke-linejoin="round"/>
-        <circle cx="9.3908" cy="5.76775" r="3.09392" stroke="#05C067" stroke-width="1.16022" stroke-linejoin="round"/>
-        </svg>,
+        icon: (
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="9.39093"
+              cy="13.8888"
+              rx="5.41436"
+              ry="2.70718"
+              stroke="#05C067"
+              stroke-width="1.16022"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="9.3908"
+              cy="5.76775"
+              r="3.09392"
+              stroke="#05C067"
+              stroke-width="1.16022"
+              stroke-linejoin="round"
+            />
+          </svg>
+        ),
         subItems: [
           {
             name: "Guide",
@@ -407,16 +478,36 @@ const sidebarItems = [
           {
             name: "Contact Us",
             href: "/dashboard/support/contact-us",
-            icon: <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.7977 9.63763V11.021C14.7977 12.167 13.8686 13.096 12.7227 13.096C11.5767 13.096 10.6477 12.167 10.6477 11.021V9.63763C10.6477 8.49164 11.5767 7.56263 12.7227 7.56263C13.8686 7.56263 14.7977 8.49164 14.7977 9.63763ZM14.7977 9.63763V8.2543C14.7977 4.81632 12.0106 2.0293 8.57266 2.0293C5.13468 2.0293 2.34766 4.81632 2.34766 8.2543V9.63763M2.34766 9.63763V11.021C2.34766 12.167 3.27667 13.096 4.42266 13.096C5.56865 13.096 6.49766 12.167 6.49766 11.021V9.63763C6.49766 8.49164 5.56865 7.56263 4.42266 7.56263C3.27667 7.56263 2.34766 8.49164 2.34766 9.63763ZM14.7977 10.3293V11.7126C14.7977 14.0046 12.9396 15.8626 10.6477 15.8626H8.57266" stroke="url(#paint0_linear_617_2790)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-            <linearGradient id="paint0_linear_617_2790" x1="14.7977" y1="15.8626" x2="-0.238263" y2="11.9391" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FF5A5F"/>
-            <stop offset="1" stop-color="#FF8A9B"/>
-            </linearGradient>
-            </defs>
-            </svg>
-            ,
+            icon: (
+              <svg
+                width="17"
+                height="18"
+                viewBox="0 0 17 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.7977 9.63763V11.021C14.7977 12.167 13.8686 13.096 12.7227 13.096C11.5767 13.096 10.6477 12.167 10.6477 11.021V9.63763C10.6477 8.49164 11.5767 7.56263 12.7227 7.56263C13.8686 7.56263 14.7977 8.49164 14.7977 9.63763ZM14.7977 9.63763V8.2543C14.7977 4.81632 12.0106 2.0293 8.57266 2.0293C5.13468 2.0293 2.34766 4.81632 2.34766 8.2543V9.63763M2.34766 9.63763V11.021C2.34766 12.167 3.27667 13.096 4.42266 13.096C5.56865 13.096 6.49766 12.167 6.49766 11.021V9.63763C6.49766 8.49164 5.56865 7.56263 4.42266 7.56263C3.27667 7.56263 2.34766 8.49164 2.34766 9.63763ZM14.7977 10.3293V11.7126C14.7977 14.0046 12.9396 15.8626 10.6477 15.8626H8.57266"
+                  stroke="url(#paint0_linear_617_2790)"
+                  stroke-width="0.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_617_2790"
+                    x1="14.7977"
+                    y1="15.8626"
+                    x2="-0.238263"
+                    y2="11.9391"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF5A5F" />
+                    <stop offset="1" stop-color="#FF8A9B" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            ),
           },
           {
             name: "Integrations",
@@ -591,65 +682,72 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
               Main menu
             </p>
             <Link
-  href="/dashboard"
-  className={`flex items-center gap-3 px-3 py-2 shadow-mid rounded-xl hover:bg-green-100 dark:hover:bg-gray-700 mt-4 transition ${
-    activePath === "/dashboard"
-      ? "dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
-      : "text-gray-800 dark:text-gray-300"
-  }`}
->
-  <div className="flex items-center justify-center">
-    <svg
-      width="38"
-      height="38"
-      viewBox="0 0 38 38"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="0.28125"
-        y="0.28125"
-        width="37.1271"
-        height="37.1271"
-        rx="11.6022"
-        fill="#05C067"
-      />
-      <mask
-        id="mask0_607_7755"
-        style={{ maskType: "alpha" }}
-        maskUnits="userSpaceOnUse"
-        x="9"
-        y="9"
-        width="20"
-        height="20"
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M11.9375 25.5939V17.8752H13.125V25.5939C13.125 25.9218 13.3908 26.1877 13.7188 26.1877H24.4062C24.7342 26.1877 25 25.9218 25 25.5939V17.8752H26.1875V25.5939C26.1875 26.5777 25.39 27.3752 24.4062 27.3752H13.7188C12.735 27.3752 11.9375 26.5777 11.9375 25.5939Z"
-          fill="black"
-        />
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M25 12.5314V16.6877L22.625 14.3127V12.5314C22.625 12.2035 22.8908 11.9377 23.2188 11.9377H24.4062C24.7342 11.9377 25 12.2035 25 12.5314Z"
-          fill="black"
-        />
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M18.2228 11.3439C18.6866 10.8802 19.4384 10.8802 19.9022 11.3439L27.7948 19.2366C28.0267 19.4684 28.0267 19.8444 27.7948 20.0762C27.563 20.3081 27.187 20.3081 26.9552 20.0762L19.0625 12.1836L11.1698 20.0762C10.938 20.3081 10.562 20.3081 10.3302 20.0762C10.0983 19.8444 10.0983 19.4684 10.3302 19.2366L18.2228 11.3439Z"
-          fill="black"
-        />
-      </mask>
-      <g mask="url(#mask0_607_7755)">
-        <rect x="9.5625" y="9.5625" width="19" height="19" fill="white" />
-      </g>
-    </svg>
-  </div>
-  <span className="font-satoshi font-medium text-sm">Dashboard</span>
-</Link>
-
+              href="/dashboard"
+              className={`flex items-center gap-3 px-3 py-2 shadow-mid rounded-xl hover:bg-green-100 dark:hover:bg-gray-700 mt-4 transition ${
+                activePath === "/dashboard"
+                  ? "dark:bg-[#161B1E] dark:border-[#05C067] dark:border-2"
+                  : "text-gray-800 dark:text-gray-300"
+              }`}
+            >
+              <div className="flex items-center justify-center">
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 38 38"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.28125"
+                    y="0.28125"
+                    width="37.1271"
+                    height="37.1271"
+                    rx="11.6022"
+                    fill="#05C067"
+                  />
+                  <mask
+                    id="mask0_607_7755"
+                    style={{ maskType: "alpha" }}
+                    maskUnits="userSpaceOnUse"
+                    x="9"
+                    y="9"
+                    width="20"
+                    height="20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M11.9375 25.5939V17.8752H13.125V25.5939C13.125 25.9218 13.3908 26.1877 13.7188 26.1877H24.4062C24.7342 26.1877 25 25.9218 25 25.5939V17.8752H26.1875V25.5939C26.1875 26.5777 25.39 27.3752 24.4062 27.3752H13.7188C12.735 27.3752 11.9375 26.5777 11.9375 25.5939Z"
+                      fill="black"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M25 12.5314V16.6877L22.625 14.3127V12.5314C22.625 12.2035 22.8908 11.9377 23.2188 11.9377H24.4062C24.7342 11.9377 25 12.2035 25 12.5314Z"
+                      fill="black"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M18.2228 11.3439C18.6866 10.8802 19.4384 10.8802 19.9022 11.3439L27.7948 19.2366C28.0267 19.4684 28.0267 19.8444 27.7948 20.0762C27.563 20.3081 27.187 20.3081 26.9552 20.0762L19.0625 12.1836L11.1698 20.0762C10.938 20.3081 10.562 20.3081 10.3302 20.0762C10.0983 19.8444 10.0983 19.4684 10.3302 19.2366L18.2228 11.3439Z"
+                      fill="black"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_607_7755)">
+                    <rect
+                      x="9.5625"
+                      y="9.5625"
+                      width="19"
+                      height="19"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <span className="font-satoshi font-medium text-sm">
+                Dashboard
+              </span>
+            </Link>
 
             {/* Sidebar Items */}
             <div className="mt-4 ml-2 space-y-8 gap-3">
