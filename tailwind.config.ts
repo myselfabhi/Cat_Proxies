@@ -21,6 +21,8 @@ const config: Config = {
       },
       boxShadow: {
         soft: "0px 3px 8px -1px #0000000D",
+        extrasoft: "4px 4px 16px 2px #00000014",
+        mid: "6px 6px 10.9px 0px #0A0A0A1F",
         deep: "0px 4px 16px 2px #00000014",
         deepest: "0px 4.87px 6.82px 0px rgba(0, 0, 0, 0.14)",
         custom: "-2px 4px 20px 0px rgba(0, 0, 0, 0.12)",
