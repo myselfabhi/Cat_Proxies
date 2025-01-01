@@ -588,7 +588,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
           {/* Dashboard Link */}
           <div className="lg:w-52">
             <p className="text-sm  font-satoshi font-medium text-[#A8A8A8] dark:text-gray-400 mb-8">
-              MAIN MENU
+              Main menu
             </p>
             <Link
   href="/dashboard"
