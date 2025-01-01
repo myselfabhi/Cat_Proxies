@@ -768,7 +768,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                               >
                                 {item.icon}
                               </span>
-                              <span className="text-sm font-satoshi font-normal">
+                              <span className="text-sm font-satoshi font-light">
                                 {item.name}
                               </span>
                             </div>
@@ -823,7 +823,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
                         }`}
                       >
                         {item.icon}
-                        <span className="text-sm">{item.name}</span>
+                        <span className="text-sm font-satoshi">{item.name}</span>
                       </Link>
                     )
                   )}
