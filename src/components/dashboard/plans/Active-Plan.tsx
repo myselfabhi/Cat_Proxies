@@ -10,9 +10,10 @@ const plansData = {
       status: "Ongoing",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-purple-500",
+      color: "bg-gradient-to-r from-[#FB9400] to-[#FFAB38]",
       link: "/dashboard/activeplan/1",
     },
+    
     {
       id: "2",
       name: "Plan Name",
@@ -20,7 +21,7 @@ const plansData = {
       status: "Ongoing",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-orange-500",
+      color: "bg-gradient-to-r from-[#FB9400] to-[#FFAB38]",
       link: "/dashboard/activeplan/2",
     },
     {
@@ -30,7 +31,7 @@ const plansData = {
       status: "Ongoing",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-purple-500",
+      color: "bg-gradient-to-r from-[#AF52DE] to-[#7E00BE]",
       link: "/dashboard/activeplan/3",
     },
     {
@@ -40,7 +41,7 @@ const plansData = {
       status: "Ongoing",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-orange-500",
+      color: "bg-gradient-to-r from-[#AF52DE] to-[#7E00BE]",
       link: "/dashboard/activeplan/4",
     },
   ],
@@ -52,7 +53,7 @@ const plansData = {
       status: "Expired",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-purple-500",
+      color: "bg-gradient-to-r from-[#FB9400] to-[#FFAB38]",
       link: "/dashboard/activeplan/5",
     },
     {
@@ -62,7 +63,7 @@ const plansData = {
       status: "Expired",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-orange-500",
+      color: "bg-gradient-to-r from-[#FB9400] to-[#FFAB38]",
       link: "/dashboard/activeplan/6",
     },
     {
@@ -72,7 +73,7 @@ const plansData = {
       status: "Expired",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-[#AF52DE] to-[#7E00BE]",
       link: "/dashboard/activeplan/7",
     },
     {
@@ -82,7 +83,7 @@ const plansData = {
       status: "Expired",
       price: "$59",
       dueDate: "25/05/2025",
-      color: "bg-teal-500",
+      color: "bg-gradient-to-r from-[#AF52DE] to-[#7E00BE]",
       link: "/dashboard/activeplan/8",
     },
   ],
@@ -94,7 +95,7 @@ const ActivePlans = () => {
       <div className="space-y-8 container mx-auto px-4 font-satoshi">
         {/* Active Plans Section */}
         <div className="space-y-6">
-          <h2 className="text-base font-medium text-gray-700 dark:text-gray-200">
+          <h2 className="text-base font-bold text-[#262626] dark:text-gray-200">
             Active Plans
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
@@ -103,48 +104,48 @@ const ActivePlans = () => {
                 href={`/dashboard/my-plans/active-plans/${plan.id}`}
                 key={plan.id}
               >
-                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-full ${plan.color}`} />
                       <div>
-                        <p className="text-sm font-normal text-[#525252] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
+                        <p className="text-xs font-medium text-[#A8A8A8] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
                         <p className="text-sm font-medium text-[#27272E] dark:text-gray-100">
                           {plan.name}
                         </p>
                       </div>
                     </div>
-                    <div className="text-right flex gap-3">
-                      <p className=" text-[#27272E] dark:text-gray-100">
+                    <div className="text-right flex gap-1">
+                      <p className=" font-medium  text-[#27272E] dark:text-gray-100">
                         {plan.price}
                       </p>
-                      <p className="text-xs mt-1 text-[#718096] dark:text-gray-400">
+                      <p className=" text-[#718096] dark:text-gray-400">
                         per year
                       </p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div>
-                      <p className="text-[8px] text-[#525252] dark:text-gray-400">
+                      <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Bandwidth Left
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.bandwidth}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
+                    <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Status
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.status}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
+                    <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Due Date
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.dueDate}
                       </p>
                     </div>
@@ -157,7 +158,7 @@ const ActivePlans = () => {
 
         {/* Expired Plans Section */}
         <div className="space-y-6">
-          <h2 className="text-base font-medium text-gray-700 dark:text-gray-200">
+          <h2 className="text-base font-bold text-[#262626] dark:text-gray-200">
             Expired Plans
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
@@ -166,48 +167,48 @@ const ActivePlans = () => {
                 href={`/dashboard/my-plans/active-plans/${plan.id}`}
                 key={plan.id}
               >
-                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="p-6 bg-white dark:bg-[#1E2327] rounded-lg  hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-full ${plan.color}`} />
                       <div>
-                        <p className="text-sm font-normal text-[#525252] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
+                        <p className="text-xs font-medium text-[#A8A8A8] dark:text-gray-400">{`Plan ID ${plan.id}`}</p>
                         <p className="text-sm font-medium text-[#27272E] dark:text-gray-100">
                           {plan.name}
                         </p>
                       </div>
                     </div>
-                    <div className="text-right flex gap-3">
-                      <p className=" text-[#27272E] dark:text-gray-100">
+                    <div className="text-right flex gap-1">
+                      <p className=" font-medium  text-[#27272E] dark:text-gray-100">
                         {plan.price}
                       </p>
-                      <p className="text-xs mt-1 text-[#718096] dark:text-gray-400">
+                      <p className=" text-[#718096] dark:text-gray-400">
                         per year
                       </p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div>
-                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
+                    <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Bandwidth Left
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.bandwidth}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
+                    <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Status
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.status}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#525252] text-[8px] dark:text-gray-400">
+                    <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                         Due Date
                       </p>
-                      <p className="font-medium text-[10px] text-[#27272E] dark:text-gray-100">
+                      <p className="font-medium text-sm text-[#27272E] dark:text-gray-100">
                         {plan.dueDate}
                       </p>
                     </div>
