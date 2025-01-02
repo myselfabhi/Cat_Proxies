@@ -33,15 +33,15 @@ const PlansSection = () => {
     <div className="w-full bg-[#F8FAF8] dark:bg-[#1E2327] rounded-2xl shadow-soft px-6 py-7 mb-12 mx-auto">
       {/* Header */}
       <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
-        <h2 className="text-base font-satoshi font-medium text-gray-800 dark:text-gray-200">
+        <h2 className=" font-satoshi font-medium text-[#262626] dark:text-gray-200">
           My Plans
         </h2>
         <div className="flex items-center">
-          <span className="text-xs text-gray-600 dark:text-gray-400">
+          <span className="text-sm text-[#020611] dark:text-gray-400">
             Plan type:
           </span>
           <select
-            className="text-xs font-satoshi font-medium text-gray-700 dark:text-gray-300 dark:bg-[#161B1E] border-none rounded-md dark:p-1 bg-transparent focus:outline-none"
+            className="text-sm font-satoshi font-medium text-[#020611] dark:text-gray-300 dark:bg-[#161B1E] border-none rounded-md dark:p-1 bg-transparent focus:outline-none"
             defaultValue="ongoing"
           >
             <option value="ongoing">Ongoing</option>
@@ -63,19 +63,19 @@ const PlansSection = () => {
               <div className="flex items-center gap-4">
                 <div className={`w-6 h-6 rounded-full ${plan.color}`}></div>
                 <div>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">{`Plan ID ${plan.id}`}</p>
-                  <p className="text-sm font-satoshi font-medium text-gray-900 dark:text-gray-100">
+                  <p className="text-xs font-medium text-[#A8A8A8] dark:text-gray-300">{`Plan ID ${plan.id}`}</p>
+                  <p className="text-sm font-satoshi font-medium text-[#27272E] dark:text-gray-100">
                     {plan.name}
                   </p>
                 </div>
               </div>
 
               {/* Right Section */}
-              <div className="flex flex-col sm:flex-row items-end sm:items-center text-right gap-1 sm:gap-3">
-                <p className="text-base font-satoshi font-normal text-gray-900 dark:text-gray-100">
+              <div className="flex flex-col sm:flex-row items-end sm:items-center text-right sm:gap-3">
+                <p className=" font-satoshi font-medium text-[#27272E] dark:text-gray-100">
                   {plan.price}
                 </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className=" text-[#718096] dark:text-gray-400">
                   per year
                 </p>
               </div>
@@ -84,26 +84,26 @@ const PlansSection = () => {
             {/* Middle Section */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <p className="text-[8px] text-gray-600 dark:text-gray-400">
+                <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                   Bandwidth Left:
                 </p>
-                <p className="text-[10px] font-satoshi font-medium text-gray-800 dark:text-gray-200">
+                <p className="text-sm font-satoshi font-medium text-[#27272E] dark:text-gray-200">
                   {plan.bandwidth}
                 </p>
               </div>
               <div>
-                <p className="text-[8px] text-gray-600 dark:text-gray-400">
+                <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                   Status:
                 </p>
-                <p className="text-[10px] font-satoshi font-medium text-gray-800 dark:text-gray-200">
+                <p className="text-sm font-satoshi font-medium text-[#27272E] dark:text-gray-200">
                   {plan.status}
                 </p>
               </div>
               <div>
-                <p className="text-[8px] text-gray-600 dark:text-gray-400">
+                <p className="text-xs font-medium text-[#8D8D8D] dark:text-gray-400">
                   Due Date:
                 </p>
-                <p className="text-[10px] font-satoshi font-medium text-gray-800 dark:text-gray-200">
+                <p className="text-sm font-satoshi font-medium text-[#27272E] dark:text-gray-200">
                   {plan.dueDate}
                 </p>
               </div>
