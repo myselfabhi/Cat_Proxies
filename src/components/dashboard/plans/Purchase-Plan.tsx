@@ -11,15 +11,19 @@ const PurchasePlan = () => {
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding Network",
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
     {
       id: "2",
       title: "30GB Plan",
       price: "30",
       duration: "/Per month",
-      description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding your network.",
+            description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
     {
       id: "3",
@@ -27,23 +31,29 @@ const PurchasePlan = () => {
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    description2: 
+      "Boost security with proxies, shielding Network",
     },
     {
       id: "4",
       title: "30GB Plan",
       price: "30",
       duration: "/Per month",
-      description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding Network",
+            description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
     {
       id: "5",
       title: "30GB Plan",
       price: "30",
       duration: "/Per month",
-      description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding your network.",
+            description:
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
     {
       id: "6",
@@ -51,7 +61,9 @@ const PurchasePlan = () => {
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+    description2: 
+      "Boost security with proxies, shielding Network",
     },
     {
       id: "7",
@@ -59,7 +71,9 @@ const PurchasePlan = () => {
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding Network",
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
     {
       id: "8",
@@ -67,15 +81,20 @@ const PurchasePlan = () => {
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online. Boost security with proxies, shielding your network.",
+        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+        "Boost security with proxies, shielding Network",
     },
+
     {
       id: "9",
       title: "30GB Plan",
       price: "30",
       duration: "/Per month",
       description:
-        "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      "Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.",
+      description2: 
+      "Boost security with proxies, shielding Network",
     },
   ]
 
@@ -95,7 +114,7 @@ const PurchasePlan = () => {
         </div>
 
         {/* Tabs Section */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 pb-2 lg:w-[95%]">
+        <div className="flex flex-wrap justify-center gap-2 shadow-extrasoft rounded-lg p-1 md:gap-4 pb-2 lg:w-[95%]">
           {["Residential (new)", "Mobile", "Datacenter", "IPv6", "ISP"].map(
             (tab) => (
               <button
@@ -103,8 +122,8 @@ const PurchasePlan = () => {
                 onClick={() => setSelectedTab(tab)}
                 className={`flex-1 text-center px-4 py-2 rounded-xl font-medium  transition-all ${
                   selectedTab === tab
-                    ? "bg-gradient-to-r from-[#FB9400] to-[#FFAB38] font-medium "
-                    : "text-black hover:bg-gray-200 dark:bg-[#161B1E] dark:text-gray-300 dark:hover:bg-gray-600"
+                    ? "bg-gradient-to-r from-[#FB9400] to-[#FFAB38] font-medium text-[15.71px text-black] "
+                    : "text-[#393939] text-[14.59px] text-medium hover:bg-gray-200 dark:bg-[#161B1E] dark:text-gray-300 dark:hover:bg-gray-600"
                 }`}
               >
                 {tab}
@@ -115,35 +134,38 @@ const PurchasePlan = () => {
 
         {/* Main Content Section */}
         {selectedTab === "Residential (new)" ? (
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
             {/* Plans */}
-            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {plansData.map((plan) => (
                 <div
                   key={plan.id}
-                  className="p-6 bg-white dark:bg-[#1E2327] rounded-lg  hover:shadow-lg transition-shadow flex flex-col justify-between"
+                  className="py-4 px-[18px]  bg-white border border-[#E0E0E0] dark:bg-[#1E2327] rounded-lg  hover:shadow-lg transition-shadow flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="font-medium text-black dark:text-gray-100">
+                    <div className="flex justify-between  mb-4">
+                      <h2 className="font-medium font-satoshi text-[15.71px] text-black dark:text-gray-100">
                         {plan.title}
                       </h2>
-                      <div className="flex flex-col items-end">
+                      <div className="flex flex-col gap-0 ">
                         <div className="flex items-baseline">
-                          <sup className="text-sm text-black dark:text-white mr-1">
+                          <sup className="text-sm text-bold text-black dark:text-white mr-1">
                             $
                           </sup>
                           <p className="text-2xl text-black dark:text-white">
                             {plan.price}
                           </p>
                         </div>
-                        <p className="text-[10px] font-medium text-black dark:text-gray-400">
+                        <p className="text-xs font-medium text-black dark:text-gray-400">
                           {plan.duration}
                         </p>
                       </div>
                     </div>
-                    <p className="text-[10px] mt-8 font-normal text-[#555555] dark:text-gray-400">
+                    <p className="text-xs mt-6 font-medium text-[#2C2C2C] dark:text-gray-400">
                       {plan.description}
+                    </p>
+                    <p className="text-xs mt-[7px] font-medium text-[#2C2C2C] dark:text-gray-400">
+                      {plan.description2}
                     </p>
                   </div>
                 </div>
@@ -151,89 +173,39 @@ const PurchasePlan = () => {
             </div>
 
             {/* Right Section */}
-            <div className="lg:col-span-1 bg-white  dark:bg-[#1E2327] p-4 lg:w-[276px] rounded-lg shadow-sm flex flex-col items-center space-y-8">
-              <div className="space-y-3">
-                <div className="bg-[#05C067] text-white text-[10px] font-normal uppercase px-3 py-1 rounded-full">
+            <div className="lg:col-span-1 lg:h-[480px] bg-white mt-1  dark:bg-[#1E2327] border border-[#E0E0E0] p-5 lg:w-[280px] rounded-lg shadow-sm flex flex-col items-center space-y-8">
+              <div className="space-y-2">
+                <div className=" absolute top-[342px] right-[112px] transform -translate-y-1/2 bg-[#05C067] border font-[Cabinet Grotesk Variable] border-[#F4F4F4] text-white text-[10.48px] font-bold  px-3 py-1 rounded-full">
                   Most Popular
                 </div>
                 <div>
-                  <p className=" font-medium text-black text-center dark:text-gray-100">
-                    Bandwidth
+                  <p className=" font-medium text-2xl w-[117px] h-[48px] leading-[22px] text-black text-center dark:text-gray-100">
+                  Residential Proxies
                   </p>
                 </div>
-              </div>
-              <div className="flex items-center">
-                <p className="text-md font-bold font-[Cabinet Grotesk Variable] self-start">
-                  $
-                </p>
-                <p className="text-4xl text-black font-bold">
-                  {bandwidthPrice}
-                </p>
-                <p className="font-medium  dark:text-gray-400 ml-1">
-                  / per month
-                </p>
+                <div className=" item-center    ml-5">
+
+<p className=" text-black font-medium">
+30Gb Plan
+</p>
+
+</div>
               </div>
 
-              <input
-                type="range"
-                min="10"
-                max="50"
-                value={bandwidthPrice}
-                onChange={(e) => setBandwidthPrice(parseInt(e.target.value))}
-                className="w-full  h-1 bg-gray-200 dark:bg-[#161B1E] rounded-lg appearance-none cursor-pointer"
-                style={{
-                  background: `linear-gradient(to right, #fd980c ${
-                    (bandwidthPrice - 10) * 2
-                  }%, ${
-                    bandwidthPrice >= 50
-                      ? "#e5e5e5"
-                      : "rgba(255, 255, 255, 0.1)"
-                  } ${(bandwidthPrice - 10) * 2.8}%)`,
-                }}
-                aria-label="Bandwidth Price Slider"
-              />
 
-              <style jsx>{`
-                input[type="range"]::-webkit-slider-thumb {
-                  -webkit-appearance: none;
-                  appearance: none;
-                  width: 15px;
-                  height: 15px;
-                  border-radius: 50%;
-                  background: linear-gradient(
-                    286.17deg,
-                    #fb9400 0%,
-                    #ffab38 100%
-                  );
-                  cursor: pointer;
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                }
-
-                input[type="range"]::-moz-range-thumb {
-                  width: 20px;
-                  height: 20px;
-                  border-radius: 50%;
-                  background: linear-gradient(
-                    286.17deg,
-                    #fb9400 0%,
-                    #ffab38 100%
-                  );
-                  cursor: pointer;
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                }
-              `}</style>
+              
 
               <div>
-                <p className="text-sm font-medium mt-4  text-[#161616] dark:text-gray-300 text-center">
-                  Up To 5GB Emails / mo
-                </p>
-                <p className="text-xs text-[#161616] dark:text-gray-300 text-center mt-2">
-                  No daily sending limit
-                </p>
+              <p className="text-sm  font-medium text-[#2C2C2C] dark:text-gray-400">
+              Boost security with proxies, shielding your network, filtering traffic, and preserving anonymity online.
+                    </p>
+                    <p className="text-sm mt-[7px] font-medium text-[#2C2C2C] dark:text-gray-400">
+                    Boost security with proxies, shielding Network
+                    </p>
               </div>
 
               <div>
-                <ul className=" space-y-2 text-[13px]  text-[#6B7280] dark:text-gray-400 text-left">
+                <ul className=" space-y-2 text-sm font-medium  text-[#393939] dark:text-gray-400 text-left">
                   <li className="flex gap-1">
                     <svg
                       width="20"
