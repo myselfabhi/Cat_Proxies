@@ -35,7 +35,7 @@ const GetBonus = () => {
           {bonusData.map((bonus) => (
             <div
               key={bonus.id}
-              className="relative flex flex-col space-y-12 justify-between p-8 bg-white dark:bg-[#1E2327] rounded-lg shadow-deep hover:shadow-lg border"
+              className="relative flex flex-col space-y-12 justify-between p-8   bg-white dark:bg-[#1E2327] rounded-lg shadow-extrasoft hover:shadow-lg border"
             >
               {/* Icon, Title, and Description */}
               <div className="text-center">
@@ -46,22 +46,19 @@ const GetBonus = () => {
                     className="object-contain "
                   />
                 </div>
-                <h2 className="mt-8 text-lg sm:text-xl lg:text-2xl font-medium text-gray-800 dark:text-gray-200">
+                <h2 className="mt-8 text-lg sm:text-xl lg:text-2xl font-medium text-[#000000] dark:text-gray-200">
                   {bonus.title}
                 </h2>
-                <p className="mt-4 text-sm font-medium text-[#6F6F6F] dark:text-gray-400 px-4 text-center  underline-offset-[from-font] [text-underline-position:from-font] font-[Satoshi Variable] leading-5">
+                <p className="mt-4  text-sm font-medium text-[#6F6F6F] dark:text-gray-400 px-4 text-center  underline-offset-[from-font] [text-underline-position:from-font] font-[Satoshi Variable] leading-5">
                   {bonus.description}
                 </p>
               </div>
 
               {/* Button */}
-              <div className="mt-6 text-center">
+              <div className="mt-3 text-center">
                 <button
-                  className="w-3/4 px-4 py-2  rounded-md font-medium "
-                  style={{
-                    background:
-                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                  }}
+                  className="w-1/2 px-4 py-2 text-[15.71px] text-white  rounded-lg font-medium bg-[#05C067] "
+ 
                 >
                   {bonus.buttonText}
                 </button>
