@@ -63,10 +63,10 @@ const Invoices = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 container mx-auto px-4 py-6 font-satoshi">
+      <div className="space-y-4 container mx-auto px-4 py-6 font-satoshi">
         {/* Header */}
-        <div className="text-gray-800 dark:text-gray-100">
-          <h1 className="text-sm font-medium mt-4">Orders</h1>
+        <div className="text-[#1F2D3D] dark:text-gray-100">
+          <h1 className="text-sm font-medium  px-4">Orders</h1>
         </div>
 
         {/* Table */}
@@ -85,24 +85,24 @@ const Invoices = () => {
           ) : (
             <table className="w-full text-sm text-gray-700 dark:text-gray-300 hidden md:table">
               {/* Table Header */}
-              <thead className="bg-[#FAFAFB] dark:bg-[#161B1E] text-gray-500 dark:text-gray-300 border-b">
+              <thead className="bg-[#FAFAFB] dark:bg-[#161B1E] text-[#393939] dark:text-gray-300 border-b">
                 <tr>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     INVOICE ID
                   </th>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     PLAN NAME
                   </th>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     DATE
                   </th>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     AMOUNT
                   </th>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     PAYMENT METHOD
                   </th>
-                  <th className="py-4 px-4 text-[10px] font-medium text-left">
+                  <th className="py-4 px-4 text-sm font-medium text-left">
                     STATUS
                   </th>
                 </tr>
@@ -115,13 +115,13 @@ const Invoices = () => {
                     key={invoice.id}
                     className="border-b hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors space-y-4 "
                   >
-                    <td className="py-2 px-4 font-medium text-xs">
+                    <td className="py-2 px-4 font-medium text-xs text-[#393939]">
                       {invoice.id}
                     </td>
                     <td className="py-2 px-4 font-medium text-xs text-[#6F6F6F]">
                       {invoice.planName}
                     </td>
-                    <td className="py-2 px-4 text-[#425466] text-xs">
+                    <td className="py-2 px-4 text-[#425466 ] text-xs">
                       {invoice.date}
                     </td>
                     <td className="py-2 px-4 font-medium text-xs text-[#425466] ">
@@ -132,7 +132,7 @@ const Invoices = () => {
                       <span>{invoice.paymentMethod}</span>
                     </td>
                     <td className="py-2 px-4 font-medium text-xs">
-                      <span className="px-3 py-1 text-[10px] font-medium text-[#66CB9F] bg-[#DEFFEE] dark:bg-green-900 dark:text-green-300 rounded-md">
+                      <span className="px-3 py-1 text-sm font-medium text-[#66CB9F] bg-[#DEFFEE] dark:bg-green-900 dark:text-green-300 rounded-md">
                         {invoice.status}
                       </span>
                     </td>
