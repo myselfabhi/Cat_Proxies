@@ -7,28 +7,28 @@ const Contactus_db = () => {
       title: "Live Chat",
       description: "Chat with us",
       icon: "/live_chat.svg",
-      color: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
+      // color: "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
     },
     {
       id: 2,
       title: "discord.gg/catproxy",
       description: "Join us on Discord",
       icon: "/discord.svg",
-      color: "linear-gradient(286.17deg, #6949FF 0%, #876DFF 100%)",
+      // color: "linear-gradient(286.17deg, #6949FF 0%, #876DFF 100%)",
     },
     {
       id: 3,
       title: "@catproxies",
       description: "Reach us on Telegram",
       icon: "/@web.svg",
-      color: "linear-gradient(286.17deg, #05C067 0%, #0FD87C 100%)",
+      // color: "linear-gradient(286.17deg, #05C067 0%, #0FD87C 100%)",
     },
     {
       id: 4,
       title: "support@catproxies.com",
       description: "Email us",
       icon: null,
-      color: "linear-gradient(286.17deg, #246BFD 0%, #5089FD 100%)",
+      // color: "linear-gradient(286.17deg, #246BFD 0%, #5089FD 100%)",
     },
   ]
 
@@ -39,13 +39,9 @@ const Contactus_db = () => {
           {contactMethods.map((method) => (
             <div
               key={method.id}
-              className="relative flex flex-col items-center text-center p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-deepest hover:shadow-lg transition-shadow"
+              className="relative flex flex-col items-center text-center p-6 bg-white dark:bg-[#1E2327] rounded-lg shadow-extrasoft hover:shadow-lg transition-shadow"
             >
-              {/* Top Border with Gradient */}
-              <div
-                className="absolute top-0 left-0 w-full h-[3px] rounded-t-md"
-                style={{ background: method.color }}
-              ></div>
+
 
               {/* Icon */}
               {method.icon ? (
@@ -86,7 +82,7 @@ const Contactus_db = () => {
               )}
 
               {/* Title */}
-              <h2 className="text-sm font-medium text-gray-800 dark:text-gray-200 break-words">
+              <h2 className="text-sm font-bold text-[#020611] dark:text-gray-200 break-words">
                 {method.title}
               </h2>
             </div>
@@ -94,7 +90,7 @@ const Contactus_db = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white dark:bg-[#1E2327] p-6 md:p-8 rounded-lg shadow-deepest">
+        <div className="bg-white dark:bg-[#1E2327] p-6 md:p-8 rounded-lg shadow-extrasoft">
           <div className="flex justify-center mb-6">
             <img
               src="/cat_contact.svg"
@@ -107,22 +103,22 @@ const Contactus_db = () => {
             {/* Name and Company */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400 ">
+                <label className="block text-sm font-medium my-4 text-[#161616] dark:text-gray-400 ">
                   FULL NAME*
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full pb-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#393939] dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we know how to address you"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-medium my-4 text-[#161616] dark:text-gray-400">
                   COMPANY NAME
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full pb-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#393939]  dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="Tailor the services to your business needs"
                 />
               </div>
@@ -131,22 +127,22 @@ const Contactus_db = () => {
             {/* Email and Referral */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-medium my-4 text-[#161616] dark:text-gray-400">
                   EMAIL*
                 </label>
                 <input
                   type="email"
-                  className="mt-1 w-full p-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full pb-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#393939] dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we can respond promptly to your inquiry"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-medium my-4 text-[#161616] dark:text-gray-400">
                   WHO REFERRED YOU TO US?
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full p-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                  className="mt-1 w-full pb-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#393939] dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                   placeholder="So we can say thank you"
                 />
               </div>
@@ -154,11 +150,11 @@ const Contactus_db = () => {
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+              <label className="block text-sm font-medium my-4 text-[#161616] dark:text-gray-400">
                 MESSAGE
               </label>
               <textarea
-                className="mt-1 w-full p-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-gray-800 dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
+                className="mt-1 w-full pb-3 text-sm border-b border-[#E0E0E0] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#393939]   dark:text-gray-200 focus:outline-none focus:ring focus:ring-orange-300 dark:focus:ring-orange-600"
                 placeholder="Provide details about your request"
                 rows={1}
               ></textarea>
@@ -166,7 +162,7 @@ const Contactus_db = () => {
 
             {/* Document Upload */}
             <div>
-              <label className="block text-sm font-medium my-4 text-gray-600 dark:text-gray-400">
+              <label className="block text-sm font-medium my-2 text-[#161616] dark:text-gray-400">
                 Any Document to Upload for Us
               </label>
               <div className="flex items-center gap-2 rounded-md cursor-pointer bg-white dark:bg-[#161B1E]">
@@ -199,7 +195,7 @@ const Contactus_db = () => {
                     fill="#28303F"
                   />
                 </svg>
-                <p className="text-sm text-gray-600 underline dark:text-gray-400">
+                <p className="text-sm text-[#525252] underline dark:text-gray-400">
                   Click here to upload document
                 </p>
               </div>
@@ -224,11 +220,8 @@ const Contactus_db = () => {
               <div className="text-right">
                 <button
                   type="submit"
-                  className="px-10 py-2 text-sm rounded-md font-medium hover:opacity-90 transition mt-2"
-                  style={{
-                    background:
-                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                  }}
+                  className="px-16 py-2 text-[15.71px] rounded-md font-medium hover:opacity-90 transition bg-[#05C067] text-white"
+
                 >
                   Get It
                 </button>
