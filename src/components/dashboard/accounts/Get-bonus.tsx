@@ -6,7 +6,7 @@ const GetBonus = () => {
       id: 1,
       title: "1Gb — For everyone!",
       description:
-        "If you are actively buying proxies with crypto, you can claim 1GB of residential proxies for free. If you just used proxies from other providers, let’s chat—we’re happy to offer you a trial. And if you work for a business, we’ve got a special offer: 5GB of free residential proxies.",
+        "If you are actively buying proxies with crypto, you can claim 1GB of residential proxies for free. If you’ve just used proxies from other providers, let’s chat—we’re happy to offer you a trial. And if you work for a business, we’ve got a special offer: 3GB of free residential proxies",
       buttonText: "Contact Us",
       icon: "/gift_bonus.svg",
     },
@@ -14,7 +14,7 @@ const GetBonus = () => {
       id: 2,
       title: "5GB free",
       description:
-        "Leave us a positive review on Trustpilot or G2 and enjoy 2GB of free residential proxies. Want even more? Write reviews on both platforms, and we’ll boost your reward to 5GB.",
+        "Leave us a positive review on Trustpilot or G2 and enjoy 2GB of free residential proxies. Want even more? Write reviews on both platforms, and we'll boost your reward to 5GB",
       buttonText: "Contact Us",
       icon: "/cards_bonus.svg",
     },
@@ -22,7 +22,7 @@ const GetBonus = () => {
       id: 3,
       title: "3-5% discount",
       description:
-        "Link your social media on site and contact us to share where you found CatProxies—we’ll give you a 3-5% discount code. Want an even bigger discount? Refer a friend, and we will offer a bigger discount code for both of you!",
+        "Link your social media on site and contact us to share where you found catproxies—we’ll give you a 3-5% discount code. Want an even bigger discount? Refer a friend, and we will offer a bigger discount code for both of you!05:44 PM",
       buttonText: "Contact Us",
       icon: "/setting_bonus.svg",
     },
