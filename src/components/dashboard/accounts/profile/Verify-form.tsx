@@ -17,15 +17,15 @@ export default function Verify() {
   return (
     <div className="container font-satoshi mx-auto px-4 py-6 space-y-4 dark:border-[#1E2327] border border-[#F4F4F4] rounded-lg">
       {/* Level 1 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
-          className="p-4 flex justify-between items-center cursor-pointer"
+          className="py-4 px-6 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(1)}
         >
-          <h2 className="font-medium text-[#05C067] dark:text-gray-200">
+          <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 1
           </h2>
-          <span className="text-gray-500 dark:text-gray-400">
+          <span className="text-[#1E1E1E] dark:text-gray-400">
             {activeLevel === 1 ? (
               <ChevronDown className="w-4 h-4" />
             ) : (
@@ -35,90 +35,90 @@ export default function Verify() {
         </div>
         {activeLevel === 1 && (
           <div className="p-6 border-t border-[#C6C6C6] dark:border-gray-700">
-            <h3 className=" text- font-medium text-black dark:text-gray-200 mb-1">
+            <h3 className=" font-bold text-black dark:text-gray-200 mb-1">
               Confirm your details
             </h3>
-            <p className="text-xs text-[#525252] lg:w-[433px] dark:text-gray-400 mb-6">
+            <p className="text-sm font-bold text-[#525252] lg:w-[433px] dark:text-gray-400 mb-6">
               Please fill in your details to confirm your identity to unlock
               additional services. All information is private & secure.
             </p>
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     First name
                   </label>
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full px-3 py-4 border text-xs font-medium border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs font-medium text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Last name
                   </label>
                   <input
                     type="text"
                     defaultValue="Samosa"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs font-medium text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Display name
                   </label>
                   <input
                     type="text"
                     defaultValue="Andre"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Email
                   </label>
                   <input
                     type="email"
                     defaultValue="andresamosa@mail.com"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Residential Address
                   </label>
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     City
                   </label>
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Postal Code
                   </label>
                   <input
                     type="text"
                     defaultValue="B/80 - A north America 27029"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Occupation Industry
                   </label>
-                  <select className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                  <select className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                     <option value="service" selected>
                       Service
                     </option>
@@ -127,13 +127,13 @@ export default function Verify() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs text-gray-600 dark:text-gray-400">
+                  <label className="block text-sm font-bold text-[#131316] dark:text-gray-400">
                     Date of Birth
                   </label>
                   <input
                     type="date"
                     defaultValue="1999-03-03"
-                    className="w-full px-3 py-4 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+                    className="w-full px-3 py-4 border text-sm font-bold border-[#EEEEEE] dark:border-gray-700 rounded-lg bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
                   />
                 </div>
               </div>
@@ -141,11 +141,8 @@ export default function Verify() {
                 <button
                   type="button"
                   onClick={() => handleSubmit(1)}
-                  className="px-10 py-2  rounded-lg font-medium  hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-600"
-                  style={{
-                    background:
-                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                  }}
+                  className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
+
                 >
                   Submit
                 </button>
@@ -156,15 +153,15 @@ export default function Verify() {
       </div>
 
       {/* Level 2 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(2)}
         >
-          <h2 className="font-medium text-[#05C067] dark:text-gray-200">
+          <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 2
           </h2>
-          <span className="text-gray-500 dark:text-gray-400">
+          <span className="text-[#1E1E1E] dark:text-gray-400">
             {activeLevel === 1 ? (
               <ChevronDown className="w-4 h-4" />
             ) : (
@@ -173,11 +170,11 @@ export default function Verify() {
           </span>
         </div>
         {activeLevel === 2 && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-            <h3 className=" font-medium text-black dark:text-gray-200 mb-2">
+          <div className="p-6 border-t border-[#F4F4F4] dark:border-gray-700">
+            <h3 className=" font-bold text-black dark:text-gray-200 mb-2">
               Upload identification
             </h3>
-            <p className="text-xs text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-sm font-bold text-[#525252] dark:text-gray-400 mb-6">
               Please upload your identification. This step will unlock more
               capabilities such as higher betting limits and enhanced account
               security.
@@ -185,22 +182,22 @@ export default function Verify() {
             <form className="space-y-6">
               {/* Document Type */}
               <div>
-                <label className="block text-xs text-gray-600 dark:text-gray-400 mb-2">
+                <label className="block text-sm font-bold text-[#131316] dark:text-gray-400 mb-2">
                   Document Type*
                 </label>
-                <select className="w-full px-2 py-3 text-xs font-medium border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
+                <select className="w-full px-2 py-3 text-sm font-bold border border-[#EEEEEE] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600">
                   <option>Driver License</option>
                   <option>Passport</option>
                   <option>ID Card</option>
                 </select>
-                <p className="mt-1 text-[10px] font-medium text-red-500">
+                <p className="mt-2 text-sm font-bold text-[#FF3B30]">
                   Following file types are accepted: .png, .jpeg, .pdf
                 </p>
               </div>
 
               {/* Upload Boxes */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border-dashed border-2 border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
+                <div className="border-dashed border-[1px] border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
                   <svg
                     width="44"
                     height="44"
@@ -279,22 +276,22 @@ export default function Verify() {
                       </linearGradient>
                     </defs>
                   </svg>
-                  <p className="text-xs font-medium text-[#353535] dark:text-gray-400">
+                  <p className="text-xs font-bold text-[#353535] dark:text-gray-400">
                     Front side
                   </p>
                   <div className="flex gap-1">
-                    <p className="text-sm font-medium text-[#019B83]">
+                    <p className="text-sm font-bold text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535] dark:text-white">
+                    <p className="text-sm font-bold text-[#353535] dark:text-white">
                       or drag and drop
                     </p>
                   </div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-sm font-bold text-[#353535]">
                     (Max. File size: 25 MB)
                   </p>
                 </div>
-                <div className="border-dashed border-2 border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
+                <div className="border-dashed border-[1px] border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
                   <svg
                     width="44"
                     height="44"
@@ -373,18 +370,18 @@ export default function Verify() {
                       </linearGradient>
                     </defs>
                   </svg>
-                  <p className="text-xs font-medium text-[#353535] dark:text-gray-400">
+                  <p className="text-xs font-bold text-[#353535] dark:text-gray-400">
                     Back side
                   </p>
                   <div className="flex gap-1">
-                    <p className="text-sm font-medium text-[#019B83]">
+                    <p className="text-sm font-bold text-[#019B83]">
                       Click to Upload
                     </p>
-                    <p className="text-sm text-[#353535] dark:text-white">
+                    <p className="text-sm font-bold text-[#353535] dark:text-white">
                       or drag and drop
                     </p>
                   </div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-sm font-bold text-[#353535]">
                     (Max. File size: 25 MB)
                   </p>
                 </div>
@@ -394,11 +391,7 @@ export default function Verify() {
                 <button
                   type="button"
                   onClick={() => handleSubmit(2)}
-                  className="px-10 py-2  rounded-lg font-medium  hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-600"
-                  style={{
-                    background:
-                      "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                  }}
+                  className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
                 >
                   Submit
                 </button>
@@ -409,15 +402,15 @@ export default function Verify() {
       </div>
 
       {/* Level 3 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(3)}
         >
-          <h2 className="font-medium text-[#05C067] dark:text-gray-200">
+          <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 3
           </h2>
-          <span className="text-gray-500 dark:text-gray-400">
+          <span className="text-[#1E1E1E] dark:text-gray-400">
             {activeLevel === 1 ? (
               <ChevronDown className="w-4 h-4" />
             ) : (
@@ -426,8 +419,8 @@ export default function Verify() {
           </span>
         </div>
         {activeLevel === 3 && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-            <h3 className="font-medium text-black dark:text-gray-200 mb-2">
+          <div className="p-6 border-t border-[#F4F4F4] dark:border-gray-700">
+            <h3 className="font-bold text-black dark:text-gray-200 mb-2">
               Verification
             </h3>
             <p className="text-xs text-[#525252] lg:w-693px dark:text-gray-400 mb-2">
@@ -525,7 +518,7 @@ export default function Verify() {
                 </defs>
               </svg>
               <div className="flex gap-1">
-                <p className="text-sm font-medium text-[#019B83]">
+                <p className="text-sm font-bold text-[#019B83]">
                   Click to Upload
                 </p>
                 <p className="text-sm text-[#353535] dark:text-gray-400">
@@ -536,18 +529,14 @@ export default function Verify() {
                 (Max. File size: 25 MB)
               </p>
             </div>
-            <p className="mt-1 text-[10px] font-medium text-center text-red-500">
+            <p className="mt-1 text-[10px] font-bold text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf
             </p>
             <div className="flex justify-end">
               <button
                 type="button"
                 onClick={() => handleSubmit(3)}
-                className="px-10 py-2  rounded-lg font-medium  hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-600"
-                style={{
-                  background:
-                    "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                }}
+                className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
               >
                 Submit
               </button>
@@ -557,15 +546,15 @@ export default function Verify() {
       </div>
 
       {/* Level 4 */}
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
           className="p-4 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(4)}
         >
-          <h2 className="font-medium text-[#05C067] dark:text-gray-200">
+          <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 4
           </h2>
-          <span className="text-gray-500 dark:text-gray-400">
+          <span className="text-[#1E1E1E] dark:text-gray-400">
             {activeLevel === 1 ? (
               <ChevronDown className="w-4 h-4" />
             ) : (
@@ -574,8 +563,8 @@ export default function Verify() {
           </span>
         </div>
         {activeLevel === 4 && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-            <h3 className="font-medium text-black dark:text-gray-200 mb-2">
+          <div className="p-6 border-t border-[#F4F4F4] dark:border-gray-700">
+            <h3 className="font-bold text-black dark:text-gray-200 mb-2">
               Verification
             </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
@@ -672,7 +661,7 @@ export default function Verify() {
                 </defs>
               </svg>
               <div className="flex gap-1">
-                <p className="text-sm font-medium text-[#019B83]">
+                <p className="text-sm font-bold text-[#019B83]">
                   Click to Upload
                 </p>
                 <p className="text-sm text-[#353535] dark:text-gray-400">
@@ -683,18 +672,14 @@ export default function Verify() {
                 (Max. File size: 25 MB)
               </p>
             </div>
-            <p className="mt-1 text-[10px] font-medium text-center text-red-500">
+            <p className="mt-1 text-[10px] font-bold text-center text-red-500">
               Following file types are accepted: .png, .jpeg, .pdf
             </p>
             <div className="flex justify-end">
               <button
                 type="button"
                 onClick={() => alert("Verification Complete!")}
-                className="px-10 py-2 mt-3 rounded-lg font-medium  hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-600"
-                style={{
-                  background:
-                    "linear-gradient(286.17deg, #FB9400 0%, #FFAB38 100%)",
-                }}
+                className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
               >
                 Submit
               </button>
