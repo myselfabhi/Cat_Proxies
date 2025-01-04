@@ -25,7 +25,7 @@ export default function ProfilePage() {
 
   return (
     <DashboardLayout>
-      <div className="container mx-auto px-4 py-6 font-satoshi">
+      <div className="container mx-auto px-4 py-6 font-satoshi ">
         {/* Mobile Dropdown for Tabs */}
         <div className="md:hidden mb-4">
           <button
@@ -60,15 +60,15 @@ export default function ProfilePage() {
         {/* Main Layout */}
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-white dark:bg-[#1E2327] dark:border-[#1E2327] shadow-sm border border-gray-50 lg:h-[260px] rounded-lg p-4">
+          <div className="hidden md:block md:w-1/4 bg-[#fcfcfc] dark:bg-[#1E2327] dark:border-[#1E2327] border border-[#F4F4F4] lg:h-[260px] rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
                   className={`cursor-pointer py-2 px-4 rounded-md ${
                     activeTab === tab.id
-                      ? "bg-[#05C06738] dark:bg-green-900  dark:text-green-300 "
-                      : "text-gray-800 dark:text-gray-300"
+                      ? "bg-[#05C06738] font-bold text-black dark:bg-green-900  dark:text-green-300 "
+                      : "text-[#525252] font-bold dark:text-gray-300"
                   }`}
                   onClick={() => setActiveTab(tab.id)}
                 >
