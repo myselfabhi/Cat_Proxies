@@ -25,7 +25,7 @@ export default function ProfilePage() {
 
   return (
     <DashboardLayout>
-      <div className="container mx-auto px-4 py-6 font-satoshi ">
+      <div className="container font-satoshi ">
         {/* Mobile Dropdown for Tabs */}
         <div className="md:hidden mb-4">
           <button
@@ -58,9 +58,9 @@ export default function ProfilePage() {
         </div>
 
         {/* Main Layout */}
-        <div className="flex flex-col md:flex-row md:space-x-8">
+        <div className="flex flex-col md:flex-row md:gap-6">
           {/* Sidebar */}
-          <div className="hidden md:block md:w-1/4 bg-[#fcfcfc] dark:bg-[#1E2327] dark:border-[#1E2327] border border-[#F4F4F4] lg:h-[260px] rounded-lg p-4">
+          <div className="hidden md:block lg:w-[236px] bg-[#fcfcfc] dark:bg-[#1E2327] dark:border-[#1E2327] border border-[#F4F4F4] lg:h-[260px] rounded-lg p-4">
             <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li
