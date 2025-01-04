@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 interface NavbarProps {
   isSidebarOpen: boolean
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
 
       <div className="flex items-center gap-4 lg:mr-5">
         {/* Creative Mode Toggle */}
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <button
             onClick={toggleDarkMode}
             className={`relative w-12 h-5 flex items-center rounded-full ${
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onSidebarToggle }) => {
               )}
             </div>
           </button>
-        </div>
+        </div> */}
 
         <div className="relative flex items-center gap-1">
           <svg
