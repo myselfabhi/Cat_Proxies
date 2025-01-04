@@ -669,9 +669,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activePath, isOpen, onClose }) => {
         {/* Sidebar Content */}
         <div className="px-6 py-8 ">
           {/* Logo */}
-          <div className="flex items-center gap-4 mb-8 pl-7 py-2 bg-[#ffffff]  shadow-extrasoft rounded-xl">
+          <div className="flex items-center gap-4 mb-8 pl-7 py-2 bg-[#ffffff] dark:bg-[#24313C]  shadow-extrasoft rounded-full">
             <img src="/logo.svg" alt="Cat Proxies" className="w-10 h-11" />
-            <h1 className="text-base font-satoshi font-medium text-gray-800 dark:text-gray-200">
+            <h1 className="text-base font-satoshi font-medium text-gray-800 dark:text-white">
               Cat Proxies
             </h1>
           </div>
