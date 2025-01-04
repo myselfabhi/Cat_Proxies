@@ -27,9 +27,9 @@ export default function Verify() {
           </h2>
           <span className="text-[#1E1E1E] dark:text-gray-400">
             {activeLevel === 1 ? (
-              <ChevronDown className="w-4 h-4" />
-            ) : (
               <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
             )}
           </span>
         </div>
@@ -155,17 +155,17 @@ export default function Verify() {
       {/* Level 2 */}
       <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
-          className="p-4 flex justify-between items-center cursor-pointer"
+          className="py-4 px-6 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(2)}
         >
           <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 2
           </h2>
           <span className="text-[#1E1E1E] dark:text-gray-400">
-            {activeLevel === 1 ? (
-              <ChevronDown className="w-4 h-4" />
-            ) : (
+            {activeLevel === 2 ? (
               <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
             )}
           </span>
         </div>
@@ -197,7 +197,7 @@ export default function Verify() {
 
               {/* Upload Boxes */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border-dashed border-[1px] border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
+                <div className="border-dashed border-2 border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
                   <svg
                     width="44"
                     height="44"
@@ -291,7 +291,7 @@ export default function Verify() {
                     (Max. File size: 25 MB)
                   </p>
                 </div>
-                <div className="border-dashed border-[1px] border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
+                <div className="border-dashed border-2 border-[#CACACA] dark:border-gray-700 rounded-md p-6 flex flex-col justify-center items-center text-center bg-[#FFFFFF] dark:bg-[#161B1E]">
                   <svg
                     width="44"
                     height="44"
@@ -404,17 +404,17 @@ export default function Verify() {
       {/* Level 3 */}
       <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
-          className="p-4 flex justify-between items-center cursor-pointer"
+          className="py-4 px-6 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(3)}
         >
           <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 3
           </h2>
           <span className="text-[#1E1E1E] dark:text-gray-400">
-            {activeLevel === 1 ? (
-              <ChevronDown className="w-4 h-4" />
-            ) : (
+            {activeLevel === 3 ? (
               <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
             )}
           </span>
         </div>
@@ -423,18 +423,18 @@ export default function Verify() {
             <h3 className="font-bold text-black dark:text-gray-200 mb-2">
               Verification
             </h3>
-            <p className="text-xs text-[#525252] lg:w-693px dark:text-gray-400 mb-2">
+            <p className="text-sm font-bold text-[#525252] lg:w-693px dark:text-gray-400 mb-2">
               Please upload your proof of address. All documents must be laying
               on a flat surface with all 4 corners inside the frame. All
               information should be clear and identifiable.
             </p>
-            <p className="text-[10px] text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-[244px] h-[24px] flex items-center">
+            <p className="text-sm font-bold text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-2/5 flex items-center">
               ⚠️ Please complete level two verification first.
             </p>
 
             <label
               htmlFor="bonus-code"
-              className="block text-xs text-[#131316] dark:text-gray-400 mb-1"
+              className="block font-bold text-xs text-[#131316] dark:text-gray-400 mb-1"
             >
               Proof of Address<span>*</span>
             </label>
@@ -518,18 +518,18 @@ export default function Verify() {
                 </defs>
               </svg>
               <div className="flex gap-1">
-                <p className="text-sm font-bold text-[#019B83]">
-                  Click to Upload
-                </p>
-                <p className="text-sm text-[#353535] dark:text-gray-400">
-                  or drag and drop
-                </p>
-              </div>
-              <p className="text-xs text-[#353535] dark:text-gray-400">
-                (Max. File size: 25 MB)
-              </p>
-            </div>
-            <p className="mt-1 text-[10px] font-bold text-center text-red-500">
+                    <p className="text-sm font-bold text-[#019B83]">
+                      Click to Upload
+                    </p>
+                    <p className="text-sm font-bold text-[#353535] dark:text-white">
+                      or drag and drop
+                    </p>
+                  </div>
+                  <p className="text-sm font-bold text-[#353535]">
+                    (Max. File size: 25 MB)
+                  </p>
+                </div>
+            <p className="mt-1 text-sm font-bold text-center text-[#FF5A5F]">
               Following file types are accepted: .png, .jpeg, .pdf
             </p>
             <div className="flex justify-end">
@@ -548,17 +548,17 @@ export default function Verify() {
       {/* Level 4 */}
       <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-extrasoft">
         <div
-          className="p-4 flex justify-between items-center cursor-pointer"
+          className="py-4 px-6 flex justify-between items-center cursor-pointer"
           onClick={() => setActiveLevel(4)}
         >
           <h2 className="font-bold text-[#05C067] dark:text-gray-200">
             Level 4
           </h2>
           <span className="text-[#1E1E1E] dark:text-gray-400">
-            {activeLevel === 1 ? (
-              <ChevronDown className="w-4 h-4" />
-            ) : (
+            {activeLevel === 4 ? (
               <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
             )}
           </span>
         </div>
@@ -567,17 +567,17 @@ export default function Verify() {
             <h3 className="font-bold text-black dark:text-gray-200 mb-2">
               Verification
             </h3>
-            <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
+            <p className="text-sm font-bold text-[#525252] dark:text-gray-400 mb-2">
               Please upload supporting documentation for your Source of Funds.
               Document laying on a flat surface must show all 4 corners and all
               information should be clear and identifiable.
             </p>
-            <p className="text-[10px] text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-[244px] h-[24px] flex items-center">
+            <p className="text-sm font-bold text-[#161616] bg-[#ffdfdf]  px-[5px] py-[5px] rounded-[34px] mb-8 w-2/5 flex items-center">
               ⚠️ Please complete level two verification first.
             </p>
             <label
               htmlFor="bonus-code"
-              className="block text-xs text-[#131316] dark:text-gray-400 mb-1"
+              className="block font-bold text-xs text-[#131316] dark:text-gray-400 mb-1"
             >
               Source of Fund<span>*</span>
             </label>
@@ -661,25 +661,25 @@ export default function Verify() {
                 </defs>
               </svg>
               <div className="flex gap-1">
-                <p className="text-sm font-bold text-[#019B83]">
-                  Click to Upload
-                </p>
-                <p className="text-sm text-[#353535] dark:text-gray-400">
-                  or drag and drop
-                </p>
-              </div>
-              <p className="text-xs text-[#353535] dark:text-gray-400">
-                (Max. File size: 25 MB)
-              </p>
-            </div>
-            <p className="mt-1 text-[10px] font-bold text-center text-red-500">
+                    <p className="text-sm font-bold text-[#019B83]">
+                      Click to Upload
+                    </p>
+                    <p className="text-sm font-bold text-[#353535] dark:text-white">
+                      or drag and drop
+                    </p>
+                  </div>
+                  <p className="text-sm font-bold text-[#353535]">
+                    (Max. File size: 25 MB)
+                  </p>
+                </div>
+            <p className="mt-1 text-sm font-bold text-center text-[#FF5A5F]">
               Following file types are accepted: .png, .jpeg, .pdf
             </p>
             <div className="flex justify-end">
               <button
                 type="button"
                 onClick={() => alert("Verification Complete!")}
-                className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
+                className="px-10 py-2 bg-[#05C067] text-white text-[15.71px] mt-4 font-bold rounded-lg  hover:bg-green-600 focus:ring-2 focus:ring-green-400 dark:focus:ring-green-600"
               >
                 Submit
               </button>
