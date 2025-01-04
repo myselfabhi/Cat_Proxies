@@ -1,7 +1,7 @@
 export default function Social() {
   return (
     <div className="container font-satoshi mx-auto px-4 py-6 border border-[#F4F4F4] dark:border-[#1E2327] rounded-lg">
-      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg shadow-deep p-6">
+      <div className="bg-[#FCFCFC] dark:bg-[#1E2327] rounded-lg border border-[#F4F4F4] shadow-extrasoft p-6">
         <div className="space-y-6">
           {/* Telegram */}
           <div className="flex flex-col gap-4">
@@ -18,14 +18,14 @@ export default function Social() {
                   fill="#05C067"
                 />
               </svg>
-              <label className="text-sm text-gray-600 dark:text-gray-400">
+              <label className="text-sm font-bold text-[#020611] dark:text-gray-400">
                 Telegram
               </label>
             </div>
             <input
               type="text"
               value="@tgfigure"
-              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] py-4 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="flex-1 p-3 font-medium text-sm border w-3/4 border-[#eeeeee] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] py-4 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
 
@@ -44,14 +44,14 @@ export default function Social() {
                   fill="#05C067"
                 />
               </svg>
-              <label className="text-sm text-gray-600 dark:text-gray-400">
+              <label className="text-sm font-bold text-[#020611] dark:text-gray-400">
                 Discord
               </label>
             </div>
             <input
               type="text"
               value="@dglxyz"
-              className="flex-1 p-3 font-medium text-xs border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] py-4 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
+              className="flex-1 p-3 font-medium text-sm w-3/4 border border-[#eeeeee] dark:border-gray-700 rounded-md bg-white dark:bg-[#161B1E] text-[#525252] py-4 dark:text-gray-200 focus:outline-none focus:ring focus:ring-green-300 dark:focus:ring-green-600"
             />
           </div>
         </div>
